@@ -16,7 +16,6 @@ int main(int argc, char** argv) {
     
        char file_name[20];
       
-      // event_description evt;
        event_description *evt = calloc(1, sizeof(event_description));
        
        event_description * temp_event = evt;
