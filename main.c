@@ -33,8 +33,33 @@ int main(int argc, char** argv) {
        
        printf("\n%s\n%s\n%s\n ", temp_event->event_title, temp_event->event_date, temp_event->event_time);
        
+      
+       printf("\nEnter node file name: ");
+       scanf(" %19[a-zA-Z.]", file_name);
        
+       FILE * file_two = fopen(file_name, "r");
        
+       if (file_two != NULL) {
+           
+          // while (fscanf(file, "   %s   ", &etc) != EOF)
+           
+           char temp_word[40];
+           int count = 0;
+           
+           while(!feof(file_two)) {
+               
+                fscanf(file_two, " %[a-zA-Z0-9]s", temp_word);
+                
+                count++;
+                
+                printf("\nNumber: %d - %s", count, temp_word);
+
+           }
+           
+       } else {
+           
+          printf("\nFAIL!! - Cannot load file.");
+       }
        
     return (EXIT_SUCCESS);
 }
