@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "event.h"
+#include "node.h"
 
 /*
  * 
@@ -39,28 +40,62 @@ int main(int argc, char** argv) {
        
        FILE * file_two = fopen(file_name, "r");
        
+       
        if (file_two != NULL) {
            
-          // while (fscanf(file, "   %s   ", &etc) != EOF)
-           
+          
            char temp_word[40];
+           char temp_word2[40];
            int count = 0;
+
            
            while(!feof(file_two)) {
                
-                fscanf(file_two, " %[a-zA-Z0-9]s", temp_word);
+                fscanf(file_two, " %[0-9]s", temp_word);
+                fscanf(file_two, " %[A-Za-z]s", temp_word2);
                 
-                count++;
-                
-                printf("\nNumber: %d - %s", count, temp_word);
+                printf("\nWord 1: %s", temp_word);
+                printf("\nWord 2: %s", temp_word2);
 
            }
+           
+           fclose(file_two);
+           
            
        } else {
            
           printf("\nFAIL!! - Cannot load file.");
        }
        
+       countLines(file_name);
+
     return (EXIT_SUCCESS);
+}
+
+int countLines(char *file_name[20])
+{
+    FILE * fp;
+    int countLines = 0;
+    int i;
+
+
+    fp = fopen(file_name, "r");
+    if (fp == NULL)
+    {
+        printf("We can't open the file.");
+        fclose(fp);
+        return 1;
+    }
+    else
+    {
+        while((i=fgetc(fp))!=EOF)
+        {
+            if (i == '\n')
+                countLines++;
+        }
+
+        printf("\nNumber of lines: %d\n",countLines);
+    }
+        return 0;
 }
 
