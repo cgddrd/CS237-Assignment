@@ -43,23 +43,51 @@ int main(int argc, char** argv) {
        
        if (file_two != NULL) {
            
-          
-           char temp_word[40];
-           char temp_word2[40];
+         
+           int lines = 0;
            int count = 0;
-
+           
+           lines = countLines(file_name);
+           
+           //dynamic allocation of array - same as: "track_node nodeArray[lines];"
+           track_node *n = calloc(1, lines * sizeof(track_node)); 
+           
            
            while(!feof(file_two)) {
                
-                fscanf(file_two, " %[0-9]s", temp_word);
-                fscanf(file_two, " %[A-Za-z]s", temp_word2);
+               // track_node *evt2 = calloc(1, sizeof(track_node));
+       
+              //  track_node *temp_node = evt2;
+               
+                fscanf(file_two, " %d", &n[count].number); //& needed here when using scan because you need a pointer to the 
+                                                               // first element - not needed with string as it is an array of chars.
                 
-                printf("\nWord 1: %s", temp_word);
-                printf("\nWord 2: %s", temp_word2);
+                //int temp_num = atoi(temp_word);
+                
+            //    temp_node->number = n[count].number;
+                
+                fscanf(file_two, " %[A-Za-z]s", n[count].type);
+                
+               // printf("\nWord 1: %d", temp_node->number);
+                //printf("\nWord 2: %s", temp_node->type);
+                
+              //  n[count] = temp_node;
+                        
+                count++;
+                
+             //   free(evt2);
 
            }
            
            fclose(file_two);
+           
+           int i;
+           
+           for (i=0; i < lines; i++) {
+               
+             printf("\nNode %d: %d -> %s", i, n[i].number, n[i].type);  
+               
+           }
            
            
        } else {
@@ -67,12 +95,13 @@ int main(int argc, char** argv) {
           printf("\nFAIL!! - Cannot load file.");
        }
        
-       countLines(file_name);
+       //printf("\nPrick - %d", countLines(file_name));
+       
 
     return (EXIT_SUCCESS);
 }
 
-int countLines(char *file_name[20])
+int countLines(char *file_name) //Don't need a pointer 
 {
     FILE * fp;
     int countLines = 0;
@@ -95,7 +124,7 @@ int countLines(char *file_name[20])
         }
 
         printf("\nNumber of lines: %d\n",countLines);
+        return countLines;
     }
-        return 0;
 }
 
