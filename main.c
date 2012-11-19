@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include "event.h"
 #include "node.h"
+#include "fileIO.h"
 
 /*
  * 
@@ -101,30 +102,5 @@ int main(int argc, char** argv) {
     return (EXIT_SUCCESS);
 }
 
-int countLines(char *file_name) //Don't need a pointer 
-{
-    FILE * fp;
-    int countLines = 0;
-    int i;
 
-
-    fp = fopen(file_name, "r");
-    if (fp == NULL)
-    {
-        printf("We can't open the file.");
-        fclose(fp);
-        return 1;
-    }
-    else
-    {
-        while((i=fgetc(fp))!=EOF)
-        {
-            if (i == '\n')
-                countLines++;
-        }
-
-        printf("\nNumber of lines: %d\n",countLines);
-        return countLines;
-    }
-}
 

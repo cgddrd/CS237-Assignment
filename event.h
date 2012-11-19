@@ -22,8 +22,6 @@ extern "C" {
 
 typedef event_description * event_des_ptr;
 
-int countLines(char *file_name);
-
 
 #ifdef	__cplusplus
 }
