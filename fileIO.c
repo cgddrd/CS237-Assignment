@@ -3,7 +3,7 @@
 #include "fileIO.h"
 
 
-int countLines(char *file_name) //Don't need a pointer 
+int countLines(char *file_name) 
 {
     FILE * fp;
     int countLines = 0;
@@ -28,4 +28,19 @@ int countLines(char *file_name) //Don't need a pointer
         printf("\nNumber of lines: %d\n",countLines);
         return countLines;
     }
+}
+
+FILE * openFile()
+{
+    
+    char file_name[40];
+    
+    printf("\nEnter file name: ");
+    scanf(" %19[a-zA-Z.]", file_name);
+    
+    FILE * file = fopen(file_name, "r");
+    
+    return file;
+    
+    
 }

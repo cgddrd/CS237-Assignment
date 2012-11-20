@@ -22,10 +22,12 @@ int main(int argc, char** argv) {
        
        event_description * temp_event = evt;
        
-       printf("\nEnter file name: ");
-       scanf(" %19[a-zA-Z.]", file_name);
+    //   printf("\nEnter file name: ");
+     //  scanf(" %19[a-zA-Z.]", file_name);
        
-       FILE * file = fopen(file_name, "r");
+     //  FILE * file = fopen(file_name, "r");
+       
+       FILE * file = openFile();
        
        fscanf(file, " %[A-Za-z -]s", temp_event -> event_title);
        fscanf(file, " %[a-zA-Z0-9 ]s", temp_event -> event_date);
@@ -36,10 +38,12 @@ int main(int argc, char** argv) {
        printf("\n%s\n%s\n%s\n ", temp_event->event_title, temp_event->event_date, temp_event->event_time);
        
       
-       printf("\nEnter node file name: ");
+      printf("\nEnter node2 file name: ");
        scanf(" %19[a-zA-Z.]", file_name);
        
-       FILE * file_two = fopen(file_name, "r");
+     //  FILE * file_two = openFile();
+       
+       FILE * file_two = openFile();
        
        
        if (file_two != NULL) {
@@ -53,8 +57,8 @@ int main(int argc, char** argv) {
            //dynamic allocation of array - same as: "track_node nodeArray[lines];"
            track_node *n = calloc(1, lines * sizeof(track_node)); 
            
-           
-           while(!feof(file_two)) {
+           int i = 0;
+           while((i=fgetc(file_two))!=EOF) {
                
                // track_node *evt2 = calloc(1, sizeof(track_node));
        
@@ -82,7 +86,7 @@ int main(int argc, char** argv) {
            
            fclose(file_two);
            
-           int i;
+           //int i;
            
            for (i=0; i < lines; i++) {
                
