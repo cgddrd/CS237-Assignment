@@ -10,6 +10,9 @@
 #include "event.h"
 #include "node.h"
 #include "fileIO.h"
+#include "track.h"
+#include "course.h"
+#include "entrant.h"
 
 /*
  * 
@@ -20,14 +23,15 @@ int main(int argc, char** argv) {
 
         loadNodes();
         printNodes();
+                
+        loadTracks();
+        printTracks();
         
-        int i = 0;
+        loadCourses();
+        printCourses();
         
-           for (i=0; i < no_of_nodes; i++) {
-               
-             printf("\nWANKER %d: %d -> %s", i, n[i].number, n[i].type);  
-               
-           }
+        loadCompetitors();
+        printCompetitors();
 
     return (EXIT_SUCCESS);
 }

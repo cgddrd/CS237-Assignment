@@ -9,7 +9,7 @@ void loadEventDes() {
     
     event_description * temp_event = evt;
     
-    FILE * file = openFile();
+    FILE * file = openFile("Enter event description file name:");
        
     fscanf(file, " %[A-Za-z -]s", temp_event -> event_title);
     fscanf(file, " %[a-zA-Z0-9 ]s", temp_event -> event_date);

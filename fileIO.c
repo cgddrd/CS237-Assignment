@@ -30,12 +30,12 @@ int countLines(FILE * file)
     }
 }
 
-FILE * openFile()
+FILE * openFile(char * prompt)
 {
     
     char file_name[40];
     
-    printf("\nEnter file name: ");
+    printf("\n%s ", prompt);
     scanf(" %19[a-zA-Z.]", file_name);
     
     FILE * file = fopen(file_name, "r");

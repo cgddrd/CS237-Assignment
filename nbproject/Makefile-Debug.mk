@@ -35,10 +35,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/track.o \
+	${OBJECTDIR}/course.o \
 	${OBJECTDIR}/fileIO.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/node.o \
-	${OBJECTDIR}/event.o
+	${OBJECTDIR}/event.o \
+	${OBJECTDIR}/entrant.o
 
 
 # C Compiler Flags
@@ -65,6 +68,16 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cs237-assignment: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cs237-assignment ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
+${OBJECTDIR}/track.o: track.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/track.o track.c
+
+${OBJECTDIR}/course.o: course.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/course.o course.c
+
 ${OBJECTDIR}/fileIO.o: fileIO.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -84,6 +97,11 @@ ${OBJECTDIR}/event.o: event.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/event.o event.c
+
+${OBJECTDIR}/entrant.o: entrant.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/entrant.o entrant.c
 
 # Subprojects
 .build-subprojects:

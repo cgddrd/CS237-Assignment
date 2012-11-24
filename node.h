@@ -23,7 +23,7 @@ typedef struct node track_node;
 
 typedef track_node * track_node_ptr;
 
-track_node *n;
+track_node * node_collection;
 
 int no_of_nodes;
 
