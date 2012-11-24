@@ -12,13 +12,11 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+    
     FILE * openFile();
 
-
-    int countLines(char *file_name);
+    int countLines(FILE * file);
     
-
-
 #ifdef	__cplusplus
 }
 #endif

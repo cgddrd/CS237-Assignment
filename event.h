@@ -22,6 +22,8 @@ extern "C" {
 
 typedef event_description * event_des_ptr;
 
+void loadEventDes();
+
 
 #ifdef	__cplusplus
 }

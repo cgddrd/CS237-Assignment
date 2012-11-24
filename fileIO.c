@@ -3,14 +3,14 @@
 #include "fileIO.h"
 
 
-int countLines(char *file_name) 
+int countLines(FILE * file) 
 {
     FILE * fp;
     int countLines = 0;
     int i;
 
 
-    fp = fopen(file_name, "r");
+    fp = file;
     if (fp == NULL)
     {
         printf("We can't open the file.");
@@ -41,6 +41,5 @@ FILE * openFile()
     FILE * file = fopen(file_name, "r");
     
     return file;
-    
     
 }
