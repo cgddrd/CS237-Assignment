@@ -20,8 +20,8 @@ extern "C" {
         char course_id[1];
         char name[50];
         event_course * course;
-        
-             
+        track_node * current_checkpoint;
+               
     };
     
     typedef struct entrant competitor;
@@ -34,6 +34,8 @@ extern "C" {
     
     void loadCompetitors();
     void printCompetitors();
+    int checkNotStarted();
+    int checkStarted();
 
     
 #ifdef	__cplusplus

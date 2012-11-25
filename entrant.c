@@ -41,6 +41,8 @@ void loadCompetitors() {
                         }
                    
                         fscanf(entrant_file, " %[a-zA-Z ]s", competitor_collection[count].name);
+                        
+                        competitor_collection[count].current_checkpoint = NULL;
    
                 count++;
                
@@ -65,4 +67,39 @@ void printCompetitors()
                
            }
     
+}
+
+int checkNotStarted() {
+ 
+    int i = 0;
+    int count = 0;
+    for (i=0; i < no_of_competitors; i++) {
+        
+        if(competitor_collection[i].current_checkpoint == NULL) {
+            
+            count++;
+            
+        }
+             
+     }
+    
+    return count;
+    
+}
+
+int checkStarted() {
+ 
+    int i = 0;
+    int count = 0;
+    for (i=0; i < no_of_competitors; i++) {
+        
+        if(competitor_collection[i].current_checkpoint != NULL) {
+            
+            count++;
+            
+        }
+             
+     }
+    
+    return count;   
 }
