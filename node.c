@@ -9,10 +9,8 @@ void loadNodes()
        FILE * file_two = openFile("Enter node file name:");
        
        
-       
        if (file_two != NULL) {
            
-         
           // int lines = 0;
            int count = 0;
            

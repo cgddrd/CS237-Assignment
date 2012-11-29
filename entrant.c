@@ -43,6 +43,7 @@ void loadCompetitors() {
                         fscanf(entrant_file, " %[a-zA-Z ]s", competitor_collection[count].name);
                         
                         competitor_collection[count].current_checkpoint = NULL;
+                        competitor_collection[count].current_progress = 0;
    
                 count++;
                
@@ -132,7 +133,7 @@ void loadTimes() {
 
                 fscanf(time_file, " %[0-9:]s", time);
                 
-                updateEntrant(type, node, entrant_no, time);
+                update(type, node, entrant_no, time);
                     
            }
            
@@ -185,8 +186,42 @@ void updateEntrant(char * type, int node, int entrant, char * time) {
        
            
     }
-               
+             
+}
+
+void update (char * type, int node, int entrant, char * time) {
     
+    int i;
+    int temp_bool = 0;
+    
+    for (i = 0; i < no_of_competitors; i++) {
+        
+       if (competitor_collection[i].competitor_number == entrant) {
+           
+           int j;
+           
+           for (j = 0; j < competitor_collection[i].course->course_length; j++) {
+               
+               if (competitor_collection[i].course->course_nodes[j]->number == node && temp_bool !=1) {
+                   
+                   if (j > (competitor_collection[i].current_progress - 1)) {
+                       
+                     track_node * temp = competitor_collection[i].course->course_nodes[j];
+                    
+                     competitor_collection[i].current_checkpoint = temp;  
+                     
+                     competitor_collection[i].current_progress = j + 1;
+                     temp_bool = 1;
+                     
+                   }
+               }
+               
+           }
+           
+       } 
+        
+        
+    }
     
 }
 

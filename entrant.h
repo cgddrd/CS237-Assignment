@@ -32,6 +32,7 @@ extern "C" {
         track_node * current_checkpoint;
        // logged_time time;
         char time[5];
+        int current_progress;
                
     };
     
@@ -49,6 +50,7 @@ extern "C" {
     int checkStarted();
     void loadTimes();
     void updateEntrant(char * type, int node, int entrant, char * time);
+    void update (char * type, int node, int entrant, char * time);
 
     
 #ifdef	__cplusplus
