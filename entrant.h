@@ -14,6 +14,15 @@ extern "C" {
     
     #include "course.h"
 
+    struct time {
+        
+        int hour;
+        int minutes;
+        
+    };
+    
+    typedef struct time logged_time;
+
     struct entrant {
      
         int competitor_number;
@@ -21,6 +30,8 @@ extern "C" {
         char name[50];
         event_course * course;
         track_node * current_checkpoint;
+       // logged_time time;
+        char time[5];
                
     };
     
@@ -36,6 +47,8 @@ extern "C" {
     void printCompetitors();
     int checkNotStarted();
     int checkStarted();
+    void loadTimes();
+    void updateEntrant(char * type, int node, int entrant, char * time);
 
     
 #ifdef	__cplusplus

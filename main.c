@@ -46,12 +46,14 @@ void loadFiles() {
         
         loadCompetitors();
         printCompetitors();
+        
+        loadTimes();
       
 }
 
 void displayMenu() {
    
-    int option;
+    int option = 0;
 
     while (option != 8) {
 

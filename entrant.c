@@ -103,3 +103,91 @@ int checkStarted() {
     
     return count;   
 }
+
+void loadTimes() {
+    
+       FILE * time_file = openFile("Enter time file name:");
+       
+       if (time_file != NULL) {
+
+           int node;
+           int entrant_no;
+           char time[5];
+           char type [2];
+           
+           //no_of_competitors = countLines(entrant_file);
+           
+           //rewind(entrant_file); //Resets the file pointer back to the beginning - could also use fseek(fp, 0)
+           
+           //dynamic allocation of array - same as: "track_node nodeArray[lines];"
+          // competitor_collection = calloc(1, no_of_competitors * sizeof(competitor)); 
+           
+           while(!feof(time_file)) {
+
+                fscanf(time_file, " %s", type); //& needed here when using scan because you need a pointer to the 
+                                                               // first element - not needed with string as it is an array of chars
+                fscanf(time_file, " %d", &node);
+                
+                fscanf(time_file, " %d", &entrant_no);
+
+                fscanf(time_file, " %[0-9:]s", time);
+                
+                updateEntrant(type, node, entrant_no, time);
+                    
+           }
+           
+           fclose(time_file);
+           
+           
+           
+       } else {
+           
+          printf("\nFAIL!! - Cannot load file.");
+       }
+}
+
+void updateEntrant(char * type, int node, int entrant, char * time) {
+        
+    int i;
+         
+    printf("\nwank");
+    for (i = 0; i < no_of_competitors; i++) {
+        
+        if (competitor_collection[i].competitor_number == entrant) {
+            
+           // printf("\n BALH");
+            
+            int j;
+            int test = 0;
+            
+            for (j = 0; j < competitor_collection[i].course->course_length; j++) {
+                
+                if (competitor_collection[i].course->course_nodes[j]->number == node && test != 1){
+                    
+                    track_node * temp = competitor_collection[i].course->course_nodes[j];
+                    
+                    competitor_collection[i].current_checkpoint = temp;
+                    
+                    printf("\nCompetitor %d -> Current Node: %d, %s", competitor_collection[i].competitor_number, 
+                
+                competitor_collection[i].current_checkpoint->number, competitor_collection[i].current_checkpoint->type); 
+                    
+                    strcpy(competitor_collection[i].time, time);
+                    
+                    test = 1;
+                    
+                }
+                
+            }
+            
+               
+        }
+       
+           
+    }
+               
+    
+    
+}
+
+
