@@ -8,6 +8,8 @@ void loadCompetitors() {
     
        FILE * entrant_file = openFile("Enter entrants file name:");
        
+       list = malloc(sizeof(entrant_list));
+       
        if (entrant_file != NULL) {
 
            int count = 0;
@@ -20,32 +22,72 @@ void loadCompetitors() {
            competitor_collection = calloc(1, no_of_competitors * sizeof(competitor)); 
            
            while(!feof(entrant_file)) {
-
                
-                fscanf(entrant_file, " %d", &competitor_collection[count].competitor_number); //& needed here when using scan because you need a pointer to the 
+               linked_entrant * new_entrant = malloc(sizeof(linked_entrant));
+               
+               competitor * new_competitor = malloc(sizeof(competitor));
+               
+               //new_entrant->data = new_competitor;
+               
+               
+               fscanf(entrant_file, " %d", &new_competitor->competitor_number);
+               fscanf(entrant_file, " %c", &new_competitor->course_id);
+               
+              //  fscanf(entrant_file, " %d", &competitor_collection[count].competitor_number); //& needed here when using scan because you need a pointer to the 
                                                                // first element - not needed with string as it is an array of chars.
 
-                fscanf(entrant_file, " %s", competitor_collection[count].course_id);
+              //  fscanf(entrant_file, " %s", competitor_collection[count].course_id);
                 
                 int i;
                 
                 for (i = 0; i < no_of_courses; i++) {
 
                         
-                                if (strcmp (competitor_collection[count].course_id, course_collection[i].id) == 0) {
+                           /*     if (strcmp (competitor_collection[count].course_id, course_collection[i].id) == 0) {
                                                         
                                         competitor_collection[count].course = &course_collection[i];
                             
-                                 }
+                                 } */
+                    
+                    if (strcmp (&new_competitor->course_id, course_collection[i].id) == 0) {
+                                                        
+                                       // competitor_collection[count].course = &course_collection[i];
+                                        
+                                        new_competitor->course = &course_collection[i];
+                            
+                                 } 
                
                         }
                    
-                        fscanf(entrant_file, " %[a-zA-Z ]s", competitor_collection[count].name);
+                       // fscanf(entrant_file, " %[a-zA-Z ]s", competitor_collection[count].name);
+
+                        fscanf(entrant_file, " %[a-zA-Z ]s", new_competitor->name);
                         
-                        competitor_collection[count].current_checkpoint = NULL;
-                        competitor_collection[count].current_progress = 0;
+                        new_competitor->current_checkpoint = NULL;
+                        new_competitor->current_progress = 0;
+                        
+                        new_entrant->data = new_competitor;
+                
+                      //  competitor_collection[count].current_checkpoint = NULL;
+                       // competitor_collection[count].current_progress = 0;
    
-                count++;
+                        if (list->head == NULL) {
+                            
+                            list->head = new_entrant;
+                            
+                        } else {
+                            
+                            linked_entrant * temp = list->head;
+                            
+                            while (temp->next !=NULL) {
+                                
+                                temp = temp->next;
+                                
+                            }
+                            
+                            temp->next = new_entrant;
+                            list->tail = new_entrant;
+                        }
                
            }
            
@@ -56,6 +98,18 @@ void loadCompetitors() {
           printf("\nFAIL!! - Cannot load file.");
        }
 }
+
+void displayList(linked_entrant * current) {
+    
+   printf("\nCurrent Entrant: %d, %c, %s", current->data->competitor_number, current->data->course_id, current->data->name);  
+   
+   if (current->next != NULL) {
+       
+       displayList(current->next);
+       
+   } 
+}
+
 
 void printCompetitors() 
 {

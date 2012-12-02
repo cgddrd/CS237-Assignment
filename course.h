@@ -20,7 +20,6 @@ extern "C" {
         int course_length;
         track_node ** course_nodes;
         
-     
     };
     
     typedef struct course event_course;

@@ -15,9 +15,7 @@ extern "C" {
  struct event {
     char event_title[79];
     char event_date[79];
-    char event_time[5];
-    
-    
+    char event_time[5];  
 };
 
 typedef struct event event_description;

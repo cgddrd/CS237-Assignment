@@ -16,6 +16,7 @@ extern "C" {
      
     int number;
     char type[2];
+    struct track * tracks_list;
      
 };
 

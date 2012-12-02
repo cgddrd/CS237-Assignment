@@ -25,7 +25,6 @@ void loadNodes()
                
                 fscanf(file_two, " %d", &node_collection[count].number); //& needed here when using scan because you need a pointer to the 
                                                                // first element - not needed with string as it is an array of chars.
-
                 fscanf(file_two, " %[A-Za-z]s", node_collection[count].type);
    
                 count++;

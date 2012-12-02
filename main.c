@@ -45,18 +45,9 @@ void loadFiles() {
         printCourses();
         
         loadCompetitors();
-        printCompetitors();
-        
-        loadTimes();
-                
-        int i;
-        
-        for (i = 0; i < no_of_competitors; i++) {
-            
-          printf("\nCompetitor %d: Current Node = %d, Progress = %d", competitor_collection[i].competitor_number, 
-                  competitor_collection[i].current_checkpoint->number, competitor_collection[i].current_progress);  
-        }
-      
+        displayList(list->head);
+       // printCompetitors();
+                  
 }
 
 void displayMenu() {
@@ -66,6 +57,10 @@ void displayMenu() {
     while (option != 8) {
 
         printf("\nWelcome, please select an option:\n");
+        printf("\n*****************************************");
+        printf("\n  1. Display competitors yet to start");
+        printf("\n  2. Load time log file into system");
+        printf("\n*****************************************\n");
         scanf(" %d", &option);
 
         switch(option) {
@@ -74,7 +69,14 @@ void displayMenu() {
             printf("\nTotal competitors not started: %d", checkNotStarted());
             break;
         case 2:
-            printf("\nDiick2\n");
+            loadTimes();
+            int i;
+        
+            for (i = 0; i < no_of_competitors; i++) {
+            
+                printf("\nCompetitor %d: Current Node = %d, Progress = %d", competitor_collection[i].competitor_number, 
+                  competitor_collection[i].current_checkpoint->number, competitor_collection[i].current_progress);  
+                }
             break;
         case 3:
             printf("\nDiick3\n");

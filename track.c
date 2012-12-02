@@ -36,9 +36,11 @@ void loadTracks()
                         
                         if (start_node == node_collection[i].number) {
                             
-                            track_node * arse = &node_collection[i];
+                            track_node * temp_node = &node_collection[i];
                                                         
-                            track_collection[count].start_node = arse;
+                            track_collection[count].start_node = temp_node;
+                            
+                          //  temp_node->tracks_list
                             
                         }
                
