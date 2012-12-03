@@ -189,7 +189,7 @@ void loadTimes() {
             fscanf(time_file, " %d", &entrant_no);
 
             fscanf(time_file, " %[0-9:]s", time);
-
+            
             update2(list->head, type, node, entrant_no, time);
 
         }
@@ -317,6 +317,16 @@ void update2(linked_entrant * current, char * type, int node, int entrant, char 
                     strcpy(current->data->last_logged_time, time);
                     
                     current->data->last_logged_node_index = j;
+                    
+            
+               char *hours = (char*) malloc(2);
+               char *mins = (char*) malloc(2);
+                strncpy(mins, time+3, 5);
+                strncpy(hours, time, 2);
+                
+                current->data->test_time.hour = atoi(hours);
+                
+                current->data->test_time.minutes = atoi(mins);
 
                     temp_bool = 1;
 
@@ -381,6 +391,27 @@ void updateOthers(linked_entrant * current, linked_entrant * new, char * time) {
                         current->data->current_status = 3;
                         
                     } else if (current->data->current_status == 3) {
+                        
+                        course_track current_track = track_collection[current->data->last_logged_track_index];
+                        
+                        int new_entrant_time = (new->data->test_time.hour * 60) + (new->data->test_time.minutes);
+                        
+                        int current_entrant_time = (current->data->test_time.hour * 60) + (current->data->test_time.minutes);
+                        
+                        int time_difference = new_entrant_time - current_entrant_time;
+                        
+                        
+                    /*    if (time_difference > current_track.minutes) {
+                            
+                            printf("\nCurrent competitor %d should move onto their next checkpoint", current->data->competitor_number);
+                            
+                        } else {
+                           
+                            printf("\nCurrent competitor %d has not reached the end of their track -> track %d", current->data->competitor_number, current_track.number);
+                            
+                        } */
+                        
+                        if (time_difference > current_track.minutes) {
                        
                        int next_node = (current->data->last_logged_node_index) + 1;
                        
@@ -417,6 +448,8 @@ void updateOthers(linked_entrant * current, linked_entrant * new, char * time) {
                            
                        } */
                         
+                        
+                    }
                         
                     }
 
