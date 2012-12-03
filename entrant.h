@@ -13,6 +13,7 @@ extern "C" {
 #endif
     
     #include "course.h"
+        #include "track.h"
 
     struct time {
         
@@ -22,6 +23,14 @@ extern "C" {
     };
     
     typedef struct time logged_time;
+    
+    typedef enum status {
+        NOTSTARTED,
+        CHECKPOINT,
+        JUNCTION,
+        TRACK,
+        FINISHED
+    } entrant_status;
 
     struct entrant {
      
@@ -29,10 +38,13 @@ extern "C" {
         char course_id;
         char name[50];
         event_course * course;
-        track_node * current_checkpoint;
-       // logged_time time;
-        char time[5];
+        track_node * last_logged_node;
+        /*logged_time test_time; */
+        char last_logged_time[5];
         int current_progress;
+        entrant_status current_status;
+        int last_logged_node_index;
+        int last_logged_track_index;
                
     };
     
@@ -61,6 +73,9 @@ extern "C" {
     
     entrant_list * list;
     
+    
+    
+    
     int no_of_competitors;
     
     void loadCompetitors();
@@ -71,6 +86,10 @@ extern "C" {
     void loadTimes();
     void updateEntrant(char * type, int node, int entrant, char * time);
     void update (char * type, int node, int entrant, char * time);
+    void update2 (linked_entrant * current, char * type, int node, int entrant, char * time);
+    void updateOthers(linked_entrant * current, linked_entrant * new, char * time);
+    void getEntrantStatus(linked_entrant * entrant);
+    void getAllEntrantStatuses();
 
     
 #ifdef	__cplusplus

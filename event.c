@@ -7,7 +7,6 @@ void loadEventDes() {
     
     event = calloc(1, sizeof(event_description));
     
-    //event_description * temp_event = evt;
     
     FILE * file = openFile("Enter event description file name:");
        
@@ -17,7 +16,6 @@ void loadEventDes() {
        
     fclose(file);
        
-    //printf("\n%s\n%s\n%s\n ", event->event_title, event->event_date, event->event_time);
     
     
 }

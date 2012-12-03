@@ -71,37 +71,37 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cs237-assignment: ${OBJECTFILES}
 ${OBJECTDIR}/track.o: track.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/track.o track.c
+	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/track.o track.c
 
 ${OBJECTDIR}/course.o: course.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/course.o course.c
+	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/course.o course.c
 
 ${OBJECTDIR}/fileIO.o: fileIO.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/fileIO.o fileIO.c
+	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/fileIO.o fileIO.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
 
 ${OBJECTDIR}/node.o: node.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/node.o node.c
+	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/node.o node.c
 
 ${OBJECTDIR}/event.o: event.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/event.o event.c
+	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/event.o event.c
 
 ${OBJECTDIR}/entrant.o: entrant.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -Wall -MMD -MP -MF $@.d -o ${OBJECTDIR}/entrant.o entrant.c
+	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/entrant.o entrant.c
 
 # Subprojects
 .build-subprojects:

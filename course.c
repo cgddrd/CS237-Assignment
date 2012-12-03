@@ -13,16 +13,14 @@ void loadCourses() {
            
            no_of_courses = countLines(course_file);
            
-           rewind(course_file); //Resets the file pointer back to the beginning - could also use fseek(fp, 0)
+           rewind(course_file); 
            
-           //dynamic allocation of array - same as: "track_node nodeArray[lines];"
            course_collection = calloc(1, no_of_courses * sizeof(event_course)); 
            
            while(!feof(course_file)) {
 
                
-                fscanf(course_file, " %s", course_collection[count].id); //& needed here when using scan because you need a pointer to the 
-                                                               // first element - not needed with string as it is an array of chars.
+                fscanf(course_file, " %s", course_collection[count].id); 
 
                 fscanf(course_file, " %d", &course_collection[count].course_length);
                 
@@ -40,7 +38,6 @@ void loadCourses() {
                         int j = 0;
                         for (j=0; j < no_of_nodes; j++) {
                
-                        //printf("\nNode %d: %d -> %s", i, node_collection[i].number, node_collection[i].type);
                         
                                 if (current_node == node_collection[j].number) {
 

@@ -46,7 +46,7 @@ void loadFiles() {
         
         loadCompetitors();
         displayList(list->head);
-       // printCompetitors();
+       /* printCompetitors(); */
                   
 }
 
@@ -70,13 +70,7 @@ void displayMenu() {
             break;
         case 2:
             loadTimes();
-            int i;
-        
-            for (i = 0; i < no_of_competitors; i++) {
-            
-                printf("\nCompetitor %d: Current Node = %d, Progress = %d", competitor_collection[i].competitor_number, 
-                  competitor_collection[i].current_checkpoint->number, competitor_collection[i].current_progress);  
-                }
+            getAllEntrantStatuses();
             break;
         case 3:
             printf("\nDiick3\n");

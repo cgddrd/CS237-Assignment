@@ -11,20 +11,17 @@ void loadNodes()
        
        if (file_two != NULL) {
            
-          // int lines = 0;
            int count = 0;
            
            no_of_nodes = countLines(file_two);
            
-           rewind(file_two); //Resets the file pointer back to the beginning - could also use fseek(fp, 0)
+           rewind(file_two); 
            
-           //dynamic allocation of array - same as: "track_node nodeArray[lines];"
            node_collection = calloc(1, no_of_nodes * sizeof(track_node)); 
            
            while(!feof(file_two)) { 
                
-                fscanf(file_two, " %d", &node_collection[count].number); //& needed here when using scan because you need a pointer to the 
-                                                               // first element - not needed with string as it is an array of chars.
+                fscanf(file_two, " %d", &node_collection[count].number); 
                 fscanf(file_two, " %[A-Za-z]s", node_collection[count].type);
    
                 count++;

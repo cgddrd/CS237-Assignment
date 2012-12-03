@@ -47,6 +47,7 @@
       </toolsSet>
       <compileType>
         <cTool>
+          <standard>2</standard>
           <warningLevel>2</warningLevel>
         </cTool>
       </compileType>
