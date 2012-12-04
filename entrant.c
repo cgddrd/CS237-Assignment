@@ -46,6 +46,22 @@ void loadCompetitors() {
             //  fscanf(entrant_file, " %s", competitor_collection[count].course_id); */
 
             int i;
+            
+            linked_course * temp_course = courselist->head;
+            
+            while (temp_course !=NULL) {
+             
+                   if (strcmp(&new_competitor->course_id, &temp_course->data->id) == 0) {
+
+                    /* competitor_collection[count].course = &course_collection[i]; */
+
+                    new_competitor->course = temp_course->data;
+
+                }
+                
+                   temp_course = temp_course->next;
+                
+            }
 
             for (i = 0; i < no_of_courses; i++) {
 
@@ -56,13 +72,7 @@ void loadCompetitors() {
                             
                       } */
 
-                if (strcmp(&new_competitor->course_id, course_collection[i].id) == 0) {
-
-                    /* competitor_collection[count].course = &course_collection[i]; */
-
-                    new_competitor->course = &course_collection[i];
-
-                }
+             
 
             }
 
@@ -263,22 +273,26 @@ void updateOthers(linked_entrant * current, linked_entrant * new, char * time) {
                         node2 = current->data->course->course_nodes[(current->data->last_logged_node_index) + 1]->number;
 
                         int i;
-
-                        for (i = 0; i < no_of_tracks; i++) {
-                           
-
-                            if ((track_collection[i].start_node->number == node1 && track_collection[i].end_node->number == node2) || (track_collection[i].start_node->number == node2 && track_collection[i].end_node->number == node1))
+                        
+                        linked_track * temp_track = tracklist->head;
+                        
+                        while (temp_track != NULL) {
+                            
+                            course_track * track = temp_track->data;
+                            
+                            if ((track->start_node->number == node1 && track->end_node->number == node2) || (track->start_node->number == node2 && track->end_node->number == node1))
                                 {
                                 
-                                current->data->last_logged_track_index = i;
+                                current->data->last_logged_track = track;
                             }
-                        }
+                            
+                            temp_track = temp_track->next;
+                            
+                        } 
                         
                         current->data->current_status = 3;
                         
                     } else if (current->data->current_status == 3) {
-                        
-                        course_track current_track = track_collection[current->data->last_logged_track_index];
                         
                         int new_entrant_time = (new->data->test_time.hour * 60) + (new->data->test_time.minutes);
                         
@@ -297,7 +311,7 @@ void updateOthers(linked_entrant * current, linked_entrant * new, char * time) {
                             
                         } */
                         
-                        if (time_difference > current_track.minutes) {
+                        if (time_difference > current->data->last_logged_track->minutes) {
                        
                        int next_node = (current->data->last_logged_node_index) + 1;
                        

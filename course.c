@@ -7,9 +7,15 @@ void loadCourses() {
     
        FILE * course_file = openFile("Enter courses file name:");
        
+        courselist = malloc(sizeof (course_list));
+    
+    courselist->head = NULL;
+    courselist->tail = NULL;
+       
        if (course_file != NULL) {
 
            int count = 0;
+           int status = 0;
            
            no_of_courses = countLines(course_file);
            
@@ -19,19 +25,24 @@ void loadCourses() {
            
            while(!feof(course_file)) {
 
+               linked_course * new_item = malloc(sizeof (linked_course));
                
-                fscanf(course_file, " %s", course_collection[count].id); 
+               event_course * new_course = malloc(sizeof (event_course));
+               
+               new_item->next = NULL;
+               
+                status = fscanf(course_file, " %c", &new_course->id); 
 
-                fscanf(course_file, " %d", &course_collection[count].course_length);
+                fscanf(course_file, " %d", &new_course->course_length);
                 
                 
-                course_collection[count].course_nodes = calloc(1, course_collection[count].course_length * sizeof(track_node));
+                new_course->course_nodes = calloc(1, new_course->course_length * sizeof(track_node));
                 
                 int i;
                 
                 int current_node;
                 
-                for (i = 0; i < course_collection[count].course_length; i++) {
+                for (i = 0; i < new_course->course_length; i++) {
                     
                 fscanf(course_file, " %d", &current_node);
                 
@@ -41,7 +52,8 @@ void loadCourses() {
                     
                     if (current_node == temp->data->number) {
 
-                              course_collection[count].course_nodes[i] = temp->data;
+                              new_course->course_nodes[i] = temp->data;
+                              printf("\nWANK: %c, %d", new_course->id, new_course->course_nodes[i]->number);
                             
                                  }
                     
@@ -63,6 +75,32 @@ void loadCourses() {
                         } */
                     
                 }
+                
+                new_item->data = new_course;
+                
+                if (status > 0) {
+
+                if (courselist->head == NULL) {
+
+                    courselist->head = new_item;
+                    courselist->tail = new_item;
+
+                } else {
+
+                    linked_course * temp = courselist->tail;
+
+                    /*       while (temp->next !=NULL) {
+                                
+                               temp = temp->next;
+                                
+                           } */
+
+                    temp->next = new_item;
+                    courselist->tail = new_item;
+                }
+
+
+            }
 
    
                 count++;
@@ -79,22 +117,27 @@ void loadCourses() {
 
 void printCourses() 
 {
-         int i = 0;
-         for (i=0; i < no_of_courses; i++) {
-               
-             printf("\nCourse %d: ID: %s, Length: %d", i, course_collection[i].id, course_collection[i].course_length);
+   
+    linked_course * temp = courselist->head;
+    
+    while (temp !=NULL) {
+        
+        printf("\nCourse ID: %c, Length: %d", temp->data->id, temp->data->course_length);
              printf("\nNodes in course:");
              
-             int j;
-             for (j = 0; j < course_collection[i].course_length; j++) {
+             int i;
+             for (i = 0; i < temp->data->course_length; i++) {
                 
-                  printf("\nNode %d: No: %d, ID: %s", j, course_collection[i].course_nodes[j]->number, course_collection[i].course_nodes[j]->type);
+                  printf("\nNode %d: No: %d, ID: %s", i, temp->data->course_nodes[i]->number, temp->data->course_nodes[i]->type);
                  
                  
              }
              
              printf("\n\n");
-           }
+        
+        temp = temp->next;
+        
+    } 
     
 }
 

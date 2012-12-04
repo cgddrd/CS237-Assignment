@@ -76,7 +76,7 @@ void displayMenu() {
             break;
         case 2:
             loadTimes();
-            getAllEntrantStatuses();
+            getAllEntrantStatuses(); 
             break;
         case 3:
         {

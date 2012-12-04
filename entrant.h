@@ -39,6 +39,7 @@ extern "C" {
         char name[50];
         event_course * course;
         track_node * last_logged_node;
+        course_track * last_logged_track;
         logged_time test_time; 
         char last_logged_time[5];
         char start_time[5];
