@@ -73,8 +73,14 @@ void displayMenu() {
             getAllEntrantStatuses();
             break;
         case 3:
-            printf("\nDiick3\n");
+        {
+            int entrant;
+            printf("Enter required competitor number:\n");
+            scanf(" %d", &entrant);
+            userUpdateEntrant(list->head, entrant);
+            getAllEntrantStatuses(list->head);
             break;
+        }
         case 5:
             printf("\nDiick5\n");
             break;

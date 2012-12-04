@@ -178,12 +178,12 @@ void loadTimes() {
         int node;
         int entrant_no;
         char time[5];
-        char type [2];
+        char type;
 
 
         while (!feof(time_file)) {
 
-            fscanf(time_file, " %s", type); 
+            fscanf(time_file, " %c", &type); 
             fscanf(time_file, " %d", &node);
 
             fscanf(time_file, " %d", &entrant_no);
@@ -280,7 +280,7 @@ void update(char * type, int node, int entrant, char * time) {
 
 }
 
-void update2(linked_entrant * current, char * type, int node, int entrant, char * time) {
+void update2(linked_entrant * current, char type, int node, int entrant, char * time) {
 
     int temp_bool = 0;
 
@@ -514,11 +514,46 @@ void getAllEntrantStatuses() {
     
     
 }
+
+void userUpdateEntrant(linked_entrant * entrant, int requested_no) {
+
+    if (entrant->data->competitor_number == requested_no) {
+       
+       int node;
+       char time[5];
+       char course_id;
+       
+       
+       
+       printf("\nEnter checkpoint number:\n");
+       scanf(" %d", &node);
+       
+       printf("\nEnter recorded for checkpoint time (HH:MM):\n");
+       scanf(" %s", time);
+       
+       course_id = entrant->data->course_id;
+       
+       update2(list->head, course_id, node, requested_no, time);
+        
+        
+        
+    } else {
+        
+        if (entrant->next !=NULL) {
+            
+            userUpdateEntrant(entrant->next, requested_no);
+            
+        } else {
+            
+            printf("\nEntrant cannot be located. Please try again.");
+        }
+    }
     
     
-
-
-
+    
+    
+    
+}
 
 
 

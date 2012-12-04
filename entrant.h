@@ -86,10 +86,11 @@ extern "C" {
     void loadTimes();
     void updateEntrant(char * type, int node, int entrant, char * time);
     void update (char * type, int node, int entrant, char * time);
-    void update2 (linked_entrant * current, char * type, int node, int entrant, char * time);
+    void update2 (linked_entrant * current, char type, int node, int entrant, char * time);
     void updateOthers(linked_entrant * current, linked_entrant * new, char * time);
     void getEntrantStatus(linked_entrant * entrant);
     void getAllEntrantStatuses();
+    void userUpdateEntrant(linked_entrant * entrant, int requested_no);
 
     
 #ifdef	__cplusplus
