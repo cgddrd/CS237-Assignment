@@ -24,7 +24,7 @@ typedef event_description * event_des_ptr;
 
 event_description * event;
 
-void loadEventDes();
+int loadEventDes();
 
 void printEventDes();
 

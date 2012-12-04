@@ -9,6 +9,9 @@ void loadCompetitors() {
     FILE * entrant_file = openFile("Enter entrants file name:");
 
     list = malloc(sizeof (entrant_list));
+    
+    list->head = NULL;
+    list->tail = NULL;
 
     if (entrant_file != NULL) {
 
@@ -26,6 +29,8 @@ void loadCompetitors() {
             int status;
 
             linked_entrant * new_entrant = malloc(sizeof (linked_entrant));
+            
+            new_entrant->next = NULL;
 
             competitor * new_competitor = malloc(sizeof (competitor));
 

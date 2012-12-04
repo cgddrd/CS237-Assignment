@@ -32,9 +32,16 @@ int main(int argc, char** argv) {
 
 void loadFiles() {
     
-        loadEventDes();
-        printEventDes();
-
+        if(loadEventDes() == 0) {
+            
+            printf("LOAD ERROR OCCURED!!");
+            
+        } else {
+          
+            printEventDes();
+            
+        };
+        
         loadNodes();
         printNodes();
                 
