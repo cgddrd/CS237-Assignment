@@ -111,63 +111,6 @@ void loadCompetitors() {
     }
 }
 
-void displayList(linked_entrant * current) {
-
-    printf("\nCurrent Entrant: %d, %c, %s", current->data->competitor_number, current->data->course_id, current->data->name);
-
-    if (current->next != NULL) {
-
-        displayList(current->next);
-
-    }
-}
-
-void printCompetitors() {
-    int i = 0;
-    for (i = 0; i < no_of_competitors; i++) {
-
-        printf("\nCompetitor %d: No: %d, Name: %s, Course ID: %s", i, competitor_collection[i].competitor_number,
-
-                competitor_collection[i].name, competitor_collection[i].course->id);
-
-    }
-
-}
-
-int checkNotStarted() {
-
-    int i = 0;
-    int count = 0;
-    for (i = 0; i < no_of_competitors; i++) {
-
-        if (competitor_collection[i].last_logged_node == NULL) {
-
-            count++;
-
-        }
-
-    }
-
-    return count;
-
-}
-
-int checkStarted() {
-
-    int i = 0;
-    int count = 0;
-    for (i = 0; i < no_of_competitors; i++) {
-
-        if (competitor_collection[i].last_logged_node != NULL) {
-
-            count++;
-
-        }
-
-    }
-
-    return count;
-}
 
 void loadTimes() {
 
@@ -204,82 +147,6 @@ void loadTimes() {
     }
 }
 
-void updateEntrant(char * type, int node, int entrant, char * time) {
-
-    int i;
-
-    printf("\nwank");
-    for (i = 0; i < no_of_competitors; i++) {
-
-        if (competitor_collection[i].competitor_number == entrant) {
-
-            int j;
-            int test = 0;
-
-            for (j = 0; j < competitor_collection[i].course->course_length; j++) {
-
-                if (competitor_collection[i].course->course_nodes[j]->number == node && test != 1) {
-
-                    track_node * temp = competitor_collection[i].course->course_nodes[j];
-
-                    competitor_collection[i].last_logged_node = temp;
-
-                    printf("\nCompetitor %d -> Current Node: %d, %s", competitor_collection[i].competitor_number,
-
-                            competitor_collection[i].last_logged_node->number, competitor_collection[i].last_logged_node->type);
-
-                    strcpy(competitor_collection[i].last_logged_time, time);
-
-                    test = 1;
-
-                }
-
-            }
-
-
-        }
-
-
-    }
-
-}
-
-void update(char * type, int node, int entrant, char * time) {
-
-    int i;
-    int temp_bool = 0;
-
-    for (i = 0; i < no_of_competitors; i++) {
-
-        if (competitor_collection[i].competitor_number == entrant) {
-
-            int j;
-
-            for (j = 0; j < competitor_collection[i].course->course_length; j++) {
-
-                if (competitor_collection[i].course->course_nodes[j]->number == node && temp_bool != 1) {
-
-                    if (j > (competitor_collection[i].current_progress - 1)) {
-
-                        track_node * temp = competitor_collection[i].course->course_nodes[j];
-
-                        competitor_collection[i].last_logged_node = temp;
-
-                        competitor_collection[i].current_progress = j + 1;
-                        temp_bool = 1;
-
-                    }
-                }
-
-            }
-
-        }
-
-
-    }
-
-}
-
 void update2(linked_entrant * current, char type, int node, int entrant, char * time) {
 
     int temp_bool = 0;
@@ -291,6 +158,7 @@ void update2(linked_entrant * current, char type, int node, int entrant, char * 
         for (j = 0; j < current->data->course->course_length; j++) {
 
             if (current->data->course->course_nodes[j]->number == node && temp_bool != 1) {
+                
 
                 if (j > (current->data->current_progress - 1)) {
 
@@ -313,14 +181,19 @@ void update2(linked_entrant * current, char type, int node, int entrant, char * 
                     current->data->last_logged_node = temp;
 
                     current->data->current_progress = j + 1;
-
+                    
                     strcpy(current->data->last_logged_time, time);
+                    
+                     if (current->data->current_progress == 1) {
+                        
+                        strcpy(current->data->start_time, time);
+                     }
                     
                     current->data->last_logged_node_index = j;
                     
             
-               char *hours = (char*) malloc(2);
-               char *mins = (char*) malloc(2);
+                char *hours = (char*) malloc(2);
+                char *mins = (char*) malloc(2);
                 strncpy(mins, time+3, 5);
                 strncpy(hours, time, 2);
                 
@@ -335,6 +208,10 @@ void update2(linked_entrant * current, char type, int node, int entrant, char * 
                         entrant_status new_status = FINISHED;
 
                         current->data->current_status = new_status;
+                        
+                        strcpy(current->data->finish_time, time);
+                        
+                        
 
                     }
                     
@@ -356,7 +233,11 @@ void update2(linked_entrant * current, char type, int node, int entrant, char * 
 
         update2(current->next, type, node, entrant, time);
 
-         }
+         } else {
+            
+            printf("\nEntrant cannot be located. Please try again.");
+        }
+    
         
     }
 
@@ -465,8 +346,7 @@ void updateOthers(linked_entrant * current, linked_entrant * new, char * time) {
 
         updateOthers(current->next, new, time);
 
-         }
-    
+         } 
 }
 
 void getEntrantStatus(linked_entrant * entrant) {
@@ -523,17 +403,38 @@ void userUpdateEntrant(linked_entrant * entrant, int requested_no) {
        char time[5];
        char course_id;
        
-       
+       int accept_bool = 0;
        
        printf("\nEnter checkpoint number:\n");
        scanf(" %d", &node);
        
-       printf("\nEnter recorded for checkpoint time (HH:MM):\n");
+       int i;
+       
+       for (i = 0; i < entrant->data->course->course_length; i++) {
+           
+           if (entrant->data->course->course_nodes[i]->number == node && strcmp(entrant->data->course->course_nodes[i]->type,"CP") == 0) {
+               
+              accept_bool = 1; 
+               
+               
+           }
+
+       }
+           
+           if (accept_bool == 1) {
+       
+                               printf("\nEnter recorded for checkpoint time (HH:MM):\n");
        scanf(" %s", time);
        
        course_id = entrant->data->course_id;
        
-       update2(list->head, course_id, node, requested_no, time);
+       update2(list->head, course_id, node, requested_no, time);  
+               
+           } else {
+               
+              printf("\nEntered node is not a checkpoint. Please try again.\n"); 
+               
+           }
         
         
         

@@ -45,7 +45,6 @@ void loadFiles() {
         printCourses();
         
         loadCompetitors();
-        displayList(list->head);
        /* printCompetitors(); */
                   
 }
@@ -66,7 +65,7 @@ void displayMenu() {
         switch(option) {
 
         case 1:
-            printf("\nTotal competitors not started: %d", checkNotStarted());
+            printf("\nTotal competitors not started: ");
             break;
         case 2:
             loadTimes();
@@ -78,7 +77,7 @@ void displayMenu() {
             printf("Enter required competitor number:\n");
             scanf(" %d", &entrant);
             userUpdateEntrant(list->head, entrant);
-            getAllEntrantStatuses(list->head);
+            getAllEntrantStatuses();
             break;
         }
         case 5:

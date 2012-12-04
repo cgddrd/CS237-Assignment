@@ -41,6 +41,8 @@ extern "C" {
         track_node * last_logged_node;
         logged_time test_time; 
         char last_logged_time[5];
+        char start_time[5];
+        char finish_time[5];
         int current_progress;
         entrant_status current_status;
         int last_logged_node_index;
