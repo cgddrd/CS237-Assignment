@@ -390,7 +390,7 @@ void getAllEntrantStatuses() {
     
     linked_entrant * temp = list->head;
     
-    while (temp->next !=NULL) {
+    while (temp !=NULL) {
         
         getEntrantStatus(temp);
         temp = temp->next;

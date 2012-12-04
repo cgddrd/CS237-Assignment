@@ -24,6 +24,27 @@ typedef struct node track_node;
 
 typedef track_node * track_node_ptr;
 
+    typedef struct node_list_item linked_node;
+    
+    struct node_list_item {
+    
+    track_node * data;
+    linked_node * next;
+    
+    };
+   
+    struct node_linked_list {
+    
+    linked_node * head;
+    linked_node * tail;
+    int no_of_items;
+    
+   };
+   
+   typedef struct node_linked_list node_list;
+   
+    node_list * nodelist;
+
 track_node * node_collection;
 
 int no_of_nodes;

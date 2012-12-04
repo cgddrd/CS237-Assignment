@@ -51,17 +51,18 @@ extern "C" {
     };
     
     typedef struct entrant competitor;
-    
-    typedef struct linked_list_item linked_entrant;
+   
 
-    struct linked_list_item {
+    typedef struct entrant_list_item linked_entrant;
+    
+    struct entrant_list_item {
     
     competitor * data;
     linked_entrant * next;
     
     };
-    
-    struct linked_list {
+   
+    struct entrant_linked_list {
     
     linked_entrant * head;
     linked_entrant * tail;
@@ -69,7 +70,7 @@ extern "C" {
     
    };
    
-   typedef struct linked_list entrant_list;
+   typedef struct entrant_linked_list entrant_list;
     
     competitor * competitor_collection;
     

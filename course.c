@@ -34,8 +34,23 @@ void loadCourses() {
                 for (i = 0; i < course_collection[count].course_length; i++) {
                     
                 fscanf(course_file, " %d", &current_node);
+                
+                linked_node * temp = nodelist->head;
+                
+                while (temp !=NULL){
                     
-                        int j = 0;
+                    if (current_node == temp->data->number) {
+
+                              course_collection[count].course_nodes[i] = temp->data;
+                            
+                                 }
+                    
+                    temp = temp->next;
+                    
+                }
+                
+                    
+                   /*     int j = 0;
                         for (j=0; j < no_of_nodes; j++) {
                
                         
@@ -45,7 +60,7 @@ void loadCourses() {
                             
                                  }
                
-                        }
+                        } */
                     
                 }
 

@@ -28,11 +28,31 @@ void loadTracks()
                                                                 first element - not needed with string as it is an array of chars. */
 
                 fscanf(track_file, " %d", &start_node);
+                fscanf(track_file, " %d", &end_node);
                  
                 int i = 0;
-                for (i=0; i < no_of_nodes; i++) {
+                
+                linked_node * temp = nodelist->head;
+                
+                while (temp !=NULL) {
+                    
+                    if (start_node == temp->data->number) {
+                        
+                      track_collection[count].start_node = temp->data;  
+                    }
+                    
+                    if (end_node == temp->data->number) {
+                       
+                        track_collection[count].end_node = temp->data;
+                        
+                    }
+                    
+                    temp = temp->next;
+                    
+                }
+                
+         /*       for (i=0; i < no_of_nodes; i++) {
                
-                        /*printf("\nNode %d: %d -> %s", i, node_collection[i].number, node_collection[i].type); */
                         
                         if (start_node == node_collection[i].number) {
                             
@@ -40,17 +60,17 @@ void loadTracks()
                                                         
                             track_collection[count].start_node = temp_node;
                             
-                          /*  temp_node->tracks_list */
+                          /*  temp_node->tracks_list 
                             
                         }
                
-                }
+                } */
                 
-                  fscanf(track_file, " %d", &end_node);
+                  
                  
-                for (i=0; i < no_of_nodes; i++) {
+            /*    for (i=0; i < no_of_nodes; i++) {
                
-                        /*printf("\nNode %d: %d -> %s", i, node_collection[i].number, node_collection[i].type); */
+                        /*printf("\nNode %d: %d -> %s", i, node_collection[i].number, node_collection[i].type); 
                         
                         if (end_node == node_collection[i].number) {
     
@@ -58,7 +78,7 @@ void loadTracks()
                             
                         }
                
-                }
+                } */
                   
                  fscanf(track_file, " %d", &track_collection[count].minutes);
    
