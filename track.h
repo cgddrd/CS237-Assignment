@@ -13,6 +13,7 @@ extern "C" {
 #endif
     
     #include "node.h"
+#include "linked_list.h"
     
     struct track {
      
@@ -25,32 +26,8 @@ extern "C" {
     
     typedef struct track course_track;
 
-    typedef course_track * course_track_ptr;
-    
-     typedef struct track_list_item linked_track;
-    
-    struct track_list_item {
-    
-    course_track * data;
-    linked_track * next;
-    
-    };
-   
-    struct track_linked_list {
-    
-    linked_track * head;
-    linked_track * tail;
-    int no_of_items;
-    
-   };
-   
-   typedef struct track_linked_list track_list;
-   
-    track_list * tracklist;
-    
-    int no_of_tracks;
-
-    course_track * track_collection;
+   linked_item * linked_track;
+   list * track_list;
     
     void loadTracks();
     void printTracks();

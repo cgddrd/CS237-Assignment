@@ -8,26 +8,20 @@ void loadTracks()
     
        FILE * track_file = openFile("Enter track file name:");
        
-       tracklist = malloc(sizeof (track_list));
+       track_list = malloc(sizeof (list));
     
-    tracklist->head = NULL;
-    tracklist->tail = NULL;
+    track_list->head = NULL;
+    track_list->tail = NULL;
        
        if (track_file != NULL) {
 
            int count = 0;
            int status = 0;
-           
-           no_of_tracks = countLines(track_file);
-           
-           rewind(track_file); /*Resets the file pointer back to the beginning - could also use fseek(fp, 0) */
-           
-           /*dynamic allocation of array - same as: "track_node nodeArray[lines];" */
-           track_collection = calloc(1, no_of_tracks * sizeof(course_track)); 
+
            
            while(!feof(track_file)) {
                
-               linked_track * new_item = malloc(sizeof (linked_node));
+               linked_item * new_item = malloc(sizeof (linked_item));
                
                course_track * new_track = malloc(sizeof (course_track));
                
@@ -44,16 +38,18 @@ void loadTracks()
                  
                 int i = 0;
                 
-                linked_node * temp = nodelist->head;
+                linked_item * temp = node_list->head;
                 
                 while (temp !=NULL) {
                     
-                    if (start_node == temp->data->number) {
+                    track_node * temp_node = (track_node *) temp->data;
+                    
+                    if (start_node == temp_node->number) {
                         
                       new_track->start_node = temp->data;  
                     }
                     
-                    if (end_node == temp->data->number) {
+                    if (end_node == temp_node->number) {
                        
                         new_track->end_node = temp->data;
                         
@@ -98,14 +94,14 @@ void loadTracks()
                  
                 if (status > 0) {
 
-                if (tracklist->head == NULL) {
+                if (track_list->head == NULL) {
 
-                    tracklist->head = new_item;
-                    tracklist->tail = new_item;
+                    track_list->head = new_item;
+                    track_list->tail = new_item;
 
                 } else {
 
-                    linked_track * temp = tracklist->tail;
+                    linked_item * temp = track_list->tail;
 
                     /*       while (temp->next !=NULL) {
                                 
@@ -114,7 +110,7 @@ void loadTracks()
                            } */
 
                     temp->next = new_item;
-                    tracklist->tail = new_item;
+                    track_list->tail = new_item;
                 }
 
 
@@ -135,15 +131,17 @@ void loadTracks()
 void printTracks() 
 {
 
-          linked_track * temp = tracklist->head;
+          linked_item * temp_item = track_list->head;
     
-    while (temp !=NULL) {
+    while (temp_item !=NULL) {
         
-        printf("\nTrack No: %d, SN: %d, EN: %d, Min: %d", temp->data->number, temp->data->start_node->number, 
+        course_track * temp_track = (course_track *) temp_item->data;
+        
+        printf("\nTrack No: %d, SN: %d, EN: %d, Min: %d", temp_track->number, temp_track->start_node->number, 
                      
-                     temp->data->end_node->number, temp->data->minutes);  
+                     temp_track->end_node->number, temp_track->minutes);  
         
-        temp = temp->next;
+        temp_item = temp_item->next;
         
     } 
     

@@ -8,10 +8,10 @@ void loadCompetitors() {
 
     FILE * entrant_file = openFile("Enter entrants file name:");
 
-    list = malloc(sizeof (entrant_list));
+    entrant_list = malloc(sizeof (list));
     
-    list->head = NULL;
-    list->tail = NULL;
+    entrant_list->head = NULL;
+    entrant_list->tail = NULL;
 
     if (entrant_file != NULL) {
 
@@ -28,9 +28,9 @@ void loadCompetitors() {
 
             int status;
 
-            linked_entrant * new_entrant = malloc(sizeof (linked_entrant));
+            linked_entrant = malloc(sizeof (linked_item));
             
-            new_entrant->next = NULL;
+            linked_entrant->next = NULL;
 
             competitor * new_competitor = malloc(sizeof (competitor));
 
@@ -47,15 +47,17 @@ void loadCompetitors() {
 
             int i;
             
-            linked_course * temp_course = courselist->head;
+            linked_item * temp_course = course_list->head;
             
             while (temp_course !=NULL) {
-             
-                   if (strcmp(&new_competitor->course_id, &temp_course->data->id) == 0) {
+                
+                   event_course * temp_event = (event_course *) temp_course->data;
+       
+                   if (strcmp(&new_competitor->course_id, &temp_event->id) == 0) {
 
                     /* competitor_collection[count].course = &course_collection[i]; */
 
-                    new_competitor->course = temp_course->data;
+                    new_competitor->course = temp_event;
 
                 }
                 
@@ -63,18 +65,7 @@ void loadCompetitors() {
                 
             }
 
-            for (i = 0; i < no_of_courses; i++) {
 
-
-                /*     if (strcmp (competitor_collection[count].course_id, course_collection[i].id) == 0) {
-                                                        
-                             competitor_collection[count].course = &course_collection[i];
-                            
-                      } */
-
-             
-
-            }
 
             /* fscanf(entrant_file, " %[a-zA-Z ]s", competitor_collection[count].name); */
 
@@ -87,21 +78,21 @@ void loadCompetitors() {
 
             new_competitor->current_status = new_status;
 
-            new_entrant->data = new_competitor;
+            linked_entrant->data = new_competitor;
 
             /*  competitor_collection[count].current_checkpoint = NULL;
             // competitor_collection[count].current_progress = 0; */
 
             if (status > 0) {
 
-                if (list->head == NULL) {
+                if (entrant_list->head == NULL) {
 
-                    list->head = new_entrant;
-                    list->tail = new_entrant;
+                    entrant_list->head = linked_entrant;
+                    entrant_list->tail = linked_entrant;
 
                 } else {
 
-                    linked_entrant * temp = list->tail;
+                    linked_item * temp = entrant_list->tail;
 
                     /*       while (temp->next !=NULL) {
                                 
@@ -109,8 +100,8 @@ void loadCompetitors() {
                                 
                            } */
 
-                    temp->next = new_entrant;
-                    list->tail = new_entrant;
+                    temp->next = linked_entrant;
+                    entrant_list->tail = linked_entrant;
                 }
 
 
@@ -148,7 +139,7 @@ void loadTimes() {
 
             fscanf(time_file, " %[0-9:]s", time);
             
-            update2(list->head, type, node, entrant_no, time);
+            updateEntrant(entrant_list->head, type, node, entrant_no, time);
 
         }
 
@@ -162,49 +153,51 @@ void loadTimes() {
     }
 }
 
-void update2(linked_entrant * current, char type, int node, int entrant, char * time) {
+void updateEntrant(linked_item * current, char type, int node, int entrant, char * time) {
+    
+    competitor * temp_competitor = (competitor *) current->data;
 
     int temp_bool = 0;
 
-    if (current->data->competitor_number == entrant) {
+    if (temp_competitor->competitor_number == entrant) {
 
         int j;
 
-        for (j = 0; j < current->data->course->course_length; j++) {
+        for (j = 0; j < temp_competitor->course->course_length; j++) {
 
-            if (current->data->course->course_nodes[j]->number == node && temp_bool != 1) {
+            if (temp_competitor->course->course_nodes[j]->number == node && temp_bool != 1) {
                 
 
-                if (j > (current->data->current_progress - 1)) {
+                if (j > (temp_competitor->current_progress - 1)) {
 
-                    track_node * temp = current->data->course->course_nodes[j];
+                    track_node * temp = temp_competitor->course->course_nodes[j];
 
-                    if (strcmp(current->data->course->course_nodes[j]->type, "CP") == 0) {
+                    if (strcmp(temp_competitor->course->course_nodes[j]->type, "CP") == 0) {
 
                         entrant_status new_status = CHECKPOINT;
 
-                        current->data->current_status = new_status;
+                        temp_competitor->current_status = new_status;
 
-                    } else if (strcmp(current->data->course->course_nodes[j]->type, "JN") == 0) {
+                    } else if (strcmp(temp_competitor->course->course_nodes[j]->type, "JN") == 0) {
 
 
                         entrant_status new_status = JUNCTION;
 
-                        current->data->current_status = new_status;
+                        temp_competitor->current_status = new_status;
                     }
 
-                    current->data->last_logged_node = temp;
+                    temp_competitor->last_logged_node = temp;
 
-                    current->data->current_progress = j + 1;
+                    temp_competitor->current_progress = j + 1;
                     
-                    strcpy(current->data->last_logged_time, time);
+                    strcpy(temp_competitor->last_logged_time, time);
                     
-                     if (current->data->current_progress == 1) {
+                     if (temp_competitor->current_progress == 1) {
                         
-                        strcpy(current->data->start_time, time);
+                        strcpy(temp_competitor->start_time, time);
                      }
                     
-                    current->data->last_logged_node_index = j;
+                    temp_competitor->last_logged_node_index = j;
                     
             
                 char *hours = (char*) malloc(2);
@@ -212,25 +205,25 @@ void update2(linked_entrant * current, char type, int node, int entrant, char * 
                 strncpy(mins, time+3, 5);
                 strncpy(hours, time, 2);
                 
-                current->data->test_time.hour = atoi(hours);
+                temp_competitor->test_time.hour = atoi(hours);
                 
-                current->data->test_time.minutes = atoi(mins);
+                temp_competitor->test_time.minutes = atoi(mins);
 
                     temp_bool = 1;
 
-                    if (current->data->current_progress == current->data->course->course_length) {
+                    if (temp_competitor->current_progress == temp_competitor->course->course_length) {
 
                         entrant_status new_status = FINISHED;
 
-                        current->data->current_status = new_status;
+                        temp_competitor->current_status = new_status;
                         
-                        strcpy(current->data->finish_time, time);
+                        strcpy(temp_competitor->finish_time, time);
                         
                         
 
                     }
                     
-                    updateOthers(list->head, current, time);
+                    updateOtherEntrants(entrant_list->head, current, time);
 
 
                 }
@@ -246,7 +239,7 @@ void update2(linked_entrant * current, char type, int node, int entrant, char * 
 
         if (current->next != NULL) {
 
-        update2(current->next, type, node, entrant, time);
+        updateEntrant(current->next, type, node, entrant, time);
 
          } else {
             
@@ -258,45 +251,49 @@ void update2(linked_entrant * current, char type, int node, int entrant, char * 
 
 }
 
-void updateOthers(linked_entrant * current, linked_entrant * new, char * time) {
+void updateOtherEntrants(linked_item * current, linked_item * new, char * time) {
     
-    if (current->data->competitor_number != new->data->competitor_number) {
+    competitor * current_competitor = (competitor *) current->data;
+    
+    competitor * new_competitor = (competitor *) new->data;
+    
+    if (current_competitor->competitor_number != new_competitor->competitor_number) {
 
-                if (strcmp(current->data->last_logged_time, time) != 0) {
+                if (strcmp(current_competitor->last_logged_time, time) != 0) {
 
-                    if (current->data->current_status == 1 || current->data->current_status == 2) {
+                    if (current_competitor->current_status == 1 || current_competitor->current_status == 2) {
 
                         int node1, node2;
 
-                        node1 = current->data->course->course_nodes[current->data->last_logged_node_index]->number;
+                        node1 = current_competitor->course->course_nodes[current_competitor->last_logged_node_index]->number;
 
-                        node2 = current->data->course->course_nodes[(current->data->last_logged_node_index) + 1]->number;
+                        node2 = current_competitor->course->course_nodes[(current_competitor->last_logged_node_index) + 1]->number;
 
                         int i;
                         
-                        linked_track * temp_track = tracklist->head;
+                        linked_item * temp_item = track_list->head;
                         
-                        while (temp_track != NULL) {
+                        while (temp_item != NULL) {
                             
-                            course_track * track = temp_track->data;
+                            course_track * temp_track = (course_track *) temp_item->data;
                             
-                            if ((track->start_node->number == node1 && track->end_node->number == node2) || (track->start_node->number == node2 && track->end_node->number == node1))
+                            if ((temp_track->start_node->number == node1 && temp_track->end_node->number == node2) || (temp_track->start_node->number == node2 && temp_track->end_node->number == node1))
                                 {
                                 
-                                current->data->last_logged_track = track;
+                                current_competitor->last_logged_track = temp_track;
                             }
                             
-                            temp_track = temp_track->next;
+                            temp_item = temp_item->next;
                             
                         } 
                         
-                        current->data->current_status = 3;
+                        current_competitor->current_status = 3;
                         
-                    } else if (current->data->current_status == 3) {
+                    } else if (current_competitor->current_status == 3) {
                         
-                        int new_entrant_time = (new->data->test_time.hour * 60) + (new->data->test_time.minutes);
+                        int new_entrant_time = (new_competitor->test_time.hour * 60) + (new_competitor->test_time.minutes);
                         
-                        int current_entrant_time = (current->data->test_time.hour * 60) + (current->data->test_time.minutes);
+                        int current_entrant_time = (current_competitor->test_time.hour * 60) + (current_competitor->test_time.minutes);
                         
                         int time_difference = new_entrant_time - current_entrant_time;
                         
@@ -311,18 +308,18 @@ void updateOthers(linked_entrant * current, linked_entrant * new, char * time) {
                             
                         } */
                         
-                        if (time_difference > current->data->last_logged_track->minutes) {
+                        if (time_difference > current_competitor->last_logged_track->minutes) {
                        
-                       int next_node = (current->data->last_logged_node_index) + 1;
+                       int next_node = (current_competitor->last_logged_node_index) + 1;
                        
-                       track_node * twat = current->data->course->course_nodes[next_node];
+                       track_node * twat = current_competitor->course->course_nodes[next_node];
                        
                        if (strcmp(twat->type, "JN") == 0) {
                            
-                           current->data->last_logged_node = twat;
-                           current->data->current_status = 2;
-                           current->data->last_logged_node_index = next_node;
-                           current->data->current_progress = current->data->current_progress + 1;
+                           current_competitor->last_logged_node = twat;
+                           current_competitor->current_status = 2;
+                           current_competitor->last_logged_node_index = next_node;
+                           current_competitor->current_progress = current_competitor->current_progress + 1;
                        }
                        
                        /* for (j = 0; j < current->data->course->course_length; j++) {
@@ -363,16 +360,18 @@ void updateOthers(linked_entrant * current, linked_entrant * new, char * time) {
     
      if (current->next != NULL) {
 
-        updateOthers(current->next, new, time);
+        updateOtherEntrants(current->next, new, time);
 
          } 
 }
 
-void getEntrantStatus(linked_entrant * entrant) {
+void getEntrantStatus(linked_item * entrant) {
+    
+    competitor * temp_competitor = (competitor *) entrant->data;
     
     char status[20];
     
-    switch(entrant->data->current_status) {
+    switch(temp_competitor->current_status) {
 
         case 0:
             strcpy(status, "Not Started");
@@ -395,14 +394,14 @@ void getEntrantStatus(linked_entrant * entrant) {
                 
         }
     
-    printf("\nCompetitor %d (%s) -> Current Status: %s, Current Progress: %d", entrant->data->competitor_number,
-            entrant->data->name, status, entrant->data->current_progress);
+    printf("\nCompetitor %d (%s) -> Current Status: %s, Current Progress: %d", temp_competitor->competitor_number,
+            temp_competitor->name, status, temp_competitor->current_progress);
      
 }
 
 void getAllEntrantStatuses() {
     
-    linked_entrant * temp = list->head;
+    linked_item * temp = entrant_list->head;
     
     while (temp !=NULL) {
         
@@ -414,9 +413,11 @@ void getAllEntrantStatuses() {
     
 }
 
-void userUpdateEntrant(linked_entrant * entrant, int requested_no) {
+void userUpdateEntrant(linked_item * entrant, int requested_no) {
+    
+    competitor * current_competitor = (competitor *) entrant->data;
 
-    if (entrant->data->competitor_number == requested_no) {
+    if (current_competitor->competitor_number == requested_no) {
        
        int node;
        char time[5];
@@ -429,9 +430,9 @@ void userUpdateEntrant(linked_entrant * entrant, int requested_no) {
        
        int i;
        
-       for (i = 0; i < entrant->data->course->course_length; i++) {
+       for (i = 0; i < current_competitor->course->course_length; i++) {
            
-           if (entrant->data->course->course_nodes[i]->number == node && strcmp(entrant->data->course->course_nodes[i]->type,"CP") == 0) {
+           if (current_competitor->course->course_nodes[i]->number == node && strcmp(current_competitor->course->course_nodes[i]->type,"CP") == 0) {
                
               accept_bool = 1; 
                
@@ -445,9 +446,9 @@ void userUpdateEntrant(linked_entrant * entrant, int requested_no) {
                                printf("\nEnter recorded for checkpoint time (HH:MM):\n");
        scanf(" %s", time);
        
-       course_id = entrant->data->course_id;
+       course_id = current_competitor->course_id;
        
-       update2(list->head, course_id, node, requested_no, time);  
+       updateEntrant(entrant_list->head, course_id, node, requested_no, time);  
                
            } else {
                

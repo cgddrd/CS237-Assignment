@@ -14,6 +14,7 @@ extern "C" {
     
     #include "course.h"
         #include "track.h"
+#include "linked_list.h"
 
     struct time {
         
@@ -32,7 +33,7 @@ extern "C" {
         FINISHED
     } entrant_status;
 
-    struct entrant {
+    typedef struct entrant {
      
         int competitor_number;
         char course_id;
@@ -49,52 +50,18 @@ extern "C" {
         int last_logged_node_index;
         int last_logged_track_index;
                
-    };
+    } competitor;
     
-    typedef struct entrant competitor;
-   
+        linked_item * linked_entrant;
+        list * entrant_list;
 
-    typedef struct entrant_list_item linked_entrant;
-    
-    struct entrant_list_item {
-    
-    competitor * data;
-    linked_entrant * next;
-    
-    };
-   
-    struct entrant_linked_list {
-    
-    linked_entrant * head;
-    linked_entrant * tail;
-    int no_of_items;
-    
-   };
-   
-   typedef struct entrant_linked_list entrant_list;
-    
-    competitor * competitor_collection;
-    
-    entrant_list * list;
-    
-    
-    
-    
-    int no_of_competitors;
-    
     void loadCompetitors();
-    void displayList(linked_entrant * current);
-    void printCompetitors();
-    int checkNotStarted();
-    int checkStarted();
     void loadTimes();
-    void updateEntrant(char * type, int node, int entrant, char * time);
-    void update (char * type, int node, int entrant, char * time);
-    void update2 (linked_entrant * current, char type, int node, int entrant, char * time);
-    void updateOthers(linked_entrant * current, linked_entrant * new, char * time);
-    void getEntrantStatus(linked_entrant * entrant);
+    void updateEntrant (linked_item * current, char type, int node, int entrant, char * time);
+    void updateOtherEntrants(linked_item * current, linked_item * new, char * time);
+    void getEntrantStatus(linked_item * entrant);
     void getAllEntrantStatuses();
-    void userUpdateEntrant(linked_entrant * entrant, int requested_no);
+    void userUpdateEntrant(linked_item * entrant, int requested_no);
 
     
 #ifdef	__cplusplus

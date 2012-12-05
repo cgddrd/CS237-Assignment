@@ -83,7 +83,7 @@ void displayMenu() {
             int entrant;
             printf("Enter required competitor number:\n");
             scanf(" %d", &entrant);
-            userUpdateEntrant(list->head, entrant);
+            userUpdateEntrant(entrant_list->head, entrant);
             getAllEntrantStatuses();
             break;
         }

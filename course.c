@@ -7,29 +7,24 @@ void loadCourses() {
     
        FILE * course_file = openFile("Enter courses file name:");
        
-        courselist = malloc(sizeof (course_list));
-    
-    courselist->head = NULL;
-    courselist->tail = NULL;
+        course_list = malloc(sizeof (list));
+   
+    course_list->head = NULL;
+    course_list->tail = NULL;
        
        if (course_file != NULL) {
 
            int count = 0;
            int status = 0;
-           
-           no_of_courses = countLines(course_file);
-           
-           rewind(course_file); 
-           
-           course_collection = calloc(1, no_of_courses * sizeof(event_course)); 
+
            
            while(!feof(course_file)) {
 
-               linked_course * new_item = malloc(sizeof (linked_course));
+               linked_course = malloc(sizeof (linked_item));
                
                event_course * new_course = malloc(sizeof (event_course));
                
-               new_item->next = NULL;
+               linked_course->next = NULL;
                
                 status = fscanf(course_file, " %c", &new_course->id); 
 
@@ -46,13 +41,15 @@ void loadCourses() {
                     
                 fscanf(course_file, " %d", &current_node);
                 
-                linked_node * temp = nodelist->head;
+                linked_item * temp = node_list->head;
                 
                 while (temp !=NULL){
                     
-                    if (current_node == temp->data->number) {
+                    track_node * temp_node = (track_node *) temp->data;
+                    
+                    if (current_node == temp_node->number) {
 
-                              new_course->course_nodes[i] = temp->data;
+                              new_course->course_nodes[i] = temp_node;
                               printf("\nWANK: %c, %d", new_course->id, new_course->course_nodes[i]->number);
                             
                                  }
@@ -76,18 +73,19 @@ void loadCourses() {
                     
                 }
                 
-                new_item->data = new_course;
+                linked_course->data = new_course;
                 
                 if (status > 0) {
 
-                if (courselist->head == NULL) {
+                if (course_list->head == NULL) {
 
-                    courselist->head = new_item;
-                    courselist->tail = new_item;
+                    course_list->head = linked_course;
+                    course_list->tail = linked_course;
 
                 } else {
 
-                    linked_course * temp = courselist->tail;
+                    linked_item * temp = course_list->tail;
+                   
 
                     /*       while (temp->next !=NULL) {
                                 
@@ -95,8 +93,8 @@ void loadCourses() {
                                 
                            } */
 
-                    temp->next = new_item;
-                    courselist->tail = new_item;
+                    temp->next = linked_course;
+                    course_list->tail = linked_course;
                 }
 
 
@@ -118,17 +116,19 @@ void loadCourses() {
 void printCourses() 
 {
    
-    linked_course * temp = courselist->head;
+    linked_item * temp = course_list->head;
     
     while (temp !=NULL) {
         
-        printf("\nCourse ID: %c, Length: %d", temp->data->id, temp->data->course_length);
+        event_course * temp_event = (event_course *) temp->data;
+        
+        printf("\nCourse ID: %c, Length: %d",temp_event->id, temp_event->course_length);
              printf("\nNodes in course:");
              
              int i;
-             for (i = 0; i < temp->data->course_length; i++) {
+             for (i = 0; i < temp_event->course_length; i++) {
                 
-                  printf("\nNode %d: No: %d, ID: %s", i, temp->data->course_nodes[i]->number, temp->data->course_nodes[i]->type);
+                  printf("\nNode %d: No: %d, ID: %s", i, temp_event->course_nodes[i]->number, temp_event->course_nodes[i]->type);
                  
                  
              }
