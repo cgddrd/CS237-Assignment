@@ -10,20 +10,20 @@ int loadEventDes() {
     FILE * event_file = openFile("Enter event description file name:");
 
     if (event_file != NULL) {
-
+        
         while (!feof(event_file)) {
 
             fscanf(event_file, " %[A-Za-z -]s", event -> event_title);
             fscanf(event_file, " %[a-zA-Z0-9 ]s", event -> event_date);
             fscanf(event_file, " %[0-9:]s", event -> event_time);
 
-
         }
 
         fclose(event_file);
 
     } else {
-
+        
+        free(event_file);
         return 0;
     }
 

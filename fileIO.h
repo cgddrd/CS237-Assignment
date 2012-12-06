@@ -17,7 +17,7 @@ extern "C" {
     
     FILE * openFile();
     void initialise(list ** data_list);
-    int addToList(linked_item ** temp, list ** data_list);
+    void addToList(linked_item ** temp, list ** data_list);
     
 #ifdef	__cplusplus
 }

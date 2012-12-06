@@ -9,6 +9,7 @@
       <itemPath>event.h</itemPath>
       <itemPath>fileIO.h</itemPath>
       <itemPath>linked_list.h</itemPath>
+      <itemPath>main.h</itemPath>
       <itemPath>node.h</itemPath>
       <itemPath>track.h</itemPath>
     </logicalFolder>

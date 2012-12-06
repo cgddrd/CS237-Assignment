@@ -44,11 +44,7 @@ int loadEntrants() {
 
             new_competitor->last_logged_node = NULL;
             new_competitor->current_progress = 0;
-
-            entrant_status new_status = NOTSTARTED;
-
-            new_competitor->current_status = new_status;
-
+            new_competitor->current_status = 0;
             linked_entrant->data = new_competitor;
 
             if (status > 0) {

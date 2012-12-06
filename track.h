@@ -26,8 +26,9 @@ extern "C" {
     linked_item * linked_track;
     list * track_list;
 
-    void loadTracks();
+    int loadTracks();
     void printTracks();
+    void locateNodes(course_track * new_track, int start_node, int end_node);
 
 #ifdef	__cplusplus
 }

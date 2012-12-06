@@ -44,8 +44,6 @@ extern "C" {
         int current_progress;
         entrant_status current_status;
         int last_logged_node_index;
-
-
     } competitor;
 
     linked_item * linked_entrant;
@@ -53,13 +51,13 @@ extern "C" {
 
     int loadEntrants();
     int loadTimes();
+    int checkEntrantCompletedTrack(competitor * current_competitor, competitor * new_competitor);
     void updateEntrant(linked_item * current, char type, int node, int entrant, char * time);
     void updateOtherEntrants(linked_item * current, linked_item * new, char * time);
     void getEntrantStatus(linked_item * entrant);
     void getAllEntrantStatuses();
     void userUpdateEntrant(linked_item * entrant, int requested_no);
     void convertTime(competitor * new_competitor, char * time_string);
-    int checkEntrantCompletedTrack(competitor * current_competitor, competitor * new_competitor);
     void updateCurrentEntrantTrack(competitor * current_competitor);
 
 

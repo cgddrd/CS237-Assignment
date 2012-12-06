@@ -23,7 +23,7 @@ extern "C" {
     linked_item * linked_node;
     list * node_list;
 
-    void loadNodes();
+    int loadNodes();
     void printNodes();
 
 
