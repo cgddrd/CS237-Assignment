@@ -65,25 +65,33 @@ void displayMenu() {
 
     int option = 0;
 
-    while (option != 8) {
+    while (option != 7) {
 
+        printf("\n*****************************************");
         printf("\nWelcome, please select an option:\n");
         printf("\n*****************************************");
         printf("\n  1. Display competitors yet to start");
-        printf("\n  2. Load time log file into system");
+        printf("\n  2. Display competitors out of courses");
+        printf("\n  3. Display finished competitors");
+        printf("\n  4. Enter competitor checkpoint time");
+        printf("\n  5. Load time log file into system");
+        printf("\n  6. Display event results list");
+        printf("\n  7. Exit Program");
         printf("\n*****************************************\n");
         scanf(" %d", &option);
 
         switch (option) {
 
             case 1:
-                printf("\nTotal competitors not started: ");
+                checkNotStarted();
                 break;
             case 2:
-                loadTimes();
-                getAllEntrantStatuses();
+                checkStarted();
                 break;
             case 3:
+                checkFinished();
+                break;
+            case 4:
             {
                 int entrant;
                 printf("Enter required competitor number:\n");
@@ -93,13 +101,17 @@ void displayMenu() {
                 break;
             }
             case 5:
-                printf("\nDiick5\n");
+                loadTimes();
+                getAllEntrantStatuses();
                 break;
-            case 8:
+            case 6:
+                displayResultsList();
+                break;
+            case 7:
                 printf("\nThanks for using this program!\n");
                 break;
             default:
-                printf("\nnot allowed\n");
+                printf("\nInput not valid. Please try again.\n");
                 break;
 
         }

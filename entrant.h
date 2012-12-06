@@ -38,9 +38,9 @@ extern "C" {
         track_node * last_logged_node;
         course_track * last_logged_track;
         logged_time last_cp_time;
-        char last_logged_time[5];
-        char start_time[5];
-        char finish_time[5];
+        char last_logged_time[6];
+        char start_time[6];
+        char finish_time[6];
         int current_progress;
         entrant_status current_status;
         int last_logged_node_index;
@@ -59,6 +59,10 @@ extern "C" {
     void userUpdateEntrant(linked_item * entrant, int requested_no);
     void convertTime(competitor * new_competitor, char * time_string);
     void updateCurrentEntrantTrack(competitor * current_competitor);
+    void checkStarted();
+    void checkNotStarted();
+    void checkFinished();
+    void displayResultsList();
 
 
 #ifdef	__cplusplus

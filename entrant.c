@@ -45,6 +45,8 @@ int loadEntrants() {
             new_competitor->last_logged_node = NULL;
             new_competitor->current_progress = 0;
             new_competitor->current_status = 0;
+            strcpy(new_competitor->start_time, "N/A"); 
+            strcpy(new_competitor->finish_time, "N/A"); 
             linked_entrant->data = new_competitor;
 
             if (status > 0) {
@@ -125,12 +127,15 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
                     temp_competitor->current_progress = j + 1;
                     temp_competitor->last_logged_node_index = j;
 
-                    strcpy(temp_competitor->last_logged_time, time);
+                   /* printf("NEW LAT LOGGED TIME: %s", temp_competitor->last_logged_time); */
 
                     if (temp_competitor->current_progress == 1) {
 
-                        strcpy(temp_competitor->start_time, time);
+                        strcpy(temp_competitor->start_time, time); 
+                        printf("NEW START TIME: %s", temp_competitor->start_time);
                     }
+                    
+                    printf("\nSTART TIME: %d, %s", temp_competitor->competitor_number, temp_competitor->start_time);
 
                     convertTime(temp_competitor, time);
 
@@ -141,6 +146,8 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
                         temp_competitor->current_status = 4;
 
                         strcpy(temp_competitor->finish_time, time);
+                        
+                        printf("\nFinish TIME: %d, %s", temp_competitor->competitor_number, temp_competitor->finish_time);
                     }
 
                     updateOtherEntrants(entrant_list->head, current, time);
@@ -271,6 +278,8 @@ void getEntrantStatus(linked_item * entrant) {
     competitor * temp_competitor = (competitor *) entrant->data;
 
     char status[20];
+    
+    printf("\nWANKER TWAT: %d, %s", temp_competitor->competitor_number, temp_competitor->start_time);
 
     switch (temp_competitor->current_status) {
 
@@ -295,8 +304,8 @@ void getEntrantStatus(linked_item * entrant) {
 
     }
 
-    printf("\nCompetitor %d (%s) -> Current Status: %s, Current Progress: %d", temp_competitor->competitor_number,
-            temp_competitor->name, status, temp_competitor->current_progress);
+    printf("\nCompetitor %d (%s) -> Current Status: %s, Current Progress: %d, Start Time: %s, End Time: %s", temp_competitor->competitor_number,
+            temp_competitor->name, status, temp_competitor->current_progress, temp_competitor->start_time, temp_competitor->finish_time);
 
 }
 
@@ -359,4 +368,191 @@ void userUpdateEntrant(linked_item * entrant, int requested_no) {
             printf("\nEntrant cannot be located. Please try again.");
         }
     }
+}
+
+void checkNotStarted() {
+
+    linked_item * temp = entrant_list->head;
+
+    int count = 0;
+
+    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
+    printf("\n|==================|========================================================|===================|");
+
+    while (temp != NULL) {
+
+        competitor * current_competitor = (competitor *) temp->data;
+
+        if (current_competitor->current_status == 0) {
+
+            char status[12];
+
+            switch (current_competitor->current_status) {
+
+                case 0:
+                    strcpy(status, "Not Started");
+                    break;
+                default:
+                    strcpy(status, "Unknown");
+                    break;
+            }
+
+            printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
+            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+
+            count++;
+
+        }
+        temp = temp->next;
+    }
+
+    if (count == 0) {
+        printf("\nAll competitors are currently on a course\n");
+    } else {
+        printf("\nTotal competitors yet to start: %d\n", count);
+    }
+
+}
+
+void checkStarted() {
+
+    linked_item * temp = entrant_list->head;
+
+    int count = 0;
+
+    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
+    printf("\n|==================|========================================================|===================|");
+
+    while (temp != NULL) {
+
+        competitor * current_competitor = (competitor *) temp->data;
+
+        if (current_competitor->current_status > 0 || current_competitor->current_status < 4) {
+
+            char status[12];
+
+            switch (current_competitor->current_status) {
+
+                case 1:
+                    strcpy(status, "Checkpoint");
+                    break;
+                case 2:
+                    strcpy(status, "Junction");
+                    break;
+                case 3:
+                    strcpy(status, "Track");
+                    break;
+                default:
+                    strcpy(status, "Unknown");
+                    break;
+            }
+
+            printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
+            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+
+            count++;
+
+        }
+        temp = temp->next;
+    }
+
+    if (count == 0) {
+        printf("\nNo competitors are currently on the course\n");
+    } else {
+        printf("\nTotal competitors out on course: %d\n", count);
+    }
+
+}
+
+void checkFinished() {
+
+    linked_item * temp = entrant_list->head;
+
+    int count = 0;
+
+    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
+    printf("\n|==================|========================================================|===================|");
+
+    while (temp != NULL) {
+
+        competitor * current_competitor = (competitor *) temp->data;
+
+        if (current_competitor->current_status == 4) {
+
+            char status[12];
+
+            switch (current_competitor->current_status) {
+
+                case 4:
+                    strcpy(status, "Finished");
+                    break;
+                default:
+                    strcpy(status, "Unknown");
+                    break;
+            }
+
+            printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
+            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+
+            count++;
+
+        }
+        temp = temp->next;
+    }
+
+    if (count == 0) {
+        printf("\nNo competitors have currently finished.\n");
+
+    } else {
+        printf("\nTotal competitors finished: %d\n", count);
+    }
+}
+
+void displayResultsList() {
+
+    linked_item * temp = entrant_list->head;
+
+    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |   Start Time  |   End Time  |");
+    printf("\n|==================|========================================================|===================|===============|=============|");
+
+    while (temp != NULL) {
+
+        competitor * current_competitor = (competitor *) temp->data;
+
+        char status[12];
+
+        switch (current_competitor->current_status) {
+
+            case 0:
+                strcpy(status, "Not Started");
+                break;
+            case 1:
+                strcpy(status, "Checkpoint");
+                break;
+            case 2:
+                strcpy(status, "Junction");
+                break;
+            case 3:
+                strcpy(status, "Track");
+                break;
+            case 4:
+                strcpy(status, "Finished");
+                break;
+            default:
+                strcpy(status, "Unknown");
+                break;
+        }
+
+        printf("\n| %8d         |   %-50s   |    %-12s   |      %-5s    |    %-5s    |",
+
+                current_competitor->competitor_number,
+                current_competitor->name,
+                status,
+                current_competitor->start_time,
+                current_competitor->finish_time);
+
+        printf("\n|------------------|--------------------------------------------------------|-------------------|---------------|-------------|");
+        temp = temp->next;
+    }
+
 }
