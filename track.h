@@ -11,28 +11,23 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-    
-    #include "node.h"
+
+#include "node.h"
 #include "linked_list.h"
-    
-    struct track {
-     
+
+    typedef struct track {
         int number;
         track_node * start_node;
         track_node * end_node;
         int minutes;
-     
-    };
-    
-    typedef struct track course_track;
 
-   linked_item * linked_track;
-   list * track_list;
-    
+    } course_track;
+
+    linked_item * linked_track;
+    list * track_list;
+
     void loadTracks();
     void printTracks();
-
-
 
 #ifdef	__cplusplus
 }

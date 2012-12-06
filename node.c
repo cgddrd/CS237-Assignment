@@ -8,11 +8,8 @@ void loadNodes()
     
        FILE * file_two = openFile("Enter node file name:");
        
-       node_list = malloc(sizeof (list));
-    
-    node_list->head = NULL;
-    node_list->tail = NULL;
-       
+       initialise(&node_list);
+
     int status = 0;
        
        if (file_two != NULL) {
@@ -40,24 +37,7 @@ void loadNodes()
                 
                 if (status > 0) {
 
-                if (node_list->head == NULL) {
-
-                    node_list->head = linked_node;
-                    node_list->tail = linked_node;
-
-                } else {
-
-                    linked_item * temp = node_list->tail;
-
-                    /*       while (temp->next !=NULL) {
-                                
-                               temp = temp->next;
-                                
-                           } */
-
-                    temp->next = linked_node;
-                    node_list->tail = linked_node;
-                }
+                addToList(&linked_node, &node_list);
 
 
             }

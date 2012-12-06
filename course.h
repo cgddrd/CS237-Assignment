@@ -11,23 +11,24 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-    
-    #include "node.h"
-    #include "linked_list.h"
-    
-   typedef struct course {
-     
+
+#include "node.h"
+#include "linked_list.h"
+
+    typedef struct course {
+        
         char id;
         int course_length;
         track_node ** course_nodes;
-        
+
     } event_course;
 
-   
-   linked_item * linked_course;
-   list * course_list;
 
-    void loadCourses();
+    linked_item * linked_course;
+    list * course_list;
+
+    int loadCourses();
+    void compareCourseNodes(event_course ** temp_course, FILE ** course_file);
     void printCourses();
 
 

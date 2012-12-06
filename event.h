@@ -11,22 +11,17 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-    
- struct event {
-    char event_title[79];
-    char event_date[79];
-    char event_time[5];  
-};
 
-typedef struct event event_description;
+    typedef struct event {
+        char event_title[79];
+        char event_date[79];
+        char event_time[5];
+    } event_description;
 
-typedef event_description * event_des_ptr;
+    event_description * event;
 
-event_description * event;
-
-int loadEventDes();
-
-void printEventDes();
+    int loadEventDes();
+    void printEventDes();
 
 
 #ifdef	__cplusplus

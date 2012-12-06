@@ -27,6 +27,8 @@ extern "C" {
     int no_of_items;
     
    } list;
+   
+   void initialise();
 
 
 #ifdef	__cplusplus

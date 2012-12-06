@@ -11,21 +11,20 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-    
+
 #include "linked_list.h"
 
- typedef struct node {
-     
-    int number;
-    char type[2];
-     
-} track_node;
+    typedef struct node {
+        int number;
+        char type[2];
 
-   linked_item * linked_node;
-   list * node_list;
+    } track_node;
 
-void loadNodes();
-void printNodes();
+    linked_item * linked_node;
+    list * node_list;
+
+    void loadNodes();
+    void printNodes();
 
 
 #ifdef	__cplusplus

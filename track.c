@@ -8,10 +8,7 @@ void loadTracks()
     
        FILE * track_file = openFile("Enter track file name:");
        
-       track_list = malloc(sizeof (list));
-    
-    track_list->head = NULL;
-    track_list->tail = NULL;
+       initialise(&track_list);
        
        if (track_file != NULL) {
 
@@ -21,11 +18,11 @@ void loadTracks()
            
            while(!feof(track_file)) {
                
-               linked_item * new_item = malloc(sizeof (linked_item));
+               linked_item * linked_track = malloc(sizeof (linked_item));
                
                course_track * new_track = malloc(sizeof (course_track));
                
-               new_item->next = NULL;
+               linked_track->next = NULL;
                
                int start_node = 0;
                int end_node = 0;
@@ -90,28 +87,13 @@ void loadTracks()
                   
                  fscanf(track_file, " %d", &new_track->minutes);
                  
-                 new_item->data = new_track;
+                 linked_track->data = new_track;
                  
                 if (status > 0) {
+                    
+                    addToList(&linked_track, &track_list);
 
-                if (track_list->head == NULL) {
 
-                    track_list->head = new_item;
-                    track_list->tail = new_item;
-
-                } else {
-
-                    linked_item * temp = track_list->tail;
-
-                    /*       while (temp->next !=NULL) {
-                                
-                               temp = temp->next;
-                                
-                           } */
-
-                    temp->next = new_item;
-                    track_list->tail = new_item;
-                }
 
 
             }

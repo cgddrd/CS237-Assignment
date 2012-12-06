@@ -2,6 +2,37 @@
 #include <stdlib.h>
 #include "fileIO.h"
 
+void initialise(list ** data_list) {
+    
+   (*data_list) = malloc(sizeof (list));
+   
+   
+  
+    (*data_list)->head = NULL;
+    (*data_list)->tail = NULL;
+
+}
+
+int addToList(linked_item ** new_item, list ** data_list) {
+    
+    
+ 
+
+                if ((*data_list)->head == NULL) {
+
+                    (*data_list)->head = (*new_item);
+                    (*data_list)->tail = (*new_item);
+
+                } else {
+
+                    linked_item * temp = (*data_list)->tail;
+
+                    temp->next = (*new_item);
+                    (*data_list)->tail = (*new_item);
+                }
+            
+    
+}
 
 int countLines(FILE * file) 
 {

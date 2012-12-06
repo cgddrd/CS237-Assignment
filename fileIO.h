@@ -13,9 +13,11 @@
 extern "C" {
 #endif
     
+#include "linked_list.h"
+    
     FILE * openFile();
-
-    int countLines(FILE * file);
+    void initialise(list ** data_list);
+    int addToList(linked_item ** temp, list ** data_list);
     
 #ifdef	__cplusplus
 }

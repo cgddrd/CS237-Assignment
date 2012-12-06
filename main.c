@@ -51,7 +51,7 @@ void loadFiles() {
         loadCourses();
         printCourses();
         
-        loadCompetitors();
+        loadEntrants();
        /* printCompetitors(); */
                   
 }
