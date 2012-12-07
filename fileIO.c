@@ -32,7 +32,7 @@ FILE * openFile(char * prompt) {
     char file_name[101];
 
     printf("\n%s ", prompt);
-    scanf(" %100[a-zA-Z0-9._]", file_name);
+    scanf(" %100[a-zA-Z0-9._/]", file_name);
 
     FILE * file = fopen(file_name, "r");
 
