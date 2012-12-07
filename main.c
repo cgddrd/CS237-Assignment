@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include "main.h"
 
-
 int main(int argc, char** argv) {
 
     loadFiles();
@@ -30,7 +29,7 @@ void checkFileLoad(int (*functionPtr)(), void (*printfunctionPtr)()) {
         switch (option) {
 
             case 1:
-                functionPtr(); 
+                functionPtr();
                 break;
             case 2:
                 printf("\nExiting program.");
@@ -43,20 +42,20 @@ void checkFileLoad(int (*functionPtr)(), void (*printfunctionPtr)()) {
         }
 
     }
-    
+
     printfunctionPtr();
 }
 
 void loadFiles() {
 
     checkFileLoad(&loadEventDes, &printEventDes);
-    
+
     checkFileLoad(&loadNodes, &printNodes);
 
     checkFileLoad(&loadTracks, &printTracks);
-    
+
     checkFileLoad(&loadCourses, &printCourses);
-    
+
     checkFileLoad(&loadEntrants, &getAllEntrantStatuses);
 
 }
@@ -65,7 +64,7 @@ void displayMenu() {
 
     int option = 0;
 
-    while (option != 7) {
+    while (option != 8) {
 
         printf("\n*****************************************");
         printf("\nWelcome, please select an option:\n");
@@ -76,7 +75,8 @@ void displayMenu() {
         printf("\n  4. Enter competitor checkpoint time");
         printf("\n  5. Load time log file into system");
         printf("\n  6. Display event results list");
-        printf("\n  7. Exit Program");
+        printf("\n  7. Display specific competitor status");
+        printf("\n  8. Exit Program");
         printf("\n*****************************************\n");
         scanf(" %d", &option);
 
@@ -108,6 +108,9 @@ void displayMenu() {
                 displayResultsList();
                 break;
             case 7:
+                getSpecificEntrantStatus();
+                break;
+            case 8:
                 printf("\nThanks for using this program!\n");
                 break;
             default:

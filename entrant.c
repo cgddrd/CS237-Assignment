@@ -148,6 +148,7 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
                         strcpy(temp_competitor->finish_time, time);
                         
                         printf("\nFinish TIME: %d, %s", temp_competitor->competitor_number, temp_competitor->finish_time);
+                        printf("\nActual TIME: %d, %s", temp_competitor->competitor_number, time);
                     }
 
                     updateOtherEntrants(entrant_list->head, current, time);
@@ -278,9 +279,7 @@ void getEntrantStatus(linked_item * entrant) {
     competitor * temp_competitor = (competitor *) entrant->data;
 
     char status[20];
-    
-    printf("\nWANKER TWAT: %d, %s", temp_competitor->competitor_number, temp_competitor->start_time);
-
+   
     switch (temp_competitor->current_status) {
 
         case 0:
@@ -304,7 +303,7 @@ void getEntrantStatus(linked_item * entrant) {
 
     }
 
-    printf("\nCompetitor %d (%s) -> Current Status: %s, Current Progress: %d, Start Time: %s, End Time: %s", temp_competitor->competitor_number,
+    printf("\nCompetitor %d (%s) -> Current Status: %s, Current Progress: %d, Start Time: %s, End Time: %s\n\n", temp_competitor->competitor_number,
             temp_competitor->name, status, temp_competitor->current_progress, temp_competitor->start_time, temp_competitor->finish_time);
 
 }
@@ -318,6 +317,34 @@ void getAllEntrantStatuses() {
         getEntrantStatus(temp);
         temp = temp->next;
 
+    }
+}
+
+void getSpecificEntrantStatus() {
+    
+    int entrant;
+    int entrantFound = 0;
+    printf("Enter required competitor number:\n");
+    scanf(" %d", &entrant);
+    
+    linked_item * temp = entrant_list->head;
+    
+    while (temp != NULL) {
+        
+         competitor * current_competitor = (competitor *) temp->data;
+         
+         if (current_competitor->competitor_number == entrant) {
+             
+             getEntrantStatus(temp);
+             entrantFound = 1;
+         } 
+         
+         temp = temp->next;
+    }
+    
+    if (entrantFound == 0) {
+        
+        printf("\nCompetitor with number %d cannot be found. Please try again.", entrant);
     }
 }
 
@@ -407,9 +434,9 @@ void checkNotStarted() {
     }
 
     if (count == 0) {
-        printf("\nAll competitors are currently on a course\n");
+        printf("\n\nAll competitors are currently on a course\n");
     } else {
-        printf("\nTotal competitors yet to start: %d\n", count);
+        printf("\n\nTotal competitors yet to start: %d\n", count);
     }
 
 }
@@ -427,7 +454,7 @@ void checkStarted() {
 
         competitor * current_competitor = (competitor *) temp->data;
 
-        if (current_competitor->current_status > 0 || current_competitor->current_status < 4) {
+        if (current_competitor->current_status == 1 || current_competitor->current_status == 2 || current_competitor->current_status == 3) {
 
             char status[12];
 
@@ -457,9 +484,9 @@ void checkStarted() {
     }
 
     if (count == 0) {
-        printf("\nNo competitors are currently on the course\n");
+        printf("\n\nNo competitors are currently on the course\n");
     } else {
-        printf("\nTotal competitors out on course: %d\n", count);
+        printf("\n\nTotal competitors out on course: %d\n", count);
     }
 
 }

@@ -63,6 +63,7 @@ extern "C" {
     void checkNotStarted();
     void checkFinished();
     void displayResultsList();
+    void getSpecificEntrantStatus();
 
 
 #ifdef	__cplusplus
