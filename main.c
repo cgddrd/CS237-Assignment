@@ -109,7 +109,7 @@ void displayMenu() {
                 getSpecificEntrantStatus();
                 break;
             case 8:
-                printf("\nThanks for using this program!\n");
+                printf("\nExiting program..\n");
                 break;
             default:
                 printf("\nInput not valid. Please try again.\n");
