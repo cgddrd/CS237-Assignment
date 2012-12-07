@@ -45,8 +45,8 @@ int loadEntrants() {
             new_competitor->last_logged_node = NULL;
             new_competitor->current_progress = 0;
             new_competitor->current_status = 0;
-            strcpy(new_competitor->start_time, "N/A"); 
-            strcpy(new_competitor->finish_time, "N/A"); 
+            strcpy(new_competitor->start_time, "N/A");
+            strcpy(new_competitor->finish_time, "N/A");
             linked_entrant->data = new_competitor;
 
             if (status > 0) {
@@ -126,16 +126,12 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
                     temp_competitor->last_logged_node = temp;
                     temp_competitor->current_progress = j + 1;
                     temp_competitor->last_logged_node_index = j;
-
-                   /* printf("NEW LAT LOGGED TIME: %s", temp_competitor->last_logged_time); */
+                    strcpy(temp_competitor->last_logged_time, time);
 
                     if (temp_competitor->current_progress == 1) {
 
-                        strcpy(temp_competitor->start_time, time); 
-                        printf("NEW START TIME: %s", temp_competitor->start_time);
+                        strcpy(temp_competitor->start_time, time);
                     }
-                    
-                    printf("\nSTART TIME: %d, %s", temp_competitor->competitor_number, temp_competitor->start_time);
 
                     convertTime(temp_competitor, time);
 
@@ -146,9 +142,6 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
                         temp_competitor->current_status = 4;
 
                         strcpy(temp_competitor->finish_time, time);
-                        
-                        printf("\nFinish TIME: %d, %s", temp_competitor->competitor_number, temp_competitor->finish_time);
-                        printf("\nActual TIME: %d, %s", temp_competitor->competitor_number, time);
                     }
 
                     updateOtherEntrants(entrant_list->head, current, time);
@@ -164,7 +157,7 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
 
         } else {
 
-            printf("\nEntrant cannot be located. Please try again.");
+            printf("\n\nEntrant cannot be located. Please try again.");
         }
     }
 }
@@ -279,7 +272,7 @@ void getEntrantStatus(linked_item * entrant) {
     competitor * temp_competitor = (competitor *) entrant->data;
 
     char status[20];
-   
+
     switch (temp_competitor->current_status) {
 
         case 0:
@@ -321,29 +314,29 @@ void getAllEntrantStatuses() {
 }
 
 void getSpecificEntrantStatus() {
-    
+
     int entrant;
     int entrantFound = 0;
     printf("Enter required competitor number:\n");
     scanf(" %d", &entrant);
-    
+
     linked_item * temp = entrant_list->head;
-    
+
     while (temp != NULL) {
-        
-         competitor * current_competitor = (competitor *) temp->data;
-         
-         if (current_competitor->competitor_number == entrant) {
-             
-             getEntrantStatus(temp);
-             entrantFound = 1;
-         } 
-         
-         temp = temp->next;
+
+        competitor * current_competitor = (competitor *) temp->data;
+
+        if (current_competitor->competitor_number == entrant) {
+
+            getEntrantStatus(temp);
+            entrantFound = 1;
+        }
+
+        temp = temp->next;
     }
-    
+
     if (entrantFound == 0) {
-        
+
         printf("\nCompetitor with number %d cannot be found. Please try again.", entrant);
     }
 }
@@ -461,13 +454,13 @@ void checkStarted() {
             switch (current_competitor->current_status) {
 
                 case 1:
-                    strcpy(status, "Checkpoint");
+                    sprintf(status, "Checkpoint %d", current_competitor->last_logged_node->number);
                     break;
                 case 2:
-                    strcpy(status, "Junction");
+                    sprintf(status, "Junction %d", current_competitor->last_logged_node->number);
                     break;
                 case 3:
-                    strcpy(status, "Track");
+                    sprintf(status, "Track %d", current_competitor->last_logged_track->number);
                     break;
                 default:
                     strcpy(status, "Unknown");
@@ -554,13 +547,13 @@ void displayResultsList() {
                 strcpy(status, "Not Started");
                 break;
             case 1:
-                strcpy(status, "Checkpoint");
+                sprintf(status, "Checkpoint %d", current_competitor->last_logged_node->number);
                 break;
             case 2:
-                strcpy(status, "Junction");
+                sprintf(status, "Junction %d", current_competitor->last_logged_node->number);
                 break;
             case 3:
-                strcpy(status, "Track");
+                sprintf(status, "Track %d", current_competitor->last_logged_track->number);
                 break;
             case 4:
                 strcpy(status, "Finished");

@@ -97,12 +97,10 @@ void displayMenu() {
                 printf("Enter required competitor number:\n");
                 scanf(" %d", &entrant);
                 userUpdateEntrant(entrant_list->head, entrant);
-                getAllEntrantStatuses();
                 break;
             }
             case 5:
                 loadTimes();
-                getAllEntrantStatuses();
                 break;
             case 6:
                 displayResultsList();
