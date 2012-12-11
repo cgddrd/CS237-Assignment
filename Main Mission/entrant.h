@@ -55,15 +55,8 @@ extern "C" {
     list * entrant_list;
 
     int loadEntrants();
-    int loadTimes();
-    int checkEntrantCompletedTrack(competitor * current_competitor, competitor * new_competitor);
-    void updateEntrant(linked_item * current, char type, int node, int entrant, char * time);
-    void updateOtherEntrants(linked_item * current, linked_item * new, char * time);
     void getEntrantStatus(linked_item * entrant);
     void getAllEntrantStatuses();
-    void userUpdateEntrant(linked_item * entrant, int requested_no);
-    void convertTime(competitor * new_competitor, char * time_string);
-    void updateCurrentEntrantTrack(competitor * current_competitor);
     void getSpecificEntrantStatus();
 
 

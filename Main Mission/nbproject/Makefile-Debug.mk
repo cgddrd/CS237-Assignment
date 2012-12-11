@@ -42,6 +42,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/node.o \
 	${OBJECTDIR}/event.o \
+	${OBJECTDIR}/process.o \
 	${OBJECTDIR}/entrant.o
 
 
@@ -103,6 +104,11 @@ ${OBJECTDIR}/event.o: event.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/event.o event.c
+
+${OBJECTDIR}/process.o: process.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -Wall -std=c89 -MMD -MP -MF $@.d -o ${OBJECTDIR}/process.o process.c
 
 ${OBJECTDIR}/entrant.o: entrant.c 
 	${MKDIR} -p ${OBJECTDIR}

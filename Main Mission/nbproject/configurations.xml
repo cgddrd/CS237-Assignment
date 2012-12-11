@@ -12,6 +12,7 @@
       <itemPath>linked_list.h</itemPath>
       <itemPath>main.h</itemPath>
       <itemPath>node.h</itemPath>
+      <itemPath>process.h</itemPath>
       <itemPath>track.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -28,6 +29,7 @@
       <itemPath>fileIO.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>node.c</itemPath>
+      <itemPath>process.c</itemPath>
       <itemPath>track.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
