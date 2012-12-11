@@ -211,7 +211,7 @@ int processMedicalCP(competitor * new_competitor, char type, int node, char * ti
 
         strcpy(new_competitor->medical_cp_log.last_arrival_time, time);
         new_competitor->current_status = 5;
-        new_competitor->current_progress++;
+       /* new_competitor->current_progress++; */
 
         linked_item * temp = node_list->head;
 
@@ -232,9 +232,11 @@ int processMedicalCP(competitor * new_competitor, char type, int node, char * ti
         
         for (i = 0; i < new_competitor->course->course_length; i++) {
 
-                    if (new_competitor->course->course_nodes[i]->number == node) {
+                    if (new_competitor->course->course_nodes[i]->number == node && i > (new_competitor->current_progress) - 1) {
 
                         new_competitor->last_logged_node_index = i;
+                        new_competitor->current_progress = i + 1;
+                        break;
                             
                     }
                     
@@ -499,7 +501,7 @@ void userUpdateEntrant(linked_item * entrant, int requested_no) {
 
         if (checkpoint_exists == 1) {
 
-            if (isMC = 1) {
+            if (isMC == 1) {
 
                 printf("\nArriving (1), Departing (2):\n");
                 scanf(" %d", &MC_choice);
@@ -681,14 +683,15 @@ void displayResultsList() {
 
     linked_item * temp = entrant_list->head;
 
-    printf("\n|  Competitor No   |                      Competitor Name                   |    Current Status    |   Start Time  |   End Time  |");
-    printf("\n|==================|========================================================|======================|===============|=============|");
+    printf("\n| Comp. No |                     Competitor Name                    |    Current Status    |   Start Time  |   End Time  |   Delay  |");
+    printf("\n|==========|========================================================|======================|===============|=============|==========|");
 
     while (temp != NULL) {
 
         competitor * current_competitor = (competitor *) temp->data;
 
         char status[12];
+        char delay[10];
 
         switch (current_competitor->current_status) {
 
@@ -720,17 +723,19 @@ void displayResultsList() {
                 strcpy(status, "Unknown");
                 break;
         }
+        
+        sprintf(delay, "%d mins", current_competitor->medical_cp_log.total_delay);
 
-        printf("\n| %8d         |   %-50s   |    %-15s   |      %-5s    |    %-5s    |",
+        printf("\n|   %-4d   |   %-50s   |    %-15s   |      %-5s    |    %-5s    |  %-6s  |",
 
                 current_competitor->competitor_number,
                 current_competitor->name,
                 status,
                 current_competitor->start_time,
-                current_competitor->finish_time);
+                current_competitor->finish_time,
+                delay);
 
-        printf("\n|------------------|--------------------------------------------------------|----------------------|---------------|-------------|");
-        printf("\nTOTAL DELAY: %d mins", current_competitor->medical_cp_log.total_delay);
+        printf("\n|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|");
         temp = temp->next;
     }
 

@@ -84,22 +84,8 @@ void displayMenu() {
         switch (option) {
 
             case 1:
-            {
-                char test1[6];
-                char test2[6];
-                
-                int wank;
-                
-                strcpy(test1, "09:27");
-                strcpy(test2, "09:55");
-                
-                wank = calcMCDelay(test1, test2);
-                
-                printf("TEST MC DELAY VALUE: %d", wank);
-                //checkNotStarted();
+                checkNotStarted();
                 break;
-                
-            }
             case 2:
                 checkStarted();
                 break;
