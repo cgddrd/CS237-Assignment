@@ -18,6 +18,7 @@ extern "C" {
 #include "track.h"
 #include "course.h"
 #include "entrant.h"
+#include "display.h"
 
     void loadFiles();
     void displayMenu();

@@ -5,12 +5,14 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>course.h</itemPath>
+      <itemPath>display.h</itemPath>
       <itemPath>entrant.h</itemPath>
       <itemPath>event.h</itemPath>
       <itemPath>fileIO.h</itemPath>
       <itemPath>linked_list.h</itemPath>
       <itemPath>main.h</itemPath>
       <itemPath>node.h</itemPath>
+      <itemPath>process.h</itemPath>
       <itemPath>track.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -21,11 +23,13 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>course.c</itemPath>
+      <itemPath>display.c</itemPath>
       <itemPath>entrant.c</itemPath>
       <itemPath>event.c</itemPath>
       <itemPath>fileIO.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>node.c</itemPath>
+      <itemPath>process.c</itemPath>
       <itemPath>track.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"

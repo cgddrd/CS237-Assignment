@@ -35,12 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/display.o \
 	${OBJECTDIR}/track.o \
 	${OBJECTDIR}/course.o \
 	${OBJECTDIR}/fileIO.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/node.o \
 	${OBJECTDIR}/event.o \
+	${OBJECTDIR}/process.o \
 	${OBJECTDIR}/entrant.o
 
 
@@ -67,6 +69,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cs237-extendedmission: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cs237-extendedmission ${OBJECTFILES} ${LDLIBSOPTIONS} 
+
+${OBJECTDIR}/display.o: display.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/display.o display.c
 
 ${OBJECTDIR}/track.o: track.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -97,6 +104,11 @@ ${OBJECTDIR}/event.o: event.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/event.o event.c
+
+${OBJECTDIR}/process.o: process.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/process.o process.c
 
 ${OBJECTDIR}/entrant.o: entrant.c 
 	${MKDIR} -p ${OBJECTDIR}
