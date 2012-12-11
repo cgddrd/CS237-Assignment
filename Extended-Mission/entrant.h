@@ -21,14 +21,13 @@ extern "C" {
         int minutes;
 
     } logged_time;
-    
+
     typedef struct med_cp {
-        
         char last_arrival_time[6];
         char last_depart_time[6];
         int total_delay;
-        
-    } medical_cp; 
+
+    } medical_cp;
 
     typedef enum status {
         NOTSTARTED,
@@ -36,9 +35,9 @@ extern "C" {
         JUNCTION,
         TRACK,
         FINISHED,
-                MEDICAL_CP,
-                EXCLUDED_MEDICAL,
-                EXCLUDED_IR
+        MEDICAL_CP,
+        EXCLUDED_MEDICAL,
+        EXCLUDED_IR
     } entrant_status;
 
     typedef struct entrant {
@@ -62,24 +61,9 @@ extern "C" {
     list * entrant_list;
 
     int loadEntrants();
-    int loadTimes();
-    int checkEntrantCompletedTrack(competitor * current_competitor, competitor * new_competitor);
-    void updateEntrant(linked_item * current, char type, int node, int entrant, char * time);
-    void updateOtherEntrants(linked_item * current, linked_item * new, char * time);
     void getEntrantStatus(linked_item * entrant);
     void getAllEntrantStatuses();
-    void userUpdateEntrant(linked_item * entrant, int requested_no);
-    void convertTime(competitor * new_competitor, char * time_string);
-    void updateCurrentEntrantTrack(competitor * current_competitor);
-    void checkStarted();
-    void checkNotStarted();
-    void checkFinished();
-    void displayResultsList();
     void getSpecificEntrantStatus();
-    int checkExclusion(competitor * new_competitor, char type, int node);
-    int processMedicalCP(competitor * new_competitor, char type, int node, char * time);
-    int calcMCDelay(char * arrive_time, char * depart_time);
-
 
 #ifdef	__cplusplus
 }

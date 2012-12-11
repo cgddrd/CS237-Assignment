@@ -80,16 +80,16 @@ void checkStarted() {
                     break;
             }
 
-            printf("\n| %8d         |   %-50s   |    %-12s   |", 
-                    current_competitor->competitor_number, 
+            printf("\n| %8d         |   %-50s   |    %-12s   |",
+                    current_competitor->competitor_number,
                     current_competitor->name, status);
-            
+
             printf("\n|------------------|--------------------------------------------------------|-------------------|");
 
             count++;
 
         }
-        
+
         temp = temp->next;
     }
 
@@ -204,5 +204,4 @@ void displayResultsList() {
         printf("\n|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|");
         temp = temp->next;
     }
-
 }

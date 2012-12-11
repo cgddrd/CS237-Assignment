@@ -11,15 +11,15 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-    
-    #include "entrant.h"
+
+#include "entrant.h"
 
     void checkStarted();
     void checkNotStarted();
     void checkFinished();
     void displayResultsList();
 
-    
+
 #ifdef	__cplusplus
 }
 #endif
