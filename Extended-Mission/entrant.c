@@ -211,35 +211,20 @@ int processMedicalCP(competitor * new_competitor, char type, int node, char * ti
 
         strcpy(new_competitor->medical_cp_log.last_arrival_time, time);
         new_competitor->current_status = 5;
-       /* new_competitor->current_progress++; */
 
-        linked_item * temp = node_list->head;
+        int i;
 
-        while (temp != NULL) {
-
-            track_node * temp_node = (track_node *) temp->data;
-
-            if (temp_node->number == node) {
-
-                new_competitor->last_logged_node = temp_node;
-            }
-
-            temp = temp->next;
-
-        }
-        
-                int i;
-        
         for (i = 0; i < new_competitor->course->course_length; i++) {
 
-                    if (new_competitor->course->course_nodes[i]->number == node && i > (new_competitor->current_progress) - 1) {
+            if (new_competitor->course->course_nodes[i]->number == node && i > (new_competitor->current_progress) - 1) {
 
-                        new_competitor->last_logged_node_index = i;
-                        new_competitor->current_progress = i + 1;
-                        break;
-                            
-                    }
-                    
+                new_competitor->last_logged_node = new_competitor->course->course_nodes[i];
+                new_competitor->last_logged_node_index = i;
+                new_competitor->current_progress = i + 1;
+                break;
+
+            }
+
         }
         return 1;
 
@@ -248,11 +233,11 @@ int processMedicalCP(competitor * new_competitor, char type, int node, char * ti
         strcpy(new_competitor->medical_cp_log.last_depart_time, time);
         new_competitor->medical_cp_log.total_delay =
                 new_competitor->medical_cp_log.total_delay + calcMCDelay(new_competitor->medical_cp_log.last_arrival_time, new_competitor->medical_cp_log.last_depart_time);
-        
-        
+
+
         updateCurrentEntrantTrack(new_competitor);
         new_competitor->current_status = 3;
-        
+
         return 0;
 
     }
@@ -281,10 +266,13 @@ int calcMCDelay(char * arrive_time, char * depart_time) {
     depart_mins = atoi(depart_mins_s);
 
     int total_arrive_time = (arrive_hours * 60) + (arrive_mins);
-
     int total_depart_time = (depart_hours * 60) + (depart_mins);
-
     int delay = total_depart_time - total_arrive_time;
+
+    free(arrive_hours_s);
+    free(arrive_mins_s);
+    free(depart_hours_s);
+    free(depart_mins_s);
 
     return delay;
 
@@ -475,12 +463,9 @@ void userUpdateEntrant(linked_item * entrant, int requested_no) {
 
     if (current_competitor->competitor_number == requested_no) {
 
-        int node;
-        int MC_choice;
+        int node, MC_choice, exc_choice, isMC, checkpoint_exists, exc_reason;
         char time[5];
         char course_id;
-        int checkpoint_exists = 0;
-        int isMC = 0;
 
         printf("\nEnter checkpoint number:\n");
         scanf(" %d", &node);
@@ -501,27 +486,58 @@ void userUpdateEntrant(linked_item * entrant, int requested_no) {
 
         if (checkpoint_exists == 1) {
 
-            if (isMC == 1) {
+            printf("\nEntrant excluded (1 = Yes, 2 = No):\n");
+            scanf(" %d", &exc_choice);
 
-                printf("\nArriving (1), Departing (2):\n");
-                scanf(" %d", &MC_choice);
+            if (exc_choice == 1) {
+                
+                printf("\nEntrant reason (1 = Wrong CP, 2 = Failed Medical):\n");
+                scanf(" %d", &exc_reason);
 
-                if (MC_choice == 1) {
-                    course_id = 'A';
+                if (exc_reason == 1) {
+
+                    course_id = 'I';
 
                 } else {
-                    course_id = 'D';
+                    
+                    if (isMC != 1) {
+                      
+                      printf("\nEntered CP not a medical CP. Entrant cannot have failed medical check.");
+                      course_id = 'I';  
+                        
+                    } else {
+                       
+                        course_id = 'E';
+                        
+                    } 
                 }
 
             } else {
-                course_id = current_competitor->course_id;
+
+                if (isMC == 1) {
+
+                    printf("\nArriving (1), Departing (2):\n");
+                    scanf(" %d", &MC_choice);
+
+                    if (MC_choice == 1) {
+                        
+                        course_id = 'A';
+
+                    } else {
+                        
+                        course_id = 'D';
+                        
+                    }
+
+                } else {
+                    course_id = current_competitor->course_id;
+
+                }
 
             }
 
             printf("\nEnter recorded for checkpoint time (HH:MM):\n");
             scanf(" %s", time);
-
-
 
             updateEntrant(entrant_list->head, course_id, node, requested_no, time);
 
@@ -618,12 +634,16 @@ void checkStarted() {
                     break;
             }
 
-            printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
+            printf("\n| %8d         |   %-50s   |    %-12s   |", 
+                    current_competitor->competitor_number, 
+                    current_competitor->name, status);
+            
             printf("\n|------------------|--------------------------------------------------------|-------------------|");
 
             count++;
 
         }
+        
         temp = temp->next;
     }
 
@@ -714,7 +734,7 @@ void displayResultsList() {
                 sprintf(status, "Medical CP %d", current_competitor->last_logged_node->number);
                 break;
             case 6:
-                strcpy(status, "Excluded - Medical");
+                strcpy(status, "Excluded - MC");
                 break;
             case 7:
                 strcpy(status, "Excluded - IR");
@@ -723,7 +743,7 @@ void displayResultsList() {
                 strcpy(status, "Unknown");
                 break;
         }
-        
+
         sprintf(delay, "%d mins", current_competitor->medical_cp_log.total_delay);
 
         printf("\n|   %-4d   |   %-50s   |    %-15s   |      %-5s    |    %-5s    |  %-6s  |",

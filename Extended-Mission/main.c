@@ -30,7 +30,7 @@ void checkFileLoad(int (*functionPtr)(), void (*printfunctionPtr)()) {
         switch (option) {
 
             case 1:
-                functionPtr();
+                functionPtr(); 
                 break;
             case 2:
                 printf("\nExiting program.");
