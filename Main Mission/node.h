@@ -1,8 +1,8 @@
 /* 
- * File:   node.h
- * Author: connor
- *
- * Created on November 18, 2012, 9:49 AM
+ * File: node.h
+ * Description: Defines structure of course node functions used.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef NODE_H
@@ -18,7 +18,7 @@ extern "C" {
         int number;
         char type[2];
 
-    } track_node;
+    } course_node;
 
     linked_item * linked_node;
     list * node_list;

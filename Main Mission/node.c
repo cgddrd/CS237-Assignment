@@ -18,11 +18,11 @@ int loadNodes() {
             linked_node = malloc(sizeof (linked_item));
             linked_node->next = NULL;
             
-            track_node * new_track = malloc(sizeof (track_node));
+            course_node * new_track = malloc(sizeof (course_node));
 
             status = fscanf(file_two, " %d %[a-zA-Z]s", &new_track->number, new_track->type);
             
-            linked_node->data = new_track;
+            linked_node->item_data = new_track;
 
             if (status > 0) {
 
@@ -49,7 +49,7 @@ void printNodes() {
 
     while (temp != NULL) {
 
-        track_node * temp_node = (track_node *) temp->data;
+        course_node * temp_node = (course_node *) temp->item_data;
 
         printf("Node: %d -> %s", temp_node->number, temp_node->type);
 

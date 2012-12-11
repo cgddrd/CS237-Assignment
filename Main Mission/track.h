@@ -17,8 +17,8 @@ extern "C" {
 
     typedef struct track {
         int number;
-        track_node * start_node;
-        track_node * end_node;
+        course_node * start_node;
+        course_node * end_node;
         int minutes;
 
     } course_track;

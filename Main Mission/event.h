@@ -1,8 +1,8 @@
 /* 
- * File:   event.h
- * Author: connor
- *
- * Created on November 16, 2012, 10:05 AM
+ * File: event.h
+ * Description: Defines the structure of an event, and defines functions used.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef EVENT_H
@@ -18,7 +18,7 @@ extern "C" {
         char event_time[5];
     } event_description;
 
-    event_description * event;
+    event_description * event; /* Defines instance of event used by program */
 
     int loadEventDes();
     void printEventDes();

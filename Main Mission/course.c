@@ -23,11 +23,11 @@ int loadCourses() {
 
             status = fscanf(course_file, " %c%d", &new_course->id, &new_course->course_length);
 
-            new_course->course_nodes = calloc(1, new_course->course_length * sizeof (track_node));
+            new_course->course_nodes = calloc(1, new_course->course_length * sizeof (course_node));
             
             compareCourseNodes(&new_course, &course_file);
 
-            linked_course->data = new_course;
+            linked_course->item_data = new_course;
 
             if (status > 0) {
 
@@ -58,7 +58,7 @@ void compareCourseNodes(event_course ** temp_course, FILE ** course_file) {
 
         while (temp_item != NULL) {
 
-            track_node * temp_node = (track_node *) temp_item->data;
+            course_node * temp_node = (course_node *) temp_item->item_data;
 
             if (current_node == temp_node->number) {
 
@@ -77,7 +77,7 @@ void printCourses() {
 
     while (temp != NULL) {
 
-        event_course * temp_event = (event_course *) temp->data;
+        event_course * temp_event = (event_course *) temp->item_data;
 
         printf("\nCourse ID: %c, Length: %d", temp_event->id, temp_event->course_length);
         printf("\nNodes in course:");

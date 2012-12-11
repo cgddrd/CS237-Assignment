@@ -29,7 +29,7 @@ int loadEntrants() {
 
             while (temp_course != NULL) {
 
-                event_course * temp_event = (event_course *) temp_course->data;
+                event_course * temp_event = (event_course *) temp_course->item_data;
 
                 if (strcmp(&new_competitor->course_id, &temp_event->id) == 0) {
 
@@ -47,7 +47,7 @@ int loadEntrants() {
             new_competitor->current_status = 0;
             strcpy(new_competitor->start_time, "N/A");
             strcpy(new_competitor->finish_time, "N/A");
-            linked_entrant->data = new_competitor;
+            linked_entrant->item_data = new_competitor;
 
             if (status > 0) {
 
@@ -97,7 +97,7 @@ int loadTimes() {
 
 void updateEntrant(linked_item * current, char type, int node, int entrant, char * time) {
 
-    competitor * temp_competitor = (competitor *) current->data;
+    competitor * temp_competitor = (competitor *) current->item_data;
 
     int temp_bool = 0;
 
@@ -111,7 +111,7 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
 
                 if (j > (temp_competitor->current_progress - 1)) {
 
-                    track_node * temp = temp_competitor->course->course_nodes[j];
+                    course_node * temp = temp_competitor->course->course_nodes[j];
 
                     if (strcmp(temp_competitor->course->course_nodes[j]->type, "CP") == 0) {
 
@@ -179,8 +179,8 @@ void convertTime(competitor * new_competitor, char * time_string) {
 
 void updateOtherEntrants(linked_item * current, linked_item * new, char * time) {
 
-    competitor * current_competitor = (competitor *) current->data;
-    competitor * new_competitor = (competitor *) new->data;
+    competitor * current_competitor = (competitor *) current->item_data;
+    competitor * new_competitor = (competitor *) new->item_data;
 
     if (current_competitor->competitor_number != new_competitor->competitor_number) {
 
@@ -198,7 +198,7 @@ void updateOtherEntrants(linked_item * current, linked_item * new, char * time) 
 
                     int next_node_index = (current_competitor->last_logged_node_index) + 1;
 
-                    track_node * next_node = current_competitor->course->course_nodes[next_node_index];
+                    course_node * next_node = current_competitor->course->course_nodes[next_node_index];
 
                     if (strcmp(next_node->type, "JN") == 0) {
 
@@ -235,7 +235,7 @@ void updateCurrentEntrantTrack(competitor * current_competitor) {
 
     while (temp_item != NULL) {
 
-        course_track * temp_track = (course_track *) temp_item->data;
+        course_track * temp_track = (course_track *) temp_item->item_data;
 
         if ((temp_track->start_node->number == node1 && temp_track->end_node->number == node2) || (temp_track->start_node->number == node2 && temp_track->end_node->number == node1)) {
 
@@ -269,7 +269,7 @@ int checkEntrantCompletedTrack(competitor * current_competitor, competitor * new
 
 void getEntrantStatus(linked_item * entrant) {
 
-    competitor * temp_competitor = (competitor *) entrant->data;
+    competitor * temp_competitor = (competitor *) entrant->item_data;
 
     char status[20];
 
@@ -324,7 +324,7 @@ void getSpecificEntrantStatus() {
 
     while (temp != NULL) {
 
-        competitor * current_competitor = (competitor *) temp->data;
+        competitor * current_competitor = (competitor *) temp->item_data;
 
         if (current_competitor->competitor_number == entrant) {
 
@@ -343,7 +343,7 @@ void getSpecificEntrantStatus() {
 
 void userUpdateEntrant(linked_item * entrant, int requested_no) {
 
-    competitor * current_competitor = (competitor *) entrant->data;
+    competitor * current_competitor = (competitor *) entrant->item_data;
 
     if (current_competitor->competitor_number == requested_no) {
 
@@ -388,191 +388,4 @@ void userUpdateEntrant(linked_item * entrant, int requested_no) {
             printf("\nEntrant cannot be located. Please try again.");
         }
     }
-}
-
-void checkNotStarted() {
-
-    linked_item * temp = entrant_list->head;
-
-    int count = 0;
-
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
-
-    while (temp != NULL) {
-
-        competitor * current_competitor = (competitor *) temp->data;
-
-        if (current_competitor->current_status == 0) {
-
-            char status[12];
-
-            switch (current_competitor->current_status) {
-
-                case 0:
-                    strcpy(status, "Not Started");
-                    break;
-                default:
-                    strcpy(status, "Unknown");
-                    break;
-            }
-
-            printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
-
-            count++;
-
-        }
-        temp = temp->next;
-    }
-
-    if (count == 0) {
-        printf("\n\nAll competitors are currently on a course\n");
-    } else {
-        printf("\n\nTotal competitors yet to start: %d\n", count);
-    }
-
-}
-
-void checkStarted() {
-
-    linked_item * temp = entrant_list->head;
-
-    int count = 0;
-
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
-
-    while (temp != NULL) {
-
-        competitor * current_competitor = (competitor *) temp->data;
-
-        if (current_competitor->current_status == 1 || current_competitor->current_status == 2 || current_competitor->current_status == 3) {
-
-            char status[12];
-
-            switch (current_competitor->current_status) {
-
-                case 1:
-                    sprintf(status, "Checkpoint %d", current_competitor->last_logged_node->number);
-                    break;
-                case 2:
-                    sprintf(status, "Junction %d", current_competitor->last_logged_node->number);
-                    break;
-                case 3:
-                    sprintf(status, "Track %d", current_competitor->last_logged_track->number);
-                    break;
-                default:
-                    strcpy(status, "Unknown");
-                    break;
-            }
-
-            printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
-
-            count++;
-
-        }
-        temp = temp->next;
-    }
-
-    if (count == 0) {
-        printf("\n\nNo competitors are currently on the course\n");
-    } else {
-        printf("\n\nTotal competitors out on course: %d\n", count);
-    }
-
-}
-
-void checkFinished() {
-
-    linked_item * temp = entrant_list->head;
-
-    int count = 0;
-
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
-
-    while (temp != NULL) {
-
-        competitor * current_competitor = (competitor *) temp->data;
-
-        if (current_competitor->current_status == 4) {
-
-            char status[12];
-
-            switch (current_competitor->current_status) {
-
-                case 4:
-                    strcpy(status, "Finished");
-                    break;
-                default:
-                    strcpy(status, "Unknown");
-                    break;
-            }
-
-            printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
-
-            count++;
-
-        }
-        temp = temp->next;
-    }
-
-    if (count == 0) {
-        printf("\nNo competitors have currently finished.\n");
-
-    } else {
-        printf("\nTotal competitors finished: %d\n", count);
-    }
-}
-
-void displayResultsList() {
-
-    linked_item * temp = entrant_list->head;
-
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |   Start Time  |   End Time  |");
-    printf("\n|==================|========================================================|===================|===============|=============|");
-
-    while (temp != NULL) {
-
-        competitor * current_competitor = (competitor *) temp->data;
-
-        char status[12];
-
-        switch (current_competitor->current_status) {
-
-            case 0:
-                strcpy(status, "Not Started");
-                break;
-            case 1:
-                sprintf(status, "Checkpoint %d", current_competitor->last_logged_node->number);
-                break;
-            case 2:
-                sprintf(status, "Junction %d", current_competitor->last_logged_node->number);
-                break;
-            case 3:
-                sprintf(status, "Track %d", current_competitor->last_logged_track->number);
-                break;
-            case 4:
-                strcpy(status, "Finished");
-                break;
-            default:
-                strcpy(status, "Unknown");
-                break;
-        }
-
-        printf("\n| %8d         |   %-50s   |    %-12s   |      %-5s    |    %-5s    |",
-
-                current_competitor->competitor_number,
-                current_competitor->name,
-                status,
-                current_competitor->start_time,
-                current_competitor->finish_time);
-
-        printf("\n|------------------|--------------------------------------------------------|-------------------|---------------|-------------|");
-        temp = temp->next;
-    }
-
 }

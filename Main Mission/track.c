@@ -27,7 +27,7 @@ int loadTracks() {
 
             locateNodes(new_track, start_node, end_node);
 
-            linked_track->data = new_track;
+            linked_track->item_data = new_track;
 
             if (status > 0) {
 
@@ -54,16 +54,16 @@ void locateNodes(course_track * new_track, int start_node, int end_node) {
 
     while (temp != NULL) {
 
-        track_node * temp_node = (track_node *) temp->data;
+        course_node * temp_node = (course_node *) temp->item_data;
 
         if (start_node == temp_node->number) {
 
-            new_track->start_node = temp->data;
+            new_track->start_node = temp->item_data;
         }
 
         if (end_node == temp_node->number) {
 
-            new_track->end_node = temp->data;
+            new_track->end_node = temp->item_data;
 
         }
         
@@ -77,7 +77,7 @@ void printTracks() {
 
     while (temp_item != NULL) {
 
-        course_track * temp_track = (course_track *) temp_item->data;
+        course_track * temp_track = (course_track *) temp_item->item_data;
 
         printf("\nTrack No: %d, SN: %d, EN: %d, Min: %d", temp_track->number, temp_track->start_node->number,
 
