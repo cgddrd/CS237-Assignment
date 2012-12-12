@@ -1,8 +1,10 @@
 /* 
- * File:   display.h
- * Author: connor
- *
- * Created on December 11, 2012, 3:04 PM
+ * File: display.h
+ * Description: Provides functionality to display results on screen to user.
+ * Description: Defines functions that are utilised by process.c and called
+ * from other source files.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef DISPLAY_H

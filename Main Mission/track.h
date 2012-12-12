@@ -1,8 +1,8 @@
 /* 
- * File:   track.h
- * Author: connor
- *
- * Created on November 24, 2012, 4:53 PM
+ * File: node.h
+ * Description: Defines course track structures and functions.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef TRACK_H
@@ -16,18 +16,25 @@ extern "C" {
 #include "linked_list.h"
 
     typedef struct track {
-        int number;
-        course_node * start_node;
-        course_node * end_node;
-        int minutes;
+        int number; /* Node ID number*/
+        course_node * start_node; /* One of two course nodes connected to track */
+        course_node * end_node; /* Second of two course nodes connected to track */
+        
+        /* Average number of minutes to complete track.
+         * Used for predicting entrant location.
+         */
+        int minutes; 
 
     } course_track;
 
+    /* Define linked-list structure for nodes */
     linked_item * linked_track;
     list * track_list;
 
     int loadTracks();
     void printTracks();
+    
+    /* Determines the nodes that connect to a particular track. */
     void locateNodes(course_track * new_track, int start_node, int end_node);
 
 #ifdef	__cplusplus

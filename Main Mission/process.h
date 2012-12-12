@@ -1,8 +1,9 @@
 /* 
- * File:   process.h
- * Author: connor
- *
- * Created on December 11, 2012, 3:22 PM
+ * File: process.h
+ * Description: Defines functions that are utilised by process.c and called
+ * from other source files.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef PROCESS_H
