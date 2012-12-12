@@ -88,6 +88,15 @@ void getEntrantStatus(linked_item * entrant) {
         case 4:
             strcpy(status, "Finished");
             break;
+        case 5:
+            sprintf(status, "Medical CP %d", temp_competitor->last_logged_node->number);
+            break;
+        case 6:
+            strcpy(status, "Excluded - MC");
+            break;
+        case 7:
+            strcpy(status, "Excluded - IR");
+            break;
         default:
             strcpy(status, "Unknown");
             break;

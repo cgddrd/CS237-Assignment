@@ -83,29 +83,37 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
 
 int checkExclusion(competitor * new_competitor, char type, int node) {
 
-    linked_item * temp = node_list->head;
+    if (new_competitor->current_status == 6 || new_competitor->current_status == 7) {
 
-    while (temp != NULL) {
+        return 1;
 
-        track_node * temp_node = (track_node *) temp->data;
+    } else {
 
-        if (type == 'I') {
+        linked_item * temp = node_list->head;
 
-            new_competitor->current_status = 7;
-            new_competitor->last_logged_node = temp_node;
-            strcpy(new_competitor->finish_time, "DNF");
-            return 1;
+        while (temp != NULL) {
 
-        } else if (type == 'E') {
+            track_node * temp_node = (track_node *) temp->data;
 
-            new_competitor->current_status = 6;
-            new_competitor->last_logged_node = temp_node;
-            strcpy(new_competitor->finish_time, "DNF");
-            return 1;
+            if (type == 'I') {
+
+                new_competitor->current_status = 7;
+                new_competitor->last_logged_node = temp_node;
+                strcpy(new_competitor->finish_time, "DNF");
+                return 1;
+
+            } else if (type == 'E') {
+
+                new_competitor->current_status = 6;
+                new_competitor->last_logged_node = temp_node;
+                strcpy(new_competitor->finish_time, "DNF");
+                return 1;
+
+            }
+
+            temp = temp->next;
 
         }
-
-        temp = temp->next;
 
     }
 
