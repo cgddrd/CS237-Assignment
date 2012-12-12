@@ -31,7 +31,7 @@ int loadEntrants() {
 
                 event_course * temp_event = (event_course *) temp_course->item_data;
 
-                if (strcmp(&new_competitor->course_id, &temp_event->id) == 0) {
+                if (new_competitor->course_id == temp_event->id) {
 
                     new_competitor->course = temp_event;
 
