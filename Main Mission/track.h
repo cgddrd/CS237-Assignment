@@ -1,5 +1,5 @@
 /* 
- * File: node.h
+ * File: track.h
  * Description: Defines course track structures and functions.
  * Author: Connor Luke Goddard (clg11)
  * Date: November 2012
@@ -16,7 +16,7 @@ extern "C" {
 #include "linked_list.h"
 
     typedef struct track {
-        int number; /* Node ID number*/
+        int number; /* Track ID number*/
         course_node * start_node; /* One of two course nodes connected to track */
         course_node * end_node; /* Second of two course nodes connected to track */
         

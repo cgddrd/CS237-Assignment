@@ -58,6 +58,15 @@ int loadCourses() {
 
                 /* Add new item to course linked list. */
                 addToList(&linked_course, &course_list);
+                
+            } else {
+                
+                /* 
+                 * If read data is incomplete/incorrupt, structures are invalid 
+                 * and so free allocated memory. 
+                 */
+                free(linked_course);
+                free(new_course);
             }
         }
 

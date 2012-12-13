@@ -1,6 +1,5 @@
 /* 
  * File: display.h
- * Description: Provides functionality to display results on screen to user.
  * Description: Defines functions that are utilised by process.c and called
  * from other source files.
  * Author: Connor Luke Goddard (clg11)

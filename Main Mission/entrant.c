@@ -18,10 +18,10 @@
  */
 int loadEntrants() {
 
-    /* Obtain course FILE pointer returned by openFile (fileIO.c). */
+    /* Obtain entrant FILE pointer returned by openFile (fileIO.c). */
     FILE * entrant_file = openFile("Enter entrants file name:");
 
-    /* Allocate memory for course linked-list data structure (fileIO.c). */
+    /* Allocate memory for entrant linked-list data structure (fileIO.c). */
     initialise(&entrant_list);
 
     if (entrant_file != NULL) {
@@ -35,7 +35,7 @@ int loadEntrants() {
             linked_entrant = malloc(sizeof (linked_item));
             linked_entrant->next = NULL;
 
-            /* Create new entrant structure and allocated required memory. */
+            /* Create new entrant structure and allocate required memory. */
             competitor * new_competitor = malloc(sizeof (competitor));
 
             status = fscanf(entrant_file, " %d", 
@@ -75,7 +75,7 @@ int loadEntrants() {
             /* Set new linked list item data to new entrant structure. */
             linked_entrant->item_data = new_competitor;
 
-            /* Check course information was read in successfully from file 
+            /* Check entrant information was read in successfully from file 
              * (data not incomplete/corrupt)
              */
             if (status > 0) {
@@ -83,6 +83,14 @@ int loadEntrants() {
                 /* Add new item to course linked list. */
                 addToList(&linked_entrant, &entrant_list);
 
+            } else {
+                
+                /* 
+                 * If read data is incomplete/incorrupt, structures are invalid 
+                 * and so free allocated memory. 
+                 */
+                free(linked_entrant);
+                free(new_competitor);
             }
         }
 
