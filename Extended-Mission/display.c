@@ -197,8 +197,7 @@ void checkFinished() {
 }
 
 /* 
- * Determines which entrants have finished their course
- * and prints a list of these entrants to screen. 
+ * Determines which entrants have been excluded from their course. 
  */
 void checkExcluded() {
 

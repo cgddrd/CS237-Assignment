@@ -1,7 +1,6 @@
 /* 
  * File: display.h
- * Description: Defines functions that are utilised by process.c and called
- * from other source files.
+ * Description: Defines functions used to display information to screen.
  * Author: Connor Luke Goddard (clg11)
  * Date: November 2012
  */
@@ -20,8 +19,7 @@ extern "C" {
     void checkFinished();
     void displayResultsList();
     void checkExcluded();
-
-
+    
 #ifdef	__cplusplus
 }
 #endif
