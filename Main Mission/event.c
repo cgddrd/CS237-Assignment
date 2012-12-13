@@ -1,10 +1,11 @@
 /* 
- * File: entrant.c
+ * File: event.c
  * Description: Creates new event structures and populates them with
  * data supplied from a file read-in by system.
  * Author: Connor Luke Goddard (clg11)
  * Date: November 2012
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "event.h"

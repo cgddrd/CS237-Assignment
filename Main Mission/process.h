@@ -17,13 +17,15 @@ extern "C" {
 #include "entrant.h"
 #include "fileIO.h"
 
+    int loadTimes();
+    int checkEntrantCompletedTrack(competitor * current_competitor, competitor * new_competitor);
+     
     void userUpdateEntrant(linked_item * entrant, int requested_no);
     void convertTime(competitor * new_competitor, char * time_string);
     void updateCurrentEntrantTrack(competitor * current_competitor);
-    int checkEntrantCompletedTrack(competitor * current_competitor, competitor * new_competitor);
     void updateEntrant(linked_item * current, char type, int node, int entrant, char * time);
-    void updateOtherEntrants(linked_item * current, linked_item * new, char * time);
-    int loadTimes();
+    void updateOtherEntrants(linked_item * current_item, linked_item * new_item, char * time);
+   
 
 #ifdef	__cplusplus
 }

@@ -36,7 +36,7 @@ void checkFileLoad(int (*functionPtr)(), void (*printfunctionPtr)()) {
     while (functionPtr() == 0) {
 
         printf("\nFile could not be opened.\nWould you like to try again? (1 = Yes, 2 = No):\n");
-        int option;
+        int option = 0;
 
         scanf(" %d", &option);
 
@@ -92,7 +92,7 @@ void loadFiles() {
  */
 void displayMenu() {
 
-    int option = 0;
+    int option = 0, status = 0;
 
     while (option != 8) {
 
@@ -108,7 +108,12 @@ void displayMenu() {
         printf("\n  7. Display specific competitor status");
         printf("\n  8. Exit Program");
         printf("\n*****************************************\n");
-        scanf(" %d", &option);
+        
+        status =  scanf(" %d", &option);
+        
+        if (status == 0) {
+            exit(0);  
+        }
 
         switch (option) {
 

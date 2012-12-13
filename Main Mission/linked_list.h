@@ -14,6 +14,7 @@ extern "C" {
 
     /* Defines a generic linked-list item */
     typedef struct list_item {
+        
         void * item_data; /* 'void' used to create generic pointer */
         struct list_item * next; /* Pointer to next linked-list item */
 
@@ -21,6 +22,7 @@ extern "C" {
 
     /* Defines structure of generic linked-list */
     typedef struct linked_list {
+        
         linked_item * head;
         linked_item * tail;
         int no_of_items;

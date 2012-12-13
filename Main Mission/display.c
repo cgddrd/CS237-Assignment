@@ -20,8 +20,13 @@ void checkNotStarted() {
 
     int count = 0;
 
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
+    printf("\n|  Competitor No   |"
+            "                      Competitor Name                   |"
+            "   Current Status  |");
+    
+    printf("\n|==================|"
+            "========================================================|"
+            "===================|");
 
     while (temp != NULL) {
 
@@ -47,7 +52,9 @@ void checkNotStarted() {
                     current_competitor->name, 
                     status);
             
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+            printf("\n|------------------|"
+                    "--------------------------------------------------------|"
+                    "-------------------|");
 
             count++;
 
@@ -57,7 +64,7 @@ void checkNotStarted() {
     }
 
     if (count == 0) {
-        printf("\n\nAll competitors are currently on a course\n");
+        printf("\n\nAll competitors have started.\n");
     } else {
         printf("\n\nTotal competitors yet to start: %d\n", count);
     }
@@ -74,14 +81,21 @@ void checkStarted() {
 
     int count = 0;
 
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
+    printf("\n|  Competitor No   |"
+            "                      Competitor Name                   |"
+            "   Current Status  |");
+    
+    printf("\n|==================|"
+            "========================================================|"
+            "===================|");
 
     while (temp != NULL) {
 
         competitor * current_competitor = (competitor *) temp->item_data;
 
-        if (current_competitor->current_status == 1 || current_competitor->current_status == 2 || current_competitor->current_status == 3) {
+        if (current_competitor->current_status == 1 ||
+                current_competitor->current_status == 2 ||
+                current_competitor->current_status == 3) {
 
             char status[12];
 
@@ -109,7 +123,9 @@ void checkStarted() {
                     current_competitor->name, 
                     status);
             
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+            printf("\n|------------------|"
+                    "--------------------------------------------------------|"
+                    "-------------------|");
 
             count++;
 
@@ -136,8 +152,13 @@ void checkFinished() {
 
     int count = 0;
 
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
+    printf("\n|  Competitor No   |"
+            "                      Competitor Name                   |"
+            "   Current Status  |");
+    
+    printf("\n|==================|"
+            "========================================================|"
+            "===================|");
 
     while (temp != NULL) {
 
@@ -163,7 +184,9 @@ void checkFinished() {
                     current_competitor->name, 
                     status);
             
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+            printf("\n|------------------|"
+                    "--------------------------------------------------------|"
+                    "-------------------|");
 
             count++;
 

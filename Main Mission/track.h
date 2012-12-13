@@ -20,14 +20,15 @@ extern "C" {
         course_node * start_node; /* One of two course nodes connected to track */
         course_node * end_node; /* Second of two course nodes connected to track */
         
-        /* Average number of minutes to complete track.
+        /* 
+         * Average number of minutes to complete track.
          * Used for predicting entrant location.
          */
         int minutes; 
 
     } course_track;
 
-    /* Define linked-list structure for nodes */
+    /* Define linked-list structure for course tracks */
     linked_item * linked_track;
     list * track_list;
 

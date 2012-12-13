@@ -59,7 +59,7 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
 
     competitor * temp_competitor = (competitor *) current->item_data;
 
-    int entrant_updated = 0, j;
+    int entrant_updated = 0, i;
 
     /* 
      * Determine if current entrant item in linked list being
@@ -71,55 +71,56 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
          * Loop through the array of nodes stored in course structure
          * referenced in current entrant's structure.
          */
-        for (j = 0; j < temp_competitor->course->course_length; j++) {
+        for (i = 0; i < temp_competitor->course->course_length; i++) {
 
             /* 
              * Check if the current course node ID matches the node ID 
              * specified in the time log file, and the entrant has not 
              * already been updated on this occasion.
              */
-            if (temp_competitor->course->course_nodes[j]->number == node && entrant_updated != 1) {
+            if (temp_competitor->course->course_nodes[i]->number == node && entrant_updated != 1) {
 
                 /* 
                  * Check if the array index of the current course node is 
                  * greater than the current progress value of the entrant.
                  * (i.e. prevent the system updating an entrant's location to 
                  * a node index that the entrant has already passed)
-                 *
                  */
-                if (j > (temp_competitor->current_progress - 1)) {
+                if (i > (temp_competitor->current_progress - 1)) {
 
-                    course_node * temp = temp_competitor->course->course_nodes[j];
+                    course_node * temp = temp_competitor->course->course_nodes[i];
 
                     /* Determine the type of the updated node. */
-                    if (strcmp(temp_competitor->course->course_nodes[j]->type, "CP") == 0) {
+                    if (strcmp(temp_competitor->course->course_nodes[i]->type, "CP") == 0) {
 
                         temp_competitor->current_status = 1;
 
-                    } else if (strcmp(temp_competitor->course->course_nodes[j]->type, "JN") == 0) {
+                    } else if (strcmp(temp_competitor->course->course_nodes[i]->type, "JN") == 0) {
 
                         temp_competitor->current_status = 2;
 
                     }
 
-                    /* Update the remaining entrant data */
+                    /* Update the entrant's information */
                     temp_competitor->last_logged_node = temp;
-                    temp_competitor->current_progress = j + 1;
-                    temp_competitor->last_logged_node_index = j;
+                    temp_competitor->current_progress = i + 1;
+                    temp_competitor->last_logged_node_index = i;
                     strcpy(temp_competitor->last_logged_time, time);
 
                     if (temp_competitor->current_progress == 1) {
                         strcpy(temp_competitor->start_time, time);
                     }
 
-                    /* Convert new logged time value to integers.
+                    /* 
+                     * Convert new logged time value to integers.
                      * (Used for entrant location prediction)
                      */
                     convertTime(temp_competitor, time);
 
                     entrant_updated = 1;
 
-                    /* Check if the updated location/status/progress of the entrant
+                    /* 
+                     * Check if the updated location/status/progress of the entrant
                      * now means they have finished their course and 
                      * update accordingly.
                      */
@@ -132,7 +133,7 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
 
                     /* 
                      * Update the location/status of all other entrants
-                     * relevant to the new time value. 
+                     * in relation to the new current time. 
                      */
                     updateOtherEntrants(entrant_list->head, current, time);
                 }
@@ -141,7 +142,8 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
 
     } else {
 
-        /* Otherwise if the current entrant does not match the
+        /* 
+         * Otherwise if the current entrant does not match the
          * specified entrant in the time log file data, recursively run the 
          * function again with the next entrant in the linked list.
          */
@@ -160,7 +162,8 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
     }
 }
 
-/* Convert new entrant time log value to integers to 
+/* 
+ * Convert new entrant time log value to integers to 
  * allow automated entrant location/status prediction to run.
  */
 void convertTime(competitor * new_competitor, char * time_string) {
@@ -181,10 +184,10 @@ void convertTime(competitor * new_competitor, char * time_string) {
  * Automatically predict and update location/status of other entrants
  * in relation to new time value obtained from time log file or user input.
  */
-void updateOtherEntrants(linked_item * current, linked_item * new, char * time) {
+void updateOtherEntrants(linked_item * current_item, linked_item * new_item, char * time) {
 
-    competitor * current_competitor = (competitor *) current->item_data;
-    competitor * new_competitor = (competitor *) new->item_data;
+    competitor * current_competitor = (competitor *) current_item->item_data;
+    competitor * new_competitor = (competitor *) new_item->item_data;
 
     /* Ensure the newly updated entrant is not automatically updated again. */
     if (current_competitor->competitor_number != new_competitor->competitor_number) {
@@ -242,9 +245,9 @@ void updateOtherEntrants(linked_item * current, linked_item * new, char * time) 
 
     }
 
-    if (current->next != NULL) {
+    if (current_item->next != NULL) {
 
-        updateOtherEntrants(current->next, new, time);
+        updateOtherEntrants(current_item->next, new_item, time);
 
     }
 }
@@ -258,7 +261,7 @@ void updateCurrentEntrantTrack(competitor * current_competitor) {
 
     int node1, node2;
 
-    /* Assign the node ID's of the entrant's current, and next scheduled node.*/
+    /* Assign the node ID numbers of the entrant's current, and next scheduled node.*/
     node1 = current_competitor->course->course_nodes[current_competitor->last_logged_node_index]->number;
     node2 = current_competitor->course->course_nodes[(current_competitor->last_logged_node_index) + 1]->number;
 
@@ -294,10 +297,14 @@ void updateCurrentEntrantTrack(competitor * current_competitor) {
  */
 int checkEntrantCompletedTrack(competitor * current_competitor, competitor * new_competitor) {
 
-    int new_entrant_time = (new_competitor->last_cp_time.hour * 60) + (new_competitor->last_cp_time.minutes);
+    /* Convert the entrant times to minutes. */
+    int new_entrant_time = (new_competitor->last_cp_time.hour * 60) +
+        (new_competitor->last_cp_time.minutes);
+    
+    int current_entrant_time = (current_competitor->last_cp_time.hour * 60) +
+        (current_competitor->last_cp_time.minutes);
 
-    int current_entrant_time = (current_competitor->last_cp_time.hour * 60) + (current_competitor->last_cp_time.minutes);
-
+    /* Calculate the time difference in minutes between the two times.*/
     int time_difference = new_entrant_time - current_entrant_time;
 
     /* 
@@ -328,7 +335,7 @@ void userUpdateEntrant(linked_item * entrant, int requested_no) {
 
         int node, checkpoint_exists = 0, i;
         char time[5];
-        char course_id;
+        char log_entry_id;
 
         printf("\nEnter checkpoint number:\n");
         scanf(" %d", &node);
@@ -352,9 +359,9 @@ void userUpdateEntrant(linked_item * entrant, int requested_no) {
             printf("\nEnter recorded for checkpoint time (HH:MM):\n");
             scanf(" %s", time);
 
-            course_id = current_competitor->course_id;
+            log_entry_id = 'T';
 
-            updateEntrant(entrant_list->head, course_id, node, requested_no, time);
+            updateEntrant(entrant_list->head, log_entry_id, node, requested_no, time);
 
         } else {
             printf("\nEntered node is not a checkpoint. Please try again.\n");

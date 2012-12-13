@@ -40,7 +40,8 @@ int loadCourses() {
                     &new_course->id, 
                     &new_course->course_length);
 
-            /* Allocate memory for course node array to size of total nodes
+            /* 
+             * Allocate memory for course node array to size of total nodes
              * value obtained from file.
              */
             new_course->course_nodes = calloc(1, 
@@ -85,9 +86,8 @@ int loadCourses() {
  * adds pointers to matching node structures in course array. */
 void compareCourseNodes(event_course ** temp_course, FILE ** course_file) {
 
-    int i;
-    int current_node;
-
+    int i, current_node;
+    
     for (i = 0; i < (*temp_course)->course_length; i++) {
 
         /* Get next node in node sequence list located in input file*/
@@ -125,14 +125,18 @@ void printCourses() {
 
         event_course * temp_event = (event_course *) temp->item_data;
 
-        printf("\nCourse ID: %c, Length: %d", temp_event->id, temp_event->course_length);
+        printf("\nCourse ID: %c, Length: %d", 
+                temp_event->id, 
+                temp_event->course_length);
+        
         printf("\nNodes in course:");
 
         int i;
         for (i = 0; i < temp_event->course_length; i++) {
 
-            printf("\nNode %d: No: %d, ID: %s", i, temp_event->course_nodes[i]->number, temp_event->course_nodes[i]->type);
-
+            printf("\nNode %d: No: %d, ID: %s", i, 
+                    temp_event->course_nodes[i]->number, 
+                    temp_event->course_nodes[i]->type);
         }
 
         printf("\n\n");
@@ -142,5 +146,3 @@ void printCourses() {
     }
 
 }
-
-

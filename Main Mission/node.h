@@ -15,6 +15,7 @@ extern "C" {
 #include "linked_list.h"
 
     typedef struct node {
+        
         int number; /* Node ID number*/
         char type[2]; /* Node type (i.e. checkpoint, junction, medical CP) */
 

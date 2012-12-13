@@ -35,14 +35,14 @@ int loadNodes() {
             linked_node->next = NULL;
             
             /* Create new course node structure and allocate required memory. */
-            course_node * new_track = malloc(sizeof (course_node));
+            course_node * new_node = malloc(sizeof (course_node));
 
             status = fscanf(node_file, " %d %[a-zA-Z]s", 
-                    &new_track->number, 
-                    new_track->type);
+                    &new_node->number, 
+                    new_node->type);
             
             /* Set new linked list item data to new course node structure. */
-            linked_node->item_data = new_track;
+            linked_node->item_data = new_node;
 
             /* Check course node information was read in successfully from file 
              * (data not incomplete/corrupt)
@@ -59,7 +59,7 @@ int loadNodes() {
                  * and so free allocated memory. 
                  */
                 free(linked_node);
-                free(new_track);
+                free(new_node);
             }
         }
 

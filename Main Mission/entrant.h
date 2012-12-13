@@ -50,7 +50,7 @@ extern "C" {
         entrant_status current_status; /* Defines current status as enum */
     } competitor;
 
-    /* Define linked-list structure for courses */
+    /* Define linked-list structure for entrants */
     linked_item * linked_entrant;
     list * entrant_list;
 

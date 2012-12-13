@@ -38,10 +38,11 @@ int loadEntrants() {
             /* Create new entrant structure and allocate required memory. */
             competitor * new_competitor = malloc(sizeof (competitor));
 
-            status = fscanf(entrant_file, " %d", 
-                    &new_competitor->competitor_number);
+            status = fscanf(entrant_file, " %d %c %[a-zA-Z ]s", 
+                    &new_competitor->competitor_number, 
+                    &new_competitor->course_id,
+                    new_competitor->name);
             
-            fscanf(entrant_file, " %c", &new_competitor->course_id);
 
             linked_item * temp_item = course_list->head;
 
@@ -62,7 +63,6 @@ int loadEntrants() {
                 temp_item = temp_item->next;
             }
 
-            fscanf(entrant_file, " %[a-zA-Z ]s", new_competitor->name);
 
             /* Set default values to entrant location,
              * status and current progress variables. */

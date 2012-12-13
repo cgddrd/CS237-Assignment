@@ -16,6 +16,7 @@ extern "C" {
 #include "linked_list.h"
 
     typedef struct course {
+        
         char id; /* Character ID of particular course */
         int course_length; /* Denotes the total number of nodes used to make up the course */
         course_node ** course_nodes; /* Pointer to array of track node pointers */

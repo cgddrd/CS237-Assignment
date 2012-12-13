@@ -18,7 +18,8 @@ extern "C" {
         char event_time[5];
     } event_description;
 
-    event_description * event; /* Defines instance of event used by program */
+    /* Defines instance of event used by program */
+    event_description * event; 
 
     int loadEventDes();
     void printEventDes();
