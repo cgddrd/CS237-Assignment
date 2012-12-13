@@ -1,21 +1,38 @@
+/* 
+ * File: display.c
+ * Description: Provides functionality to display results on screen to user.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "display.h"
 
+/* 
+ * Determines which entrants have not started on their course yet
+ * and prints a list of these entrants to screen. 
+ */
 void checkNotStarted() {
 
     linked_item * temp = entrant_list->head;
 
     int count = 0;
 
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
+    printf("\n|  Competitor No   |"
+            "                      Competitor Name                   |"
+            "   Current Status  |");
+    
+    printf("\n|==================|"
+            "========================================================|"
+            "===================|");
 
     while (temp != NULL) {
 
         competitor * current_competitor = (competitor *) temp->data;
 
+        /* Determine if current entrant status is NOTSTARTED. */
         if (current_competitor->current_status == 0) {
 
             char status[12];
@@ -31,7 +48,9 @@ void checkNotStarted() {
             }
 
             printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+            printf("\n|------------------|"
+                    "--------------------------------------------------------|"
+                    "-------------------|");
 
             count++;
 
@@ -40,30 +59,44 @@ void checkNotStarted() {
     }
 
     if (count == 0) {
-        printf("\n\nAll competitors are currently on a course\n");
+        printf("\n\nAll competitors have started.\n");
     } else {
         printf("\n\nTotal competitors yet to start: %d\n", count);
     }
 
 }
 
+/* 
+ * Determines which entrants are currently on their designated course
+ * and prints a list of these entrants to screen. 
+ */
 void checkStarted() {
 
     linked_item * temp = entrant_list->head;
 
     int count = 0;
 
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
+    printf("\n|  Competitor No   |"
+            "                      Competitor Name                   |"
+            "   Current Status  |");
+    
+    printf("\n|==================|"
+            "========================================================|"
+            "===================|");
 
     while (temp != NULL) {
 
         competitor * current_competitor = (competitor *) temp->data;
 
-        if (current_competitor->current_status == 1 || current_competitor->current_status == 2 || current_competitor->current_status == 3) {
+        if (current_competitor->current_status == 1 ||
+                current_competitor->current_status == 2 ||
+                current_competitor->current_status == 3) {
 
             char status[12];
 
+            /* Determine current entrant status 
+             * and output required status string
+             */
             switch (current_competitor->current_status) {
 
                 case 1:
@@ -84,7 +117,9 @@ void checkStarted() {
                     current_competitor->competitor_number,
                     current_competitor->name, status);
 
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+            printf("\n|------------------|"
+                    "--------------------------------------------------------|"
+                    "-------------------|");
 
             count++;
 
@@ -101,19 +136,29 @@ void checkStarted() {
 
 }
 
+/* 
+ * Determines which entrants have finished their course
+ * and prints a list of these entrants to screen. 
+ */
 void checkFinished() {
 
     linked_item * temp = entrant_list->head;
 
     int count = 0;
 
-    printf("\n|  Competitor No   |                      Competitor Name                   |   Current Status  |");
-    printf("\n|==================|========================================================|===================|");
+    printf("\n|  Competitor No   |"
+            "                      Competitor Name                   |"
+            "   Current Status  |");
+    
+    printf("\n|==================|"
+            "========================================================|"
+            "===================|");
 
     while (temp != NULL) {
 
         competitor * current_competitor = (competitor *) temp->data;
 
+        /* Determine if current entrant status is FINISHED. */
         if (current_competitor->current_status == 4) {
 
             char status[12];
@@ -128,8 +173,14 @@ void checkFinished() {
                     break;
             }
 
-            printf("\n| %8d         |   %-50s   |    %-12s   |", current_competitor->competitor_number, current_competitor->name, status);
-            printf("\n|------------------|--------------------------------------------------------|-------------------|");
+            printf("\n| %8d         |   %-50s   |    %-12s   |", 
+                    current_competitor->competitor_number,
+                    current_competitor->name, 
+                    status);
+            
+            printf("\n|------------------|"
+                    "--------------------------------------------------------|"
+                    "-------------------|");
 
             count++;
 
@@ -145,12 +196,25 @@ void checkFinished() {
     }
 }
 
+/* 
+ * Display complete results list for event including all entrants.
+ * (Including entrant name, status, start time, and end time)
+ */
 void displayResultsList() {
 
     linked_item * temp = entrant_list->head;
 
-    printf("\n| Comp. No |                     Competitor Name                    |    Current Status    |   Start Time  |   End Time  |   Delay  |");
-    printf("\n|==========|========================================================|======================|===============|=============|==========|");
+    printf("\n| Comp. No |                     Competitor Name                    |"
+            "    Current Status    |"
+            "   Start Time  |"
+            "   End Time  |"
+            "   Delay  |");
+    
+    printf("\n|==========|========================================================|"
+            "======================|"
+            "===============|"
+            "=============|"
+            "==========|");
 
     while (temp != NULL) {
 
@@ -201,7 +265,10 @@ void displayResultsList() {
                 current_competitor->finish_time,
                 delay);
 
-        printf("\n|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|");
+        printf("\n|----------|"
+                "--------------------------------------------------------|"
+                "----------------------|"
+                "---------------|-------------|----------|");
         temp = temp->next;
     }
 }

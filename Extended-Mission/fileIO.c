@@ -1,7 +1,20 @@
+/* 
+ * File: fileIO.c
+ * Description: Contains modular functions used to read in files
+ * specified by the user and to allocate memory for linked-list
+ * structures. 
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "fileIO.h"
 
+/* 
+ * Allocates memory blocks for linked-list data structures
+ * passed as parameters and sets default values.
+ */
 void initialise(list ** data_list) {
 
     (*data_list) = malloc(sizeof (list));
@@ -11,22 +24,42 @@ void initialise(list ** data_list) {
 
 }
 
+/* 
+ * Appends a new linked-list item to the end 
+ * of a linked-list specified as parameters.
+ */
 void addToList(linked_item ** new_item, list ** data_list) {
 
+    /* Check if linked list is currently empty */
     if ((*data_list)->head == NULL) {
-
+        
+        /* 
+         * If so add the new item and point the
+         * linked-list head and tail to it.
+         * (As there is only one item in the list)
+         */
         (*data_list)->head = (*new_item);
         (*data_list)->tail = (*new_item);
 
     } else {
 
+        /* Otherwise locate the last item in the linked-list*/
         linked_item * temp = (*data_list)->tail;
 
+         /* 
+         * Set the 'next' pointer of that original last
+         * item to the new item being added, and set the 
+         * 'tail' pointer to the new item.
+         */
         temp->next = (*new_item);
         (*data_list)->tail = (*new_item);
     }
 }
 
+/* 
+ * Returns a FILE pointer that points to a file specified
+ * by a user via an input prompt.
+ */
 FILE * openFile(char * prompt) {
 
     char file_name[101];
