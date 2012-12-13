@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass{article}
 
 \title{CS237 Assignment 2012 \\
  Monitoring Runners and Riders}	
@@ -58,7 +58,7 @@ This array is vital for updating entrant locations/statuses in the application. 
 
 Throughout the design and implementation of the application, I attempted to structure the application in such a way as to enforce modularisation as this would allow particular functions to have multiple uses and become re-usable, and to ease debugging.\\
 
-\begin{tabular}{| p{1.5cm} | p{1.5cm} | p{8cm} |}
+\begin{tabular}{| p{1.5cm} | p{1.7cm} | p{6.2cm} |}
 \hline
 Source File & Header File & Description \\
 \hline
@@ -76,18 +76,13 @@ entrant.c & entrant.h & Defines structure for an event course and loads specifie
 \hline
 process.c & process.h & Provides functionality used to process and update entrant locations/statuses. \\
 \hline
-
-\end{tabular} 
-
-\begin{tabular}{| p{1.5cm} | p{1.5cm} | p{8cm} |}
-\hline
-Source File & Header File & Description \\
-\hline
 display.c & display.h & Provides functionality used to display information to the user. \\
 \hline
 N/A & linked\_list.h & Defines generic structure of linked-list. \\
 \hline
-\end{tabular}
+
+\end{tabular} 
+
 \subsection{Key Design Decisions}
 
 \subsubsection{Modularised Functions}

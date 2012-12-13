@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  13 DEC 2012 16:03
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  13 DEC 2012 16:39
 entering extended mode
  %&-line parsing enabled.
 **appendix6.tex
@@ -14,8 +14,8 @@ orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
 rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size12.clo
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -79,19 +79,20 @@ LaTeX Font Info:    ... okay on input line 5.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) [3] (./appendix6.aux)
  ) 
 Here is how much of TeX's memory you used:
- 1430 strings out of 493848
- 20210 string characters out of 1152822
- 255600 words of memory out of 3000000
- 4766 multiletter control sequences out of 15000+50000
- 5020 words of font info for 19 fonts, out of 3000000 for 9000
+ 1429 strings out of 493848
+ 20195 string characters out of 1152822
+ 272565 words of memory out of 3000000
+ 4765 multiletter control sequences out of 15000+50000
+ 4721 words of font info for 18 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 26i,5n,32p,723b,1457s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on appendix6.pdf (3 pages, 43741 bytes).
+ 26i,4n,32p,723b,1457s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on appendix6.pdf (3 pages, 63445 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
+ 28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
