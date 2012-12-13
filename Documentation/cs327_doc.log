@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  13 DEC 2012 15:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  13 DEC 2012 16:30
 entering extended mode
  %&-line parsing enabled.
 **cs327_doc.tex
@@ -67,142 +67,141 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [2
 
-] [3
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+ [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 30--34
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--34
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--34
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 []\OT1/cmr/m/n/12 Source
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 []\OT1/cmr/m/n/12 Header
  []
 
 
-Overfull \hbox (3.01485pt too wide) in paragraph at lines 58--58
+Overfull \hbox (3.01485pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/m/n/12 entrant.c| 
  []
 
 
-Overfull \hbox (4.32039pt too wide) in paragraph at lines 58--58
+Overfull \hbox (4.32039pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/m/n/12 entrant.h| 
  []
 
 
-Overfull \hbox (2.81902pt too wide) in paragraph at lines 60--60
+Overfull \hbox (2.81902pt too wide) in paragraph at lines 77--77
 []\OT1/cmr/m/n/12 process.c| 
  []
 
 
-Overfull \hbox (4.12456pt too wide) in paragraph at lines 60--60
+Overfull \hbox (4.12456pt too wide) in paragraph at lines 77--77
 []\OT1/cmr/m/n/12 process.h| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
 []\OT1/cmr/m/n/12 Source
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
 []\OT1/cmr/m/n/12 Header
  []
 
 
-Overfull \hbox (0.79543pt too wide) in paragraph at lines 69--69
+Overfull \hbox (0.79543pt too wide) in paragraph at lines 86--86
 []\OT1/cmr/m/n/12 display.c| 
  []
 
 
-Overfull \hbox (2.10097pt too wide) in paragraph at lines 69--69
+Overfull \hbox (2.10097pt too wide) in paragraph at lines 86--86
 []\OT1/cmr/m/n/12 display.h| 
  []
 
 
-Overfull \hbox (17.75441pt too wide) in paragraph at lines 71--71
+Overfull \hbox (17.75441pt too wide) in paragraph at lines 88--88
 []\OT1/cmr/m/n/12 linked[]list.h| 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--91
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--91
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 94--97
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--97
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
+Underfull \hbox (badness 10000) in paragraph at lines 117--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
+Underfull \hbox (badness 10000) in paragraph at lines 117--120
 
  []
 
-[7]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 109.
-
- (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
- [8]
-Underfull \hbox (badness 2469) in paragraph at lines 122--123
-[]\OT1/cmr/m/n/12 B. P. Tid-de-man \OT1/cmr/m/it/12 Mon-ster Mash Game Re-quire
--ments Spec-i-fi-ca-tion
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[]\OT1/cmr/m/n/12 Anders Ahlstrom \OT1/cmr/m/it/12 Void point-ers in C \OT1/cmr
+/m/n/12 2012: an-toarts.com,
  []
 
 [9
@@ -226,7 +225,7 @@ texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/font
 s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
 /cm/cmti12.pfb>
-Output written on cs327_doc.pdf (9 pages, 99081 bytes).
+Output written on cs327_doc.pdf (9 pages, 98868 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  13 DEC 2012 15:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  13 DEC 2012 16:20
 entering extended mode
  %&-line parsing enabled.
 **appendix5.tex
@@ -57,8 +57,7 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
-
-No file appendix5.aux.
+ (./appendix5.aux)
 \openout1 = `appendix5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -83,8 +82,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./appendix5.aux) ) 
 Here is how much of TeX's memory you used:
- 1420 strings out of 493848
- 20047 string characters out of 1152822
+ 1422 strings out of 493848
+ 20075 string characters out of 1152822
  67600 words of memory out of 3000000
  4764 multiletter control sequences out of 15000+50000
  4851 words of font info for 18 fonts, out of 3000000 for 9000
@@ -93,7 +92,7 @@ Here is how much of TeX's memory you used:
 </usr/s
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on appendix5.pdf (1 page, 27012 bytes).
+Output written on appendix5.pdf (1 page, 26181 bytes).
 PDF statistics:
  14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
