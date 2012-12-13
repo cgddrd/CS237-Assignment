@@ -197,6 +197,70 @@ void checkFinished() {
 }
 
 /* 
+ * Determines which entrants have finished their course
+ * and prints a list of these entrants to screen. 
+ */
+void checkExcluded() {
+
+    linked_item * temp = entrant_list->head;
+
+    int count = 0;
+
+    printf("\n|  Competitor No   |"
+            "                      Competitor Name                   |"
+            "   Current Status  |");
+    
+    printf("\n|==================|"
+            "========================================================|"
+            "===================|");
+
+    while (temp != NULL) {
+
+        competitor * current_competitor = (competitor *) temp->data;
+
+        /* Determine if current entrant status is FINISHED. */
+        if (current_competitor->current_status == 6 
+                || current_competitor->current_status == 7) {
+
+            char status[12];
+
+            switch (current_competitor->current_status) {
+
+                case 6:
+                    strcpy(status, "Excluded-MC");
+                    break;
+                case 7:
+                    strcpy(status, "Excluded-IR");
+                    break;
+                default:
+                    strcpy(status, "Unknown");
+                    break;
+            }
+
+            printf("\n| %8d         |   %-50s   |    %-12s   |", 
+                    current_competitor->competitor_number,
+                    current_competitor->name, 
+                    status);
+            
+            printf("\n|------------------|"
+                    "--------------------------------------------------------|"
+                    "-------------------|");
+
+            count++;
+
+        }
+        temp = temp->next;
+    }
+
+    if (count == 0) {
+        printf("\nNo competitors have currently been excluded.\n");
+
+    } else {
+        printf("\nTotal competitors excluded: %d\n", count);
+    }
+}
+
+/* 
  * Display complete results list for event including all entrants.
  * (Including entrant name, status, start time, and end time)
  */

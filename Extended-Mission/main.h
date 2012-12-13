@@ -19,6 +19,8 @@ extern "C" {
 #include "course.h"
 #include "entrant.h"
 #include "display.h"
+#include "process.h"
+    
 
     void loadFiles();
     void displayMenu();

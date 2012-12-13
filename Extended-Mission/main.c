@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
  */
 void checkFileLoad(int (*functionPtr)(), void (*printfunctionPtr)()) {
 
-     /* 
+    /* 
      * If the current load function returns an "unsuccessful" flag,
      * (i.e. it cannot locate the file name inputted by the user)
      */
@@ -45,7 +45,7 @@ void checkFileLoad(int (*functionPtr)(), void (*printfunctionPtr)()) {
 
             case 1:
                 /* Run the same load function again. */
-                functionPtr(); 
+                functionPtr();
                 break;
             case 2:
                 /* Exit program cleanly. */
@@ -94,7 +94,7 @@ void displayMenu() {
 
     int option = 0, status = 0;
 
-    while (option != 8) {
+    while (option != 9) {
 
         printf("\n*****************************************");
         printf("\nWelcome, please select an option:\n");
@@ -106,13 +106,14 @@ void displayMenu() {
         printf("\n  5. Load time log file into system");
         printf("\n  6. Display event results list");
         printf("\n  7. Display specific competitor status");
-        printf("\n  8. Exit Program");
+        printf("\n  8. Display excluded competitors");
+        printf("\n  9. Exit Program");
         printf("\n*****************************************\n");
-        
+
         status = scanf(" %d", &option);
-        
+
         if (status == 0) {
-            exit(0);  
+            exit(0);
         }
 
         switch (option) {
@@ -127,7 +128,7 @@ void displayMenu() {
                 checkFinished();
                 break;
             case 4:
-            /* Brackets are required as variables are being defined here. */
+                /* Brackets are required as variables are being defined here. */
             {
                 int entrant;
                 printf("Enter required competitor number:\n");
@@ -145,6 +146,9 @@ void displayMenu() {
                 getSpecificEntrantStatus();
                 break;
             case 8:
+                checkExcluded();
+                break;
+            case 9:
                 printf("\nExiting program..\n");
                 break;
             default:

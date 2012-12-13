@@ -19,6 +19,7 @@ extern "C" {
     void checkNotStarted();
     void checkFinished();
     void displayResultsList();
+    void checkExcluded();
 
 
 #ifdef	__cplusplus
