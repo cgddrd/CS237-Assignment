@@ -1,8 +1,8 @@
 /* 
- * File:   course.h
- * Author: connor
- *
- * Created on November 24, 2012, 6:23 PM
+ * File: course.h
+ * Description: Defines the structure of an event course and defines functions used.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef COURSE_H
@@ -17,13 +17,13 @@ extern "C" {
 
     typedef struct course {
         
-        char id;
-        int course_length;
-        track_node ** course_nodes;
+        char id; /* Character ID of particular course */
+        int course_length; /* Denotes the total number of nodes used to make up the course */
+        course_node ** course_nodes; /* Pointer to array of track node pointers */
 
     } event_course;
 
-
+    /* Define linked-list structure for courses */
     linked_item * linked_course;
     list * course_list;
 

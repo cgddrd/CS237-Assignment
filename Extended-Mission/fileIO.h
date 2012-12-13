@@ -1,8 +1,8 @@
 /* 
- * File:   fileIO.h
- * Author: connor
- *
- * Created on November 19, 2012, 11:44 AM
+ * File: fileIO.h
+ * Description: Defines functions used to open/parse files.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef FILEIO_H

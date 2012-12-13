@@ -23,7 +23,7 @@ void updateEntrant(linked_item * current, char type, int node, int entrant, char
 
                         if (i > (temp_competitor->current_progress - 1)) {
 
-                            track_node * temp = temp_competitor->course->course_nodes[i];
+                            course_node * temp = temp_competitor->course->course_nodes[i];
 
                             if (strcmp(temp_competitor->course->course_nodes[i]->type, "CP") == 0) {
 
@@ -93,7 +93,7 @@ int checkExclusion(competitor * new_competitor, char type, int node) {
 
         while (temp != NULL) {
 
-            track_node * temp_node = (track_node *) temp->data;
+            course_node * temp_node = (course_node *) temp->data;
 
             if (type == 'I') {
 
@@ -132,7 +132,7 @@ int processMedicalCP(competitor * new_competitor, char type, int node, char * ti
 
         while (temp != NULL) {
 
-            track_node * temp_node = (track_node *) temp->data;
+            course_node * temp_node = (course_node *) temp->data;
 
             if (temp_node->number == node) {
 
@@ -223,10 +223,10 @@ void convertTime(competitor * new_competitor, char * time_string) {
 
 }
 
-void updateOtherEntrants(linked_item * current, linked_item * new, char * time) {
+void updateOtherEntrants(linked_item * current_item, linked_item * new_item, char * time) {
 
-    competitor * current_competitor = (competitor *) current->data;
-    competitor * new_competitor = (competitor *) new->data;
+    competitor * current_competitor = (competitor *) current_item->data;
+    competitor * new_competitor = (competitor *) new_item->data;
 
     if (current_competitor->competitor_number != new_competitor->competitor_number) {
 
@@ -244,7 +244,7 @@ void updateOtherEntrants(linked_item * current, linked_item * new, char * time) 
 
                     int next_node_index = (current_competitor->last_logged_node_index) + 1;
 
-                    track_node * next_node = current_competitor->course->course_nodes[next_node_index];
+                    course_node * next_node = current_competitor->course->course_nodes[next_node_index];
 
                     if (strcmp(next_node->type, "JN") == 0) {
 
@@ -262,9 +262,9 @@ void updateOtherEntrants(linked_item * current, linked_item * new, char * time) 
 
     }
 
-    if (current->next != NULL) {
+    if (current_item->next != NULL) {
 
-        updateOtherEntrants(current->next, new, time);
+        updateOtherEntrants(current_item->next, new_item, time);
 
     }
 }

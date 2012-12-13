@@ -1,8 +1,8 @@
 /* 
- * File:   main.h
- * Author: connor
- *
- * Created on December 6, 2012, 12:37 PM
+ * File: main.h
+ * Description: Defines functions used by user to interact with program.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef MAIN_H
@@ -22,11 +22,13 @@ extern "C" {
 
     void loadFiles();
     void displayMenu();
+    
+    /* Define function pointers (one returns an int, other void)*/
     int (*functionPtr)();
     void (*printfunctionPtr)();
-    void checkFileLoad(int (*functionPtr)(), void (*printfunctionPtr)());
-
-
+    
+    /* Define function that takes the two function pointers as parameters */
+    void checkFileLoad(int (*loadFunctionPtr)(), void (*printFunctionPtr)());
 
 #ifdef	__cplusplus
 }

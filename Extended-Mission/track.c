@@ -54,7 +54,7 @@ void locateNodes(course_track * new_track, int start_node, int end_node) {
 
     while (temp != NULL) {
 
-        track_node * temp_node = (track_node *) temp->data;
+        course_node * temp_node = (course_node *) temp->data;
 
         if (start_node == temp_node->number) {
 

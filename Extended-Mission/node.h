@@ -1,8 +1,8 @@
 /* 
- * File:   node.h
- * Author: connor
- *
- * Created on November 18, 2012, 9:49 AM
+ * File: node.h
+ * Description: Defines course node structures and functions.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef NODE_H
@@ -15,11 +15,13 @@ extern "C" {
 #include "linked_list.h"
 
     typedef struct node {
-        int number;
-        char type[2];
+        
+        int number; /* Node ID number*/
+        char type[2]; /* Node type (i.e. checkpoint, junction, medical CP) */
 
-    } track_node;
+    } course_node;
 
+    /* Define linked-list structure for nodes */
     linked_item * linked_node;
     list * node_list;
 

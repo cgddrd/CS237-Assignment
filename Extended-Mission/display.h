@@ -1,8 +1,9 @@
 /* 
- * File:   display.h
- * Author: connor
- *
- * Created on December 11, 2012, 6:51 PM
+ * File: display.h
+ * Description: Defines functions that are utilised by process.c and called
+ * from other source files.
+ * Author: Connor Luke Goddard (clg11)
+ * Date: November 2012
  */
 
 #ifndef DISPLAY_H
