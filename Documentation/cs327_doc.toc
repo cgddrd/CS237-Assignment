@@ -12,3 +12,5 @@
 \contentsline {subsubsection}{\numberline {2.3.4}Function Pointers as Parameters}{7}
 \contentsline {subsubsection}{\numberline {2.3.5}Processing Medical Checkpoints (Extended Mission)}{8}
 \contentsline {section}{\numberline {3}Highlighted Issues \& Assumptions}{8}
+\contentsline {section}{References}{9}
+\contentsline {section}{Appendix}{9}

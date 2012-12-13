@@ -1,0 +1,459 @@
+
+Enter event description file name: /dcs/dap/CS23710_DATA/event_3/name.txt
+
+Endurance Horse Race - The Main Event
+27th June 2012
+07:30
+ 
+Enter node file name: /dcs/dap/CS23710_DATA/event_3/nodes.txt
+Node: 1 -> CPNode: 2 -> JNNode: 3 -> JNNode: 4 -> CPNode: 5 -> CPNode: 6 -> JNNode: 7 -> CPNode: 8 -> JNNode: 9 -> CPNode: 10 -> JNNode: 11 -> JNNode: 12 -> JNNode: 13 -> CPNode: 14 -> MCNode: 15 -> JNNode: 16 -> JNNode: 17 -> CPNode: 18 -> JN
+Enter track file name: /dcs/dap/CS23710_DATA/event_3/tracks.txt
+
+Track No: 1, SN: 1, EN: 2, Min: 20
+Track No: 2, SN: 2, EN: 3, Min: 10
+Track No: 3, SN: 3, EN: 4, Min: 11
+Track No: 4, SN: 4, EN: 5, Min: 15
+Track No: 5, SN: 5, EN: 6, Min: 12
+Track No: 6, SN: 6, EN: 8, Min: 10
+Track No: 7, SN: 6, EN: 7, Min: 8
+Track No: 8, SN: 7, EN: 10, Min: 12
+Track No: 9, SN: 8, EN: 10, Min: 10
+Track No: 10, SN: 8, EN: 9, Min: 5
+Track No: 11, SN: 3, EN: 9, Min: 18
+Track No: 12, SN: 9, EN: 12, Min: 20
+Track No: 13, SN: 2, EN: 13, Min: 30
+Track No: 14, SN: 12, EN: 13, Min: 5
+Track No: 15, SN: 10, EN: 11, Min: 15
+Track No: 16, SN: 11, EN: 12, Min: 5
+Track No: 17, SN: 11, EN: 14, Min: 12
+Track No: 18, SN: 14, EN: 15, Min: 15
+Track No: 19, SN: 15, EN: 16, Min: 8
+Track No: 20, SN: 16, EN: 17, Min: 8
+Track No: 21, SN: 17, EN: 18, Min: 7
+Track No: 22, SN: 15, EN: 18, Min: 5
+Enter courses file name: /dcs/dap/CS23710_DATA/event_3/courses.txt
+
+Course ID: A, Length: 21
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 4, ID: CP
+Node 4: No: 5, ID: CP
+Node 5: No: 6, ID: JN
+Node 6: No: 7, ID: CP
+Node 7: No: 10, ID: JN
+Node 8: No: 11, ID: JN
+Node 9: No: 14, ID: MC
+Node 10: No: 15, ID: JN
+Node 11: No: 16, ID: JN
+Node 12: No: 17, ID: CP
+Node 13: No: 18, ID: JN
+Node 14: No: 15, ID: JN
+Node 15: No: 14, ID: MC
+Node 16: No: 11, ID: JN
+Node 17: No: 12, ID: JN
+Node 18: No: 13, ID: CP
+Node 19: No: 2, ID: JN
+Node 20: No: 1, ID: CP
+
+
+Course ID: B, Length: 15
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 4, ID: CP
+Node 4: No: 5, ID: CP
+Node 5: No: 6, ID: JN
+Node 6: No: 7, ID: CP
+Node 7: No: 10, ID: JN
+Node 8: No: 11, ID: JN
+Node 9: No: 14, ID: MC
+Node 10: No: 11, ID: JN
+Node 11: No: 12, ID: JN
+Node 12: No: 13, ID: CP
+Node 13: No: 2, ID: JN
+Node 14: No: 1, ID: CP
+
+
+Course ID: C, Length: 13
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 4, ID: CP
+Node 4: No: 5, ID: CP
+Node 5: No: 6, ID: JN
+Node 6: No: 7, ID: CP
+Node 7: No: 10, ID: JN
+Node 8: No: 11, ID: JN
+Node 9: No: 12, ID: JN
+Node 10: No: 13, ID: CP
+Node 11: No: 2, ID: JN
+Node 12: No: 1, ID: CP
+
+
+Course ID: D, Length: 11
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 4, ID: CP
+Node 4: No: 5, ID: CP
+Node 5: No: 6, ID: JN
+Node 6: No: 8, ID: JN
+Node 7: No: 9, ID: CP
+Node 8: No: 3, ID: JN
+Node 9: No: 2, ID: JN
+Node 10: No: 1, ID: CP
+
+
+Course ID: E, Length: 11
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 9, ID: CP
+Node 4: No: 8, ID: JN
+Node 5: No: 10, ID: JN
+Node 6: No: 11, ID: JN
+Node 7: No: 12, ID: JN
+Node 8: No: 13, ID: CP
+Node 9: No: 2, ID: JN
+Node 10: No: 1, ID: CP
+
+
+Course ID: F, Length: 8
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 9, ID: CP
+Node 4: No: 12, ID: JN
+Node 5: No: 13, ID: CP
+Node 6: No: 2, ID: JN
+Node 7: No: 1, ID: CP
+
+
+Enter entrants file name: /dcs/dap/CS23710_DATA/event_3/entrants.txt
+
+Competitor 1 (Ace Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 3 (Ace Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 4 (Amber Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 5 (Amber Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 6 (April Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 7 (April Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 8 (Ash Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 9 (Ash Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 10 (Asti Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 11 (Asti Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 12 (Autumn Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 13 (Autumn Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 14 (Barfields Marco Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 16 (Barfields Marco Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 17 (Basil Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 18 (Basil Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 19 (Beatrice Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 20 (Beatrice Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 22 (Beau Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 23 (Beau Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 24 (Bella Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 26 (Bella Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 27 (Black Jack Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 28 (Black Jack Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 30 (Blue Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 31 (Blue Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 32 (Bobby Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 34 (Bobby Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 35 (Bubbles Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 36 (Bubbles Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 38 (Captain Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 39 (Captain Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 40 (Chalkie Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 41 (Chalkie Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 42 (Copper Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 44 (Copper Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 45 (Diamond Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 46 (Diamond Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 47 (Dinky Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 48 (Dinky Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 49 (Ebony Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 50 (Ebony Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 51 (Ginger Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 52 (Ginger Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 53 (Goldie Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 55 (Goldie Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 56 (Honey Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 57 (Honey Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 58 (Izzy Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 59 (Izzy Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 60 (Jasmine Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 61 (Jasmine Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 62 (Lady Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 64 (Lady Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 65 (Lady Tara Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 66 (Lady Tara Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 67 (Lemon Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 68 (Lemon Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 69 (Lord Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 70 (Lord Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 71 (Lucky Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 74 (Lucky Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 76 (Lord Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 77 (Lord Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 78 (Maddy Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 79 (Maddy Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 80 (Magic Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 81 (Magic Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 83 (Major Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 85 (Major Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 86 (Mattie Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 87 (Mattie Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 89 (Prince Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 90 (Prince Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 91 (Princess Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 92 (Princess Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 93 (Rosie Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 94 (Rosie Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 95 (Ruby Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 97 (Ruby Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 98 (Sapphire Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 100 (Sapphire Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 101 (Scarlet Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 102 (Scarlet Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 103 (sienna Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 106 (sienna Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 107 (Silver Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 108 (Silver Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 109 (Smokey Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 110 (Smokey Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 111 (Snowy Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 113 (Snowy Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 114 (sonic Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 115 (sonic Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 117 (Summer Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 118 (Summer Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 121 (Tango Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 122 (Tango Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 123 (Topaz Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 124 (Topaz Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 126 (Zizou Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 127 (Zizou Fudge) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
