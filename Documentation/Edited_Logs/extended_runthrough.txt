@@ -534,5 +534,32 @@ Welcome, please select an option:
   5. Load time log file into system
   6. Display event results list
   7. Display specific competitor status
-  8. Exit Program
+  8. Display excluded competitors
+  9. Exit Program
 *****************************************
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_2.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Display excluded competitors
+  9. Exit Program
+*****************************************
+8
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+|       23         |   Beau Fudge                                           |    Excluded-IR    |
+|------------------|--------------------------------------------------------|-------------------|
+|       36         |   Bubbles Fudge                                        |    Excluded-IR    |
+|------------------|--------------------------------------------------------|-------------------|
+Total competitors excluded: 2

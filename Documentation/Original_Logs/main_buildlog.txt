@@ -1,47 +1,47 @@
 "/opt/csw/bin/gmake" -f nbproject/Makefile-Debug.mk QMAKE= SUBPROJECTS= .clean-conf
-gmake[1]: Entering directory `/berw/homes1/c/clg11/NetBeansProjects/cs237_main'
+gmake[1]: Entering directory `/berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN'
 rm -f -r build/Debug
 rm -f dist/Debug/NewGnu-Solaris-Sparc/cs237_main
-gmake[1]: Leaving directory `/berw/homes1/c/clg11/NetBeansProjects/cs237_main'
+gmake[1]: Leaving directory `/berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN'
 
 
-CLEAN SUCCESSFUL (total time: 559ms)
+CLEAN SUCCESSFUL (total time: 622ms)
 
 "/opt/csw/bin/gmake" -f nbproject/Makefile-Debug.mk QMAKE= SUBPROJECTS= .build-conf
-gmake[1]: Entering directory `/berw/homes1/c/clg11/NetBeansProjects/cs237_main'
+gmake[1]: Entering directory `/berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN'
 "/opt/csw/bin/gmake"  -f nbproject/Makefile-Debug.mk dist/Debug/NewGnu-Solaris-Sparc/cs237_main
-gmake[2]: Entering directory `/berw/homes1/c/clg11/NetBeansProjects/cs237_main'
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/display.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/display.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/display.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/display.c
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/course.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/course.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/course.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/course.c
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/node.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/node.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/node.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/node.c
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/event.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/event.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/event.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/event.c
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/fileIO.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/fileIO.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/fileIO.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/fileIO.c
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/main.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/main.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/main.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/main.c
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/process.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/process.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/process.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/process.c
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/entrant.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/entrant.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/entrant.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/entrant.c
-mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/828662154
-rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/track.o.d
-gcc    -c -g -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/track.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/track.o /berw/homes1/c/clg11/NetBeansProjects/cs237_main/track.c
+gmake[2]: Entering directory `/berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN'
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/main.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/main.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/main.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/main.c
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/display.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/display.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/display.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/display.c
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/node.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/node.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/node.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/node.c
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/fileIO.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/fileIO.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/fileIO.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/fileIO.c
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/entrant.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/entrant.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/entrant.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/entrant.c
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/course.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/course.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/course.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/course.c
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/event.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/event.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/event.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/event.c
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/track.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/track.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/track.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/track.c
+mkdir -p build/Debug/NewGnu-Solaris-Sparc/_ext/530142602
+rm -f build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/process.o.d
+gcc -ansi   -c -g -Wall -std=c89 -MMD -MP -MF build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/process.o.d -o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/process.o /berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN/process.c
 mkdir -p dist/Debug/NewGnu-Solaris-Sparc
-gcc     -o dist/Debug/NewGnu-Solaris-Sparc/cs237_main build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/display.o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/course.o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/node.o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/event.o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/fileIO.o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/main.o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/process.o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/entrant.o build/Debug/NewGnu-Solaris-Sparc/_ext/828662154/track.o  
-gmake[2]: Leaving directory `/berw/homes1/c/clg11/NetBeansProjects/cs237_main'
-gmake[1]: Leaving directory `/berw/homes1/c/clg11/NetBeansProjects/cs237_main'
+gcc -ansi    -o dist/Debug/NewGnu-Solaris-Sparc/cs237_main build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/main.o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/display.o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/node.o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/fileIO.o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/entrant.o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/course.o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/event.o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/track.o build/Debug/NewGnu-Solaris-Sparc/_ext/530142602/process.o  
+gmake[2]: Leaving directory `/berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN'
+gmake[1]: Leaving directory `/berw/homes1/c/clg11/NetBeansProjects/CS237_MAIN'
 
 
-BUILD SUCCESSFUL (total time: 5s)
+BUILD SUCCESSFUL (total time: 11s)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  13 DEC 2012 16:39
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  14 DEC 2012 10:27
 entering extended mode
  %&-line parsing enabled.
 **appendix8.tex
@@ -415,7 +415,22 @@ Overfull \hbox (372.89838pt too wide) in paragraph at lines 524--526
 [][][] 
  []
 
-) [15] (./appendix8.aux) ) 
+[15]
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 560--561
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 562--563
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 564--565
+[][][] 
+ []
+
+) [16] (./appendix8.aux) ) 
 Here is how much of TeX's memory you used:
  1429 strings out of 493848
  20201 string characters out of 1152822
@@ -428,9 +443,9 @@ Here is how much of TeX's memory you used:
 /cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
 are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on appendix8.pdf (15 pages, 84143 bytes).
+Output written on appendix8.pdf (16 pages, 85520 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

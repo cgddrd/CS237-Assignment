@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  13 DEC 2012 16:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  14 DEC 2012 10:24
 entering extended mode
  %&-line parsing enabled.
 **appendix2.tex
@@ -81,16 +81,16 @@ LaTeX Font Info:    ... okay on input line 5.
 Here is how much of TeX's memory you used:
  1429 strings out of 493848
  20183 string characters out of 1152822
- 271565 words of memory out of 3000000
+ 288565 words of memory out of 3000000
  4765 multiletter control sequences out of 15000+50000
  4721 words of font info for 18 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 26i,4n,32p,711b,1457s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,4n,32p,716b,1457s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
 xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on appendix2.pdf (3 pages, 62783 bytes).
+Output written on appendix2.pdf (3 pages, 63291 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

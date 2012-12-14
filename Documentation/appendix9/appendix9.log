@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  14 DEC 2012 10:24
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  14 DEC 2012 10:30
 entering extended mode
  %&-line parsing enabled.
-**appendix6.tex
-(./appendix6.tex
+**appendix9.tex
+(./appendix9.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
@@ -57,8 +57,8 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
- (./appendix6.aux)
-\openout1 = `appendix6.aux'.
+ (./appendix9.aux)
+\openout1 = `appendix9.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -74,25 +74,46 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 \c@lstlisting=\count95
 
-(../Edited_Logs/extended_buildlog.txt [1
+Overfull \hbox (2.27731pt too wide) in paragraph at lines 10--12
+\OT1/cmr/m/n/10 This doc-u-ment con-tains the IDE log pro-duced from Net-beans 
+run-ning on Aberys-
+ []
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) [3] (./appendix6.aux)
- ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+
+ []
+
+(../Edited_Logs/ide_log.txt
+Overfull \hbox (32.69904pt too wide) in paragraph at lines 1--2
+[][][] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (32.69904pt too wide) in paragraph at lines 33--34
+[][][] 
+ []
+
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13]) [14] (./appendix9.aux) ) 
 Here is how much of TeX's memory you used:
- 1429 strings out of 493848
- 20195 string characters out of 1152822
- 288565 words of memory out of 3000000
- 4765 multiletter control sequences out of 15000+50000
- 4721 words of font info for 18 fonts, out of 3000000 for 9000
+ 1431 strings out of 493848
+ 20186 string characters out of 1152822
+ 279565 words of memory out of 3000000
+ 4766 multiletter control sequences out of 15000+50000
+ 5067 words of font info for 19 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 26i,4n,32p,728b,1457s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on appendix6.pdf (3 pages, 63857 bytes).
+ 26i,5n,32p,1455b,1455s stack positions out of 5000i,500n,10000p,200000b,50000s
+</
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmtt10.pfb>
+Output written on appendix9.pdf (14 pages, 108768 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
