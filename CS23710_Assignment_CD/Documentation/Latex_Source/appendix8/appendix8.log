@@ -1,0 +1,451 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.10.28)  14 DEC 2012 10:27
+entering extended mode
+ %&-line parsing enabled.
+**appendix8.tex
+(./appendix8.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\lst@mode=\count87
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count88
+\lst@currlwidth=\dimen103
+\lst@column=\count89
+\lst@pos=\count90
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count91
+\lst@lineno=\count92
+\lst@maxwidth=\dimen106
+
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count93
+\lst@skipnumbers=\count94
+\lst@framebox=\box27
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+ (./appendix8.aux)
+\openout1 = `appendix8.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+\c@lstlisting=\count95
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+
+ []
+
+(../Edited_Logs/extended_runthrough.txt
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 34--36
+[][][] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 54--55
+[][][] 
+ []
+
+[2] [3]
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 129--130
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 131--132
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 133--134
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 135--136
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 137--138
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 139--140
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 141--142
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 143--144
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 145--146
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 147--148
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 149--150
+[][][] 
+ []
+
+[4]
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 151--152
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 153--154
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 155--156
+[][][] 
+ []
+
+[5] [6]
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 242--243
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 244--245
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 246--247
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 248--249
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 250--251
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 252--253
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 254--255
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 256--257
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 258--259
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 260--261
+[][][] 
+ []
+
+[7]
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 262--263
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 264--265
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 266--267
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 268--269
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 270--271
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 272--273
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 274--275
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 276--277
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 278--279
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 280--281
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 282--283
+[][][] 
+ []
+
+[8]
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 284--285
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 286--287
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 288--289
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 290--291
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 307--309
+[][][] 
+ []
+
+[9]
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 327--329
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 347--348
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 349--350
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 351--352
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 353--354
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 355--356
+[][][] 
+ []
+
+[10]
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 357--358
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 359--360
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 361--362
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 363--364
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 365--366
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 368--369
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 370--371
+[][][] 
+ []
+
+[11] [12]
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 451--452
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 453--454
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 455--457
+[][][] 
+ []
+
+[13]
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 490--491
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 492--493
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 494--495
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 496--498
+[][][] 
+ []
+
+[14]
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 516--517
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 518--519
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 520--521
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 522--523
+[][][] 
+ []
+
+
+Overfull \hbox (372.89838pt too wide) in paragraph at lines 524--526
+[][][] 
+ []
+
+[15]
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 560--561
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 562--563
+[][][] 
+ []
+
+
+Overfull \hbox (146.09882pt too wide) in paragraph at lines 564--565
+[][][] 
+ []
+
+) [16] (./appendix8.aux) ) 
+Here is how much of TeX's memory you used:
+ 1429 strings out of 493848
+ 20201 string characters out of 1152822
+ 210565 words of memory out of 3000000
+ 4765 multiletter control sequences out of 15000+50000
+ 4721 words of font info for 18 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 26i,5n,32p,314b,1455s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on appendix8.pdf (16 pages, 85520 bytes).
+PDF statistics:
+ 70 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

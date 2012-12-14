@@ -1,0 +1,538 @@
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+1
+
+Total competitors yet to start: 102
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+2
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+
+No competitors are currently on the course
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+3
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+No competitors have currently finished.
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+7
+Enter required competitor number:
+123
+
+Competitor 123 (Topaz Abbey) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+7
+Enter required competitor number:
+2
+
+Competitor with number 2 cannot be found. Please try again.
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_1.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+| Comp. No |                     Competitor Name                    |    Current Status    |   Start Time  |   End Time  |   Delay  |
+|==========|========================================================|======================|===============|=============|==========|
+|   1      |   Ace Abbey                                            |    Track 1           |      07:30    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   3      |   Ace Fudge                                            |    Track 18          |      07:33    |    N/A      |  3 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   4      |   Amber Abbey                                          |    Track 13          |      07:37    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   5      |   Amber Fudge                                          |    Track 13          |      07:40    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   6      |   April Abbey                                          |    Track 1           |      07:43    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   7      |   April Fudge                                          |    Medical CP 14     |      07:46    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   8      |   Ash Abbey                                            |    Track 13          |      07:49    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   9      |   Ash Fudge                                            |    Track 2           |      07:52    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   10     |   Asti Abbey                                           |    Track 17          |      07:55    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   11     |   Asti Fudge                                           |    Track 17          |      07:58    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   12     |   Autumn Abbey                                         |    Track 14          |      08:01    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   13     |   Autumn Fudge                                         |    Track 8           |      08:04    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   14     |   Barfields Marco Abbey                                |    Track 8           |      08:07    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   16     |   Barfields Marco Fudge                                |    Track 13          |      08:10    |    N/A      |  0 mins  |
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_2.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_3.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_4.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_5.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+| Comp. No |                     Competitor Name                    |    Current Status    |   Start Time  |   End Time  |   Delay  |
+|==========|========================================================|======================|===============|=============|==========|
+|   1      |   Ace Abbey                                            |    Finished          |      07:30    |    09:34    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   3      |   Ace Fudge                                            |    Finished          |      07:33    |    11:31    |  6 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   4      |   Amber Abbey                                          |    Finished          |      07:37    |    10:14    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   5      |   Amber Fudge                                          |    Finished          |      07:40    |    09:51    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   6      |   April Abbey                                          |    Finished          |      07:43    |    09:46    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   7      |   April Fudge                                          |    Finished          |      07:46    |    10:36    |  4 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   8      |   Ash Abbey                                            |    Finished          |      07:49    |    09:45    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   9      |   Ash Fudge                                            |    Finished          |      07:52    |    09:50    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   10     |   Asti Abbey                                           |    Finished          |      07:55    |    11:50    |  6 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   11     |   Asti Fudge                                           |    Finished          |      07:58    |    11:55    |  6 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   12     |   Autumn Abbey                                         |    Finished          |      08:01    |    10:31    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   13     |   Autumn Fudge                                         |    Finished          |      08:04    |    11:00    |  3 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   14     |   Barfields Marco Abbey                                |    Finished          |      08:07    |    12:01    |  5 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   16     |   Barfields Marco Fudge                                |    Finished          |      08:10    |    10:05    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   17     |   Basil Abbey                                          |    Finished          |      08:13    |    11:05    |  3 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   18     |   Basil Fudge                                          |    Finished          |      08:16    |    12:11    |  5 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   19     |   Beatrice Abbey                                       |    Finished          |      08:20    |    10:47    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   20     |   Beatrice Fudge                                       |    Finished          |      08:23    |    12:19    |  6 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   22     |   Beau Abbey                                           |    Finished          |      08:26    |    10:28    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   23     |   Beau Fudge                                           |    Excluded - IR     |      08:29    |    DNF      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   24     |   Bella Abbey                                          |    Finished          |      08:32    |    11:28    |  2 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   26     |   Bella Fudge                                          |    Finished          |      08:35    |    10:24    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+***
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   127    |   Zizou Fudge                                          |    Finished          |      12:52    |    14:47    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+2
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+
+No competitors are currently on the course
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+1
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+
+All competitors are currently on a course
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+3
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+|        1         |   Ace Abbey                                            |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|        3         |   Ace Fudge                                            |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|        4         |   Amber Abbey                                          |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|        5         |   Amber Fudge                                          |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|        6         |   April Abbey                                          |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|        7         |   April Fudge                                          |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|        8         |   Ash Abbey                                            |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|        9         |   Ash Fudge                                            |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|       10         |   Asti Abbey                                           |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+*****
+|      126         |   Zizou Abbey                                          |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+|      127         |   Zizou Fudge                                          |    Finished       |
+|------------------|--------------------------------------------------------|-------------------|
+Total competitors finished: 87
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+
+** MANUAL ENTRY OF TIMES **
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_1.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+4
+Enter required competitor number:
+3
+
+Enter checkpoint number:
+14
+
+Entrant excluded (1 = Yes, 2 = No):
+1
+
+Entrant reason (1 = Wrong CP, 2 = Failed Medical):
+2
+
+Enter recorded for checkpoint time (HH:MM):
+10:23
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+| Comp. No |                     Competitor Name                    |    Current Status    |   Start Time  |   End Time  |   Delay  |
+|==========|========================================================|======================|===============|=============|==========|
+|   1      |   Ace Abbey                                            |    Track 1           |      07:30    |    N/A      |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   3      |   Ace Fudge                                            |    Excluded - MC     |      07:33    |    DNF      |  3 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_2.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+| Comp. No |                     Competitor Name                    |    Current Status    |   Start Time  |   End Time  |   Delay  |
+|==========|========================================================|======================|===============|=============|==========|
+|   1      |   Ace Abbey                                            |    Finished          |      07:30    |    09:34    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   3      |   Ace Fudge                                            |    Excluded - MC     |      07:33    |    DNF      |  3 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   4      |   Amber Abbey                                          |    Finished          |      07:37    |    10:14    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_3/cp_times_3.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+| Comp. No |                     Competitor Name                    |    Current Status    |   Start Time  |   End Time  |   Delay  |
+|==========|========================================================|======================|===============|=============|==========|
+|   1      |   Ace Abbey                                            |    Finished          |      07:30    |    09:34    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   3      |   Ace Fudge                                            |    Excluded - MC     |      07:33    |    DNF      |  3 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   4      |   Amber Abbey                                          |    Finished          |      07:37    |    10:14    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+|   5      |   Amber Fudge                                          |    Finished          |      07:40    |    09:51    |  0 mins  |
+|----------|--------------------------------------------------------|----------------------|---------------|-------------|----------|
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************

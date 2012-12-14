@@ -1,0 +1,497 @@
+
+Enter event description file name: /dcs/dap/CS23710_DATA/event_1/name.txt
+
+Endurance Horse Race - Beginners Event
+26th June 2012
+07:30
+ 
+Enter node file name: /dcs/dap/CS23710_DATA/event_1/nodes.txt
+Node: 1 -> CPNode: 2 -> JNNode: 3 -> JNNode: 4 -> CPNode: 5 -> CPNode: 6 -> JNNode: 7 -> CPNode: 8 -> JNNode: 9 -> CPNode: 10 -> JNNode: 11 -> JNNode: 12 -> JNNode: 13 -> CP
+Enter track file name: /dcs/dap/CS23710_DATA/event_1/tracks.txt
+
+Track No: 1, SN: 1, EN: 2, Min: 20
+Track No: 2, SN: 2, EN: 3, Min: 10
+Track No: 3, SN: 3, EN: 4, Min: 11
+Track No: 4, SN: 4, EN: 5, Min: 15
+Track No: 5, SN: 5, EN: 6, Min: 12
+Track No: 6, SN: 6, EN: 8, Min: 10
+Track No: 7, SN: 6, EN: 7, Min: 8
+Track No: 8, SN: 7, EN: 10, Min: 12
+Track No: 9, SN: 8, EN: 10, Min: 10
+Track No: 10, SN: 8, EN: 9, Min: 5
+Track No: 11, SN: 3, EN: 9, Min: 18
+Track No: 12, SN: 9, EN: 12, Min: 20
+Track No: 13, SN: 2, EN: 13, Min: 30
+Track No: 14, SN: 12, EN: 13, Min: 5
+Track No: 15, SN: 10, EN: 11, Min: 15
+Track No: 16, SN: 11, EN: 12, Min: 5
+Enter courses file name: /dcs/dap/CS23710_DATA/event_1/courses.txt
+
+Course ID: D, Length: 11
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 4, ID: CP
+Node 4: No: 5, ID: CP
+Node 5: No: 6, ID: JN
+Node 6: No: 8, ID: JN
+Node 7: No: 9, ID: CP
+Node 8: No: 3, ID: JN
+Node 9: No: 2, ID: JN
+Node 10: No: 1, ID: CP
+
+
+Course ID: E, Length: 11
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 9, ID: CP
+Node 4: No: 8, ID: JN
+Node 5: No: 10, ID: JN
+Node 6: No: 11, ID: JN
+Node 7: No: 12, ID: JN
+Node 8: No: 13, ID: CP
+Node 9: No: 2, ID: JN
+Node 10: No: 1, ID: CP
+
+
+Course ID: F, Length: 8
+Nodes in course:
+Node 0: No: 1, ID: CP
+Node 1: No: 2, ID: JN
+Node 2: No: 3, ID: JN
+Node 3: No: 9, ID: CP
+Node 4: No: 12, ID: JN
+Node 5: No: 13, ID: CP
+Node 6: No: 2, ID: JN
+Node 7: No: 1, ID: CP
+
+
+Enter entrants file name: /dcs/dap/CS23710_DATA/event_1/entrants.txt
+
+Competitor 1 (Donald Duck) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 2 (Mickey Mouse) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 3 (Jemima Julieta Mouse) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 4 (Minnie Duck) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 5 (Minnie Mouse) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 6 (Minnie Mouse Junior) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 7 (Deputy Doug) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 8 (Deputy Duck) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 9 (Bewick Swan) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 10 (Black Swan) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 11 (Albert Einstein) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 12 (Albert Mouse) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 13 (Donald Duck Senior) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+Competitor 14 (Egbert Einstein) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |   Start Time  |   End Time  |
+|==================|========================================================|===================|===============|=============|
+|        1         |   Donald Duck                                          |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        2         |   Mickey Mouse                                         |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        3         |   Jemima Julieta Mouse                                 |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        4         |   Minnie Duck                                          |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        5         |   Minnie Mouse                                         |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        6         |   Minnie Mouse Junior                                  |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        7         |   Deputy Doug                                          |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        8         |   Deputy Duck                                          |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        9         |   Bewick Swan                                          |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       10         |   Black Swan                                           |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       11         |   Albert Einstein                                      |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       12         |   Albert Mouse                                         |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       13         |   Donald Duck Senior                                   |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       14         |   Egbert Einstein                                      |    Not Started    |      N/A      |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+1
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+|        1         |   Donald Duck                                          |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|        2         |   Mickey Mouse                                         |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|        3         |   Jemima Julieta Mouse                                 |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|        4         |   Minnie Duck                                          |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|        5         |   Minnie Mouse                                         |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|        6         |   Minnie Mouse Junior                                  |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|        7         |   Deputy Doug                                          |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|        8         |   Deputy Duck                                          |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|        9         |   Bewick Swan                                          |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|       10         |   Black Swan                                           |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|       11         |   Albert Einstein                                      |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|       12         |   Albert Mouse                                         |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|       13         |   Donald Duck Senior                                   |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+|       14         |   Egbert Einstein                                      |    Not Started    |
+|------------------|--------------------------------------------------------|-------------------|
+
+Total competitors yet to start: 14
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+2
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+
+No competitors are currently on the course
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+3
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |
+|==================|========================================================|===================|
+No competitors have currently finished.
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+7
+Enter required competitor number:
+3
+
+Competitor 3 (Jemima Julieta Mouse) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+7
+Enter required competitor number:
+14
+
+Competitor 14 (Egbert Einstein) -> Current Status: Not Started, Current Progress: 0, Start Time: N/A, End Time: N/A
+
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_1/cp_times_1.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |   Start Time  |   End Time  |
+|==================|========================================================|===================|===============|=============|
+|        1         |   Donald Duck                                          |    Track 11       |      07:30    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        2         |   Mickey Mouse                                         |    Track 11       |      07:35    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        3         |   Jemima Julieta Mouse                                 |    Track 14       |      07:39    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        4         |   Minnie Duck                                          |    Junction 12    |      07:43    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        5         |   Minnie Mouse                                         |    Junction 11    |      07:47    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        6         |   Minnie Mouse Junior                                  |    Junction 11    |      07:51    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        7         |   Deputy Doug                                          |    Track 5        |      07:56    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        8         |   Deputy Duck                                          |    Track 4        |      08:01    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        9         |   Bewick Swan                                          |    Track 12       |      08:05    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       10         |   Black Swan                                           |    Checkpoint 9   |      08:10    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       11         |   Albert Einstein                                      |    Track 11       |      08:14    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       12         |   Albert Mouse                                         |    Track 3        |      08:18    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       13         |   Donald Duck Senior                                   |    Track 11       |      08:22    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       14         |   Egbert Einstein                                      |    Track 11       |      08:26    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+4
+Enter required competitor number:
+1
+
+Enter checkpoint number:
+1
+
+Enter recorded for checkpoint time (HH:MM):
+09:02
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |   Start Time  |   End Time  |
+|==================|========================================================|===================|===============|=============|
+|        1         |   Donald Duck                                          |    Finished       |      07:30    |    09:02    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        2         |   Mickey Mouse                                         |    Track 11       |      07:35    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        3         |   Jemima Julieta Mouse                                 |    Track 14       |      07:39    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        4         |   Minnie Duck                                          |    Track 14       |      07:43    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        5         |   Minnie Mouse                                         |    Track 16       |      07:47    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        6         |   Minnie Mouse Junior                                  |    Track 16       |      07:51    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        7         |   Deputy Doug                                          |    Junction 6     |      07:56    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        8         |   Deputy Duck                                          |    Track 4        |      08:01    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        9         |   Bewick Swan                                          |    Track 12       |      08:05    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       10         |   Black Swan                                           |    Track 12       |      08:10    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       11         |   Albert Einstein                                      |    Track 11       |      08:14    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       12         |   Albert Mouse                                         |    Track 3        |      08:18    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       13         |   Donald Duck Senior                                   |    Track 11       |      08:22    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       14         |   Egbert Einstein                                      |    Track 11       |      08:26    |    N/A      |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+5
+
+Enter time file name: /dcs/dap/CS23710_DATA/event_1/cp_times_2.txt
+
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+6
+
+|  Competitor No   |                      Competitor Name                   |   Current Status  |   Start Time  |   End Time  |
+|==================|========================================================|===================|===============|=============|
+|        1         |   Donald Duck                                          |    Finished       |      07:30    |    09:02    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        2         |   Mickey Mouse                                         |    Finished       |      07:35    |    09:34    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        3         |   Jemima Julieta Mouse                                 |    Finished       |      07:39    |    09:42    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        4         |   Minnie Duck                                          |    Finished       |      07:43    |    09:46    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        5         |   Minnie Mouse                                         |    Finished       |      07:47    |    10:05    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        6         |   Minnie Mouse Junior                                  |    Finished       |      07:51    |    09:58    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        7         |   Deputy Doug                                          |    Finished       |      07:56    |    10:02    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        8         |   Deputy Duck                                          |    Finished       |      08:01    |    10:11    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|        9         |   Bewick Swan                                          |    Finished       |      08:05    |    09:56    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       10         |   Black Swan                                           |    Finished       |      08:10    |    10:09    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       11         |   Albert Einstein                                      |    Finished       |      08:14    |    10:26    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       12         |   Albert Mouse                                         |    Finished       |      08:18    |    10:23    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       13         |   Donald Duck Senior                                   |    Finished       |      08:22    |    10:33    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+|       14         |   Egbert Einstein                                      |    Finished       |      08:26    |    10:20    |
+|------------------|--------------------------------------------------------|-------------------|---------------|-------------|
+*****************************************
+Welcome, please select an option:
+
+*****************************************
+  1. Display competitors yet to start
+  2. Display competitors out of courses
+  3. Display finished competitors
+  4. Enter competitor checkpoint time
+  5. Load time log file into system
+  6. Display event results list
+  7. Display specific competitor status
+  8. Exit Program
+*****************************************
+8
+
+Exiting program..
+
+RUN SUCCESSFUL (total time: 7m 6s)
